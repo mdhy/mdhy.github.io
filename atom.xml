@@ -4,7 +4,7 @@
   <title><![CDATA[めだはや]]></title>
   <link href="http://mdhy.github.io/atom.xml" rel="self"/>
   <link href="http://mdhy.github.io/"/>
-  <updated>2014-03-22T23:51:23+09:00</updated>
+  <updated>2014-03-22T23:58:08+09:00</updated>
   <id>http://mdhy.github.io/</id>
   <author>
     <name><![CDATA[はやし]]></name>
@@ -23,11 +23,17 @@
     
     <content type="html"><![CDATA[<p>Hello!</p>
 
-<h3>Comments</h3>
+<h4>Comments</h4>
 
 <p>一行目<br/>
 二行名<br/>
-|はやし|2007/5/10</p>
+|はやし|2007/5/10 23:10</p>
+
+<hr />
+
+<p>はははｈ<br/>
+へへへｈ<br/>
+|はやし|2007/5/10 23:10</p>
 ]]></content>
     
   </entry>
