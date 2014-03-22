@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
 
-  <title><![CDATA[めだのはや]]></title>
+  <title><![CDATA[めだはや]]></title>
   <link href="http://mdhy.github.io/atom.xml" rel="self"/>
   <link href="http://mdhy.github.io/"/>
-  <updated>2014-03-22T23:11:48+09:00</updated>
+  <updated>2014-03-22T23:31:56+09:00</updated>
   <id>http://mdhy.github.io/</id>
   <author>
     <name><![CDATA[はやし]]></name>
@@ -18,7 +18,9 @@
     <link href="http://mdhy.github.io/blog/2014/03/22/hello/"/>
     <updated>2014-03-22T19:06:57+09:00</updated>
     <id>http://mdhy.github.io/blog/2014/03/22/hello</id>
-    <content type="html"><![CDATA[
+    <content type="html"><![CDATA[<p>Hello!</p>
+
+<h3>Comments</h3>
 ]]></content>
   </entry>
   
