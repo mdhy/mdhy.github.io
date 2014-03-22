@@ -1,0 +1,217 @@
+
+<!DOCTYPE html>
+<!--[if IEMobile 7 ]><html class="no-js iem7"><![endif]-->
+<!--[if lt IE 9]><html class="no-js lte-ie8"><![endif]-->
+<!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <title>受難 - めだはや</title>
+  <meta name="author" content="はやし">
+
+  
+  <meta name="description" content="パーツの相性は良く、動作は快適だが・・・ 　昨日に購入した日本HPのProLiant　ML115が納品されてきた（自宅にw） 　とりあえず用意していたopensuse10.2 x86_64（今回購入したものはCPUがopteronであるため）をインストールしてみる。 　 &hellip;">
+  
+
+  <!-- http://t.co/dKP3o1e -->
+  <meta name="HandheldFriendly" content="True">
+  <meta name="MobileOptimized" content="320">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  
+  <link rel="canonical" href="http://mdhy.github.io/blog/2007/09/01/Suffering">
+  <link href="/favicon.png" rel="icon">
+  <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
+  <link href="/atom.xml" rel="alternate" title="めだはや" type="application/atom+xml">
+  <script src="/javascripts/modernizr-2.0.js"></script>
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+  <script>!window.jQuery && document.write(unescape('%3Cscript src="./javascripts/lib/jquery.min.js"%3E%3C/script%3E'))</script>
+  <script src="/javascripts/octopress.js" type="text/javascript"></script>
+  <!--Fonts from Google"s Web font directory at http://google.com/webfonts -->
+<link href="http://fonts.googleapis.com/css?family=PT+Serif:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+<link href="http://fonts.googleapis.com/css?family=PT+Sans:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+<link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+<link href='http://fonts.googleapis.com/css?family=Fjalla+One' rel='stylesheet' type='text/css'>
+  
+
+</head>
+
+<body   class="collapse-sidebar sidebar-footer" >
+  <header role="banner">
+</header>
+  <nav role="navigation"><ul class="subscription" data-subscription="rss">
+  <li><a href="/atom.xml" rel="subscribe-rss" title="subscribe via RSS">RSS</a></li>
+  
+</ul>
+  
+<form action="https://www.google.com/search" method="get">
+  <fieldset role="search">
+    <input type="hidden" name="q" value="site:mdhy.github.io" />
+    <input class="search" type="text" name="q" results="0" placeholder="Search"/>
+  </fieldset>
+</form>
+  
+<ul class="main-navigation">
+  <li><a href="/">Blog</a></li>
+  <li><a href="/blog/archives">Archives</a></li>
+  <li><a href="/about">About</a></li>
+</ul>
+
+</nav>
+  <div id="main">
+    <div id="content">
+      <div>
+<article class="hentry" role="article">
+  
+  <header>
+  
+    
+      <h1 class="entry-title">受難</h1>
+    
+  
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2007-09-01T11:18:05+09:00" pubdate data-updated="true">Sep 1<span>st</span>, 2007</time>
+        
+      </p>
+    
+  </header>
+
+
+<div class="entry-content"><p>パーツの相性は良く、動作は快適だが・・・ 　昨日に購入した日本HPのProLiant　ML115が納品されてきた（自宅にw）  　とりあえず用意していたopensuse10.2 x86_64（今回購入したものはCPUがopteronであるため）をインストールしてみる。 　なんなくインストールできてホッとして、次にFreeBSDを動かす為のVMware ServerをインストールしFreebsd 6.2-RELEASE(amd64)をインストールを難なくこなすが、何やら動作が不安定のようだ＞＜  　またNICにブリッジという性質上iptablesの設定が難しく（単に面倒くさいだけだがw）、動作が不安定（検証をしていないので、原因不明。もしかしたら、パッチを当てなかったのが原因かもwいくつかあった気がする）であることから、断念（午前0時頃；；）してしまいました＞＜  　そして、頻繁に更新されるプログラムは６４ビットと３２ビットのライブラリを自動認識できるようだが、何年も前から更新がなされていないプログラムについては、コンパイル環境設定時に６４ビットライブラリ（デフォルト設定）を読みに行くため、エラーになる（単に３２ビットライブラリを改めて指定してやれば行くような気がする）。  　これはチラッと感じたこものだが、opteronはサーバ向け（スレッドでの動作とか複数のリクエストに対する耐性）のCPUで動作周波数でゴリ押しする某CPUメーカーのCPUの方が私のやりたかったに向いている気がしてならないが・・・  　私は<big>じゃじゃ馬の方が好き</big>（opteronは物静かで、堅牢なイメージをもったが。しかし、背面FANは爆音）なので、じっくりと弄っていこうと思っています♪  　思っていたものと触ってみて方向性が違うみたいですが、この時期（特に意味はない）から６４ビットマシーンとOSを使っておくのは、今後役に立つはずなので、こいつに無茶をさせていこうと思います〜  　ということで、まだサーバ紹介は学校も始まるので、１０月くらいになるかもしれませんwww</p>
+</div>
+
+
+  <footer>
+    <p class="meta">
+      
+  
+
+<span class="byline author vcard">Posted by <span class="fn">はやし</span></span>
+
+      
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2007-09-01T11:18:05+09:00" pubdate data-updated="true">Sep 1<span>st</span>, 2007</time>
+      
+
+<span class="categories">
+  
+    <a class='category' href='/blog/categories/diary/'>diary</a>
+  
+</span>
+
+
+    </p>
+    
+      <div class="sharing">
+  
+  <a href="http://twitter.com/share" class="twitter-share-button" data-url="http://mdhy.github.io/blog/2007/09/01/Suffering/" data-via="" data-counturl="http://mdhy.github.io/blog/2007/09/01/Suffering/" >Tweet</a>
+  
+  
+  
+</div>
+
+    
+    <p class="meta">
+      
+        <a class="basic-alignment left" href="/blog/2007/08/30/At-the-end-of-summer/" title="Previous Post: 夏の終わりに">&laquo; 夏の終わりに</a>
+      
+      
+        <a class="basic-alignment right" href="/blog/2007/09/02/It-will-also-tired-story-of-the-stone/" title="Next Post: 石の話も飽きたでしょう">石の話も飽きたでしょう &raquo;</a>
+      
+    </p>
+  </footer>
+</article>
+
+</div>
+
+<aside class="sidebar">
+  
+    <section>
+  <h1>Recent Posts</h1>
+  <ul id="recent_posts">
+    
+      <li class="post">
+        <a href="/blog/2013/02/02/How-big-reservoir-of-data/">ビックデータの溜め方</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2013/01/28/It-moves-to-the-VPS-Sakura-from-AmazonEC2/">AmazonEC2 から さくらの VPS へお引越し</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2012/08/11/Buy-the-ThinkPad-X61s/">ThinkPad X61s を購入</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2012/03/04/to-start-github/">github をはじめるよ</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2012/03/01/W-that-is-supposed-to-be-amazing-pair-programming-joint-party/">ペアプログラミング合コン...すごいことになってるｗ</a>
+      </li>
+    
+  </ul>
+</section>
+
+
+
+
+
+  
+</aside>
+
+
+    </div>
+  </div>
+  <footer role="contentinfo"><p>
+  Copyright &copy; 2014 - はやし <br/>
+  <span class="credit">Powered by <a href="http://octopress.org">Octopress</a>, customized with <a href="https://github.com/mjhea0/whiterspace">whiterspace</a>.</span>
+</p>
+
+</footer>
+  
+
+
+
+
+
+
+
+  <script type="text/javascript">
+    (function(){
+      var twitterWidgets = document.createElement('script');
+      twitterWidgets.type = 'text/javascript';
+      twitterWidgets.async = true;
+      twitterWidgets.src = 'http://platform.twitter.com/widgets.js';
+      document.getElementsByTagName('head')[0].appendChild(twitterWidgets);
+    })();
+  </script>
+
+
+
+
+
+</body>
+</html>

@@ -1,0 +1,217 @@
+
+<!DOCTYPE html>
+<!--[if IEMobile 7 ]><html class="no-js iem7"><![endif]-->
+<!--[if lt IE 9]><html class="no-js lte-ie8"><![endif]-->
+<!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <title>--with-libdir=lib64 - めだはや</title>
+  <meta name="author" content="はやし">
+
+  
+  <meta name="description" content="そう！！これが欲しかったのだよ！！！ 　何度も書いてきていますが、サーバを移行する為にOSの再インストールとか、サービスのいインストールとかして、ライブラリが64ビットで関数が違う（たぶんｗ）って怒られたりとか、ライブラリが見つかりませんって怒られたりとかしながら、やり遂げましたよｗ 　PHPに& &hellip;">
+  
+
+  <!-- http://t.co/dKP3o1e -->
+  <meta name="HandheldFriendly" content="True">
+  <meta name="MobileOptimized" content="320">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  
+  <link rel="canonical" href="http://mdhy.github.io/blog/2007/09/09/With-libdir-lib64">
+  <link href="/favicon.png" rel="icon">
+  <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
+  <link href="/atom.xml" rel="alternate" title="めだはや" type="application/atom+xml">
+  <script src="/javascripts/modernizr-2.0.js"></script>
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+  <script>!window.jQuery && document.write(unescape('%3Cscript src="./javascripts/lib/jquery.min.js"%3E%3C/script%3E'))</script>
+  <script src="/javascripts/octopress.js" type="text/javascript"></script>
+  <!--Fonts from Google"s Web font directory at http://google.com/webfonts -->
+<link href="http://fonts.googleapis.com/css?family=PT+Serif:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+<link href="http://fonts.googleapis.com/css?family=PT+Sans:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+<link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+<link href='http://fonts.googleapis.com/css?family=Fjalla+One' rel='stylesheet' type='text/css'>
+  
+
+</head>
+
+<body   class="collapse-sidebar sidebar-footer" >
+  <header role="banner">
+</header>
+  <nav role="navigation"><ul class="subscription" data-subscription="rss">
+  <li><a href="/atom.xml" rel="subscribe-rss" title="subscribe via RSS">RSS</a></li>
+  
+</ul>
+  
+<form action="https://www.google.com/search" method="get">
+  <fieldset role="search">
+    <input type="hidden" name="q" value="site:mdhy.github.io" />
+    <input class="search" type="text" name="q" results="0" placeholder="Search"/>
+  </fieldset>
+</form>
+  
+<ul class="main-navigation">
+  <li><a href="/">Blog</a></li>
+  <li><a href="/blog/archives">Archives</a></li>
+  <li><a href="/about">About</a></li>
+</ul>
+
+</nav>
+  <div id="main">
+    <div id="content">
+      <div>
+<article class="hentry" role="article">
+  
+  <header>
+  
+    
+      <h1 class="entry-title">--with-libdir=lib64</h1>
+    
+  
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2007-09-09T11:05:13+09:00" pubdate data-updated="true">Sep 9<span>th</span>, 2007</time>
+        
+      </p>
+    
+  </header>
+
+
+<div class="entry-content"><p>そう！！これが欲しかったのだよ！！！  　何度も書いてきていますが、サーバを移行する為にOSの再インストールとか、サービスのいインストールとかして、ライブラリが64ビットで関数が違う（たぶんｗ）って怒られたりとか、ライブラリが見つかりませんって怒られたりとかしながら、<big>やり遂げましたよｗ</big>  　PHPに&mdash;with-imapをつけて./configureしてやるとlibc-client.aが見つからないと怒られていました＞＜  　libc-client.aは確かに/usr/lib64に確かに入っているのに、&mdash;with-imap=/usrで通らない？！  　ネットで調べてみると、&mdash;with-libdir=lib64をつけると通るということが分かり、試してみると難なく通る♪  　<big>しかし、</big>今度はmysqlが通らなくなってしまった＞＜ 　今度はmysqlのライブラリが見つからないと怒られるｗｗ  　そりゃ&mdash;with-libdir=lib64でiampが通って、mysqlが通らない・・・となると、もうmysqlのライブラリを  　ln -s /usr/local/mysql/lib /usr/local/mysql/lib64  としてやると、難なく通るｗｗ  　mysql自体はx86_64でコンパイルされているので、問題なく使えると推測ｗｗｗ  　コンパイルが出来たことに満足して寝ました〜  　今回の問題解決は結構かかりましたが、初めてじっくり使ったOSで（しかも６４ビット。使い方が違わないようで、深い所で違っている感じｗ）分かれば簡単なものです♪  　高専に入ってUNIXに触ってそろそろ５年目ｗ  　WEBサーバとperl-CGIに触れて７−８年目になろうとしています〜 　独学でやってきて、やっと全体像を把握できるようになった気がします。  　やっぱり今になって思う事は、参考文献や本を読む事でかなりの時間短縮になること、あとは賢人さんの物をパクることです（コンパイルすれば、分からんｗ）。  　私の古い知人は、私が「パソコンが好き」とか「パソコンに詳しい」と思っているようですが（昔は特に目標が無かったので、闇雲に情報収集してました）、今はインターネットを取り巻く技術に注目しています。  　なぜか？というと、これから需要が増してくる技術であるし、よくあるロボットやらAI（人工知能）やらが世界を支配するクライシスSFがありますがあのような事が起きたとき、開発者側の視点から問題を見て、愛する人や友人を守ろうと真剣に考えたりしていますｗｗ  　周知のことと思いますが、便利をいうことは、同じだけ危険が背中合わせになっています（プログラミングなんかをしていても、少しわかる。複雑になると、バグが出やすくなるとか）。  Goolgeは便利ですが、情報統制がなされています（情報の改ざんがなされていいないとはいえないｗ）。  　単純には、<big>無知であることは愚かである</big>と言う事です♪</p>
+</div>
+
+
+  <footer>
+    <p class="meta">
+      
+  
+
+<span class="byline author vcard">Posted by <span class="fn">はやし</span></span>
+
+      
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2007-09-09T11:05:13+09:00" pubdate data-updated="true">Sep 9<span>th</span>, 2007</time>
+      
+
+<span class="categories">
+  
+    <a class='category' href='/blog/categories/diary/'>diary</a>
+  
+</span>
+
+
+    </p>
+    
+      <div class="sharing">
+  
+  <a href="http://twitter.com/share" class="twitter-share-button" data-url="http://mdhy.github.io/blog/2007/09/09/With-libdir-lib64/" data-via="" data-counturl="http://mdhy.github.io/blog/2007/09/09/With-libdir-lib64/" >Tweet</a>
+  
+  
+  
+</div>
+
+    
+    <p class="meta">
+      
+        <a class="basic-alignment left" href="/blog/2007/09/08/rm-R-usr/" title="Previous Post: rm -R /usr">&laquo; rm -R /usr</a>
+      
+      
+        <a class="basic-alignment right" href="/blog/2007/09/11/Evangelion-The-Movie-Introduction/" title="Next Post: エヴァンゲリヲン劇場版・序">エヴァンゲリヲン劇場版・序 &raquo;</a>
+      
+    </p>
+  </footer>
+</article>
+
+</div>
+
+<aside class="sidebar">
+  
+    <section>
+  <h1>Recent Posts</h1>
+  <ul id="recent_posts">
+    
+      <li class="post">
+        <a href="/blog/2013/02/02/How-big-reservoir-of-data/">ビックデータの溜め方</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2013/01/28/It-moves-to-the-VPS-Sakura-from-AmazonEC2/">AmazonEC2 から さくらの VPS へお引越し</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2012/08/11/Buy-the-ThinkPad-X61s/">ThinkPad X61s を購入</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2012/03/04/to-start-github/">github をはじめるよ</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2012/03/01/W-that-is-supposed-to-be-amazing-pair-programming-joint-party/">ペアプログラミング合コン...すごいことになってるｗ</a>
+      </li>
+    
+  </ul>
+</section>
+
+
+
+
+
+  
+</aside>
+
+
+    </div>
+  </div>
+  <footer role="contentinfo"><p>
+  Copyright &copy; 2014 - はやし <br/>
+  <span class="credit">Powered by <a href="http://octopress.org">Octopress</a>, customized with <a href="https://github.com/mjhea0/whiterspace">whiterspace</a>.</span>
+</p>
+
+</footer>
+  
+
+
+
+
+
+
+
+  <script type="text/javascript">
+    (function(){
+      var twitterWidgets = document.createElement('script');
+      twitterWidgets.type = 'text/javascript';
+      twitterWidgets.async = true;
+      twitterWidgets.src = 'http://platform.twitter.com/widgets.js';
+      document.getElementsByTagName('head')[0].appendChild(twitterWidgets);
+    })();
+  </script>
+
+
+
+
+
+</body>
+</html>

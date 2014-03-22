@@ -1,0 +1,522 @@
+
+<!DOCTYPE html>
+<!--[if IEMobile 7 ]><html class="no-js iem7"><![endif]-->
+<!--[if lt IE 9]><html class="no-js lte-ie8"><![endif]-->
+<!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <title>めだはや</title>
+  <meta name="author" content="はやし">
+
+  
+  <meta name="description" content="これって結構使えるなー 　この前書いた記事で紹介した「行列式を掃き出し法で解く」が分数に対応しました。 　なぜ、分数に対応が必要かといいますと、答えを出すと「23.9999999999999」とか「1.3E-12」と格好悪い始末になってしまうので、気持ちのいい分数で計算できるようにしました。 　 &hellip;">
+  
+
+  <!-- http://t.co/dKP3o1e -->
+  <meta name="HandheldFriendly" content="True">
+  <meta name="MobileOptimized" content="320">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  
+  <link rel="canonical" href="http://mdhy.github.io/blog/page/37">
+  <link href="/favicon.png" rel="icon">
+  <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
+  <link href="/atom.xml" rel="alternate" title="めだはや" type="application/atom+xml">
+  <script src="/javascripts/modernizr-2.0.js"></script>
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+  <script>!window.jQuery && document.write(unescape('%3Cscript src="./javascripts/lib/jquery.min.js"%3E%3C/script%3E'))</script>
+  <script src="/javascripts/octopress.js" type="text/javascript"></script>
+  <!--Fonts from Google"s Web font directory at http://google.com/webfonts -->
+<link href="http://fonts.googleapis.com/css?family=PT+Serif:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+<link href="http://fonts.googleapis.com/css?family=PT+Sans:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+<link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+<link href='http://fonts.googleapis.com/css?family=Fjalla+One' rel='stylesheet' type='text/css'>
+  
+
+</head>
+
+<body   class="collapse-sidebar sidebar-footer" >
+  <header role="banner">
+</header>
+  <nav role="navigation"><ul class="subscription" data-subscription="rss">
+  <li><a href="/atom.xml" rel="subscribe-rss" title="subscribe via RSS">RSS</a></li>
+  
+</ul>
+  
+<form action="https://www.google.com/search" method="get">
+  <fieldset role="search">
+    <input type="hidden" name="q" value="site:mdhy.github.io" />
+    <input class="search" type="text" name="q" results="0" placeholder="Search"/>
+  </fieldset>
+</form>
+  
+<ul class="main-navigation">
+  <li><a href="/">Blog</a></li>
+  <li><a href="/blog/archives">Archives</a></li>
+  <li><a href="/about">About</a></li>
+</ul>
+
+</nav>
+  <div id="main">
+    <div id="content">
+      <div class="blog-index">
+  
+  
+  
+    <article>
+      
+  <header>
+  
+    
+      <h1 class="entry-title"><a href="/blog/2007/11/12/I-now-supports-fractional/">分数に対応しました</a></h1>
+      
+      
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2007-11-12T21:26:56+09:00" pubdate data-updated="true">Nov 12<span>th</span>, 2007</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>これって結構使えるなー 　<a href="http://baabuu.ddo.jp/blog/?id=1194703139">この前書いた記事</a>で紹介した「行列式を掃き出し法で解く」が分数に対応しました。  　なぜ、分数に対応が必要かといいますと、答えを出すと「23.9999999999999」とか「1.3E-12」と格好悪い始末になってしまうので、気持ちのいい分数で計算できるようにしました。  　私のプログラム作り方がいいのか、CALC_FRAC($VAL1, $VAL2, $OP)という関数を作る時間だけで、ちょっとのプログラム修正で完成しました。  　<a href="http://baabuu.ddo.jp/share/gyoretsushiki/">使ってみてください。</a> 　バグがあったら教えてください。 　一応正常系テストはしてあます。</p>
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+  
+    
+      <h1 class="entry-title"><a href="/blog/2007/11/10/10-I-started-to-make-a-program/">プログラムを作り始めて１０年</a></h1>
+      
+      
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2007-11-10T22:58:59+09:00" pubdate data-updated="true">Nov 10<span>th</span>, 2007</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>自分の作りたい物をつくれるようには、なりました。 　中学では運動部に興味もなく、パソコン部に入部し何をさせてもらうわけでもなく、部室（パソコン教室）に有ったそれっぽい本を読みながら、みようみまねでBASICのプログラムを打ち込んで、動かしていたのを思い出した。  　実際にパソコンに触れ始めたのは、小学校３年生くらいで、確かDOSをいじくり回して、一緒に貰ったゲームを手当たり次第に壊していったのも思い出す。 　たしか、PC-9801DXだった。  　中学校三年間はプログラムというよりは，二年生の頃からロボコンに出すロボット作りに力を入れていましたｗ  　高校に入ってインターネットをINS64回線で接続できるようになり、ホームページというものが静的ページと動的ページとがあることを知る。  　特に深くやり込むわけでなく、Perlと出会いました。 　掲示板やカウンタやロボットチャットを無料で配られていたものを参考に独学で改造をして使えるようになっていました。  　あの頃はWINDOWSでHTTPDとActivePerlで環境を構築していました。 　確かインターネットから見えるようにSOHO-PALを設定していたような気がします。  　高専に入って、FreeBSDと出会いました。 　この頃からC言語やシェルと出会い、Perlは自由に扱えるレベルに達していたように思えます。  　周りには凄い経験値の高い人がいて、アルゴリズムとプログラムを理解できるようになっていました。  　今良く使っているPHPは二年前に使い始めたばかりですが、Perlの心得が効いています。 　ちなみに熟練度は別としてPerl歴は７年ですｗｗ  　＊＊＊＊＊  　昔話はこのくらいにして、何がいいたいかというと・・・  　行列式を解くことができるWEBページを作りました。  　今回用いた解法は「掃き出し法」というものです。 　リンクは→<a href="http://baabuu.ddo.jp/share/gyoretsushiki/">行列式を掃き出し法で解く</a>  　処理手順は参考にさせて貰ったものがありますが、実装に関しては私オリジナルです。 　ここまで作れて感じる事は、今でも出来上がるとやった♪と思ってしまうこと、誰が使ってくれるんだろ？と思ってしまうこと、だったりします。  　良く見かけるページを評価するアイテムが有りますが、次はアレを作ってみようと思っています。 　ページごとに一行掲示板みたいなのをつけてもいいかも・・・  　ということでした。 　考えて形にして、動かして、期待とおりに動く、結構と楽しいものです。</p>
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+  
+    
+      <h1 class="entry-title"><a href="/blog/2007/11/09/Baton/">ばとん</a></h1>
+      
+      
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2007-11-09T17:33:49+09:00" pubdate data-updated="true">Nov 9<span>th</span>, 2007</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>まめ バトンが回って来ました…。やります。    『１０コの質問ばとん』  ルール ＊このバトンを以下のルールを守ってやってください。 ＊回されて３日以内に回答する事。 ＊嘘偽りなく答える事。 ＊アンカー禁止。 ＊回した人は回された人がルールを守っているか確認して回ること。 ＊守ってない場合は罰ゲームをやらせる事。 ＊バトンを回す人はマイミクの人数÷２(単数切り上げ)を足跡の上からマイミクさんに回す事。    ＊貴方のお名前は？   まめです。 本名はなんとなく秘密。    ＊年はいくつ？   ギリギリ２２歳たらーっ（汗） あと２日で…ふらふら    ＊好きな芸能人１０人  えー…、 玉山鉄二 塚本高志 伊藤英明 V6の岡田準一 平岡祐太 ラルクのTESTU 福山雅治    …ガチャピン、スティッチ、チョッパー…って人じゃねぇ。芸能人あんま知りませんたらーっ（汗）好きなスポーツ選手ならたくさんいますが…。   ＊好きな食べ物１０個   梨 りんご みかん チョコレート（中毒） ハーゲンのクリーム＆クッキー 肉まん たこ焼き かつおのタタキ たこわさ 唐揚げ（鶏肉exclamation ×2）  …後半おっさんみたいたらーっ（汗）    ＊萌えポイント１０個   ってか萌えって基本的にどんなヤツよ？  …メガネとか？あと笑顔？ 無理、10コも出ませんたらーっ（汗）    ＊萎えポイント１０個   まぁ目上の方に敬語使えなかったり、人の悪口ばっか言うたり、自己中、なよなよしたヤツは萎えるってゆうか大嫌いですねぇ。    ＊好きな曲１０個   バンプ『天体観測』 YUI『Good-bye days』 D.A.I『under the sun』 ラルク『DIVE TO BLUE』 伊藤由奈『Urban Mermaid』 コブクロ『ここにしか咲かない花』 ミスチル『口笛』 レミオロメン『粉雪』 スキマスイッチ『マリンスノウ』 柴咲コウ『Sweet Mom』   最近いいな、って思ったヤツだけ。 10じゃ足りないじょーたらーっ（汗）    ＊好きな飲み物１０個   ジンジャーエール 水 緑茶 ミルクティー レモンティー アップルティー カフェオレ アロエドリンク 飲むヨーグルト系 オレンジジュース    ＊今欲しいもの１０個   お金 自由 睡眠時間 服 靴 ピアス でっかいスティッチのぬいぐるみ ドラえもんの四次元ポケット ふとんカバー   …あと愛(笑)。    ＊放棄した方への罰ゲーム(指令)  とりあえず…職場、もしくは学校で机の上に乗って「俺が神だexclamation ×2」または「俺が世界をとったexclamation ×2」と叫んでください。   …冗談です。 部屋の窓開けて熱唱、くらいでいいです(笑)。    ＊回す人発表   …10人でもいいすか？  こたつ虫さん。 ぐっさん。 愛媛のシェフチェンコさん。 ともやん。 ジャガーさん。 田中さん。 PKくん。 ソルトさん。 サスケさん。 そぼくさん。    以上。がんばれ〜わーい（嬉しい顔） …結構時間かかったたらーっ（汗）</p>
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+  
+    
+      <h1 class="entry-title"><a href="/blog/2007/11/09/Suite-Nico-Nico-Douga/">組曲『ニコニコ動画』</a></h1>
+      
+      
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2007-11-09T16:30:59+09:00" pubdate data-updated="true">Nov 9<span>th</span>, 2007</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>ネタが古いです。 　最近になって、やっと組曲『ニコニコ動画』の意味を理解しました。  　もうかなり前からあるみたいで、既に200万件の視聴がされています。  　<object width="425" height="355"><param name="movie" value="http://www.youtube.com/v/Wcm9gbsgmXo&color1=0x234900&color2=0x4e9e00&border=0"></param><param name="wmode" value="transparent"></param><embed src="http://www.youtube.com/v/Wcm9gbsgmXo&color1=0x234900&color2=0x4e9e00&border=0" type="application/x-shockwave-flash" wmode="transparent" width="425" height="355"></embed></object>  　10分程度に33のニコニコ動画にアップされ、再生回数の多かった楽曲がリミックスされています。  　<a href="http://ja.wikipedia.org/wiki/%E7%B5%84%E6%9B%B2%E3%80%8E%E3%83%8B%E3%82%B3%E3%83%8B%E3%82%B3%E5%8B%95%E7%94%BB%E3%80%8F">詳しいうんちくはウキペディアへ</a>  　そして、どうも歌のうまい人たちが「歌ってみた」という感じにカバーをしているようで、その中から面白いものを1つ紹介します。  　<object width="425" height="355"><param name="movie" value="http://www.youtube.com/v/ouh9_rrOR3I&color1=0x234900&color2=0x4e9e00&border=0"></param><param name="wmode" value="transparent"></param><embed src="http://www.youtube.com/v/ouh9_rrOR3I&color1=0x234900&color2=0x4e9e00&border=0" type="application/x-shockwave-flash" wmode="transparent" width="425" height="355"></embed></object>  　「いさじ」という「漢」らしい声で歌う人で、友達は「ヤバイ」ｗといっていました。 　アレンジもうまいし、声色も豊富で聞いていて楽しい一本でした。  　どうも、今は組曲『ニコニコ動画』ほどの人気はないようですが、「ニコニコ動画物語.wav」という第三弾（組曲は第二弾ｗ）がアップされているようです。  　ちなみに第一弾は「ニコニコ動画中毒の方へ贈る一曲」だそうです。 　確かチラッと見た気がするなー</p>
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+  
+    
+      <h1 class="entry-title"><a href="/blog/2007/11/08/Second-edition-followed-in-Hatsune-Miku/">初音ミクに続く第二弾・・・</a></h1>
+      
+      
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2007-11-08T21:33:30+09:00" pubdate data-updated="true">Nov 8<span>th</span>, 2007</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>「とかちつくちて」って？！ 　少し前に<a href="http://baabuu.ddo.jp/blog/?id=1193273946">『初音ミク』</a>について触れたが，なんと第二弾が発売されるようである。  　その名は『鏡音リン』という。  　ニコニコ動画にアイドルマスターというXbox向けのゲームの中で使われている「エージェント夜を往く」を『鏡音リン』に歌わせた動画が上がっていたｗ  　<object width="425" height="355"><param name="movie" value="http://www.youtube.com/v/DA7wDaitRS4&rel=1"></param><param name="wmode" value="transparent"></param><embed src="http://www.youtube.com/v/DA7wDaitRS4&rel=1" type="application/x-shockwave-flash" wmode="transparent" width="425" height="355"></embed></object>  　同じ物ではないが，完成度はどうだろう。 　かなり素晴らしいできでは、ないかと思ったかもしれない。  　そう、これは『鏡音リン』に歌わせてないｗｗ 　声をサンプリングされた声優である<a href="http://ja.wikipedia.org/wiki/%E4%B8%8B%E7%94%B0%E9%BA%BB%E7%BE%8E">下田麻美</a>さんが歌っているのもので、歌わせたらこんなんにあるだろうーというジョークで、ニコニコ動画に上がっていたｗｗｗ  　『鏡音リン』は１２月下旬に発売予定らしい。  　参考記事：<a href="http://www.itmedia.co.jp/news/articles/0711/07/news064.html">初音ミクの次は「鏡音リン」by ITmedia News</a>  　＊＊＊＊＊  　今日は昨日？から続いていた片付けを更に進めて、朝トイレに入りながら見ていたコーナンの広告に出ていた工具箱を買ってきて、まだ溢れていた工具をおさめました。  　昨日かりた「ロッキー・ザ・ファイナル」を二度目をみながら記事を書いています。 　感想は内容が軽く、外伝みたいに新鮮味があってよかったです。 　スタローンの演技も年寄りになったのに冴えていて、友達がよくマネをしていた、あの口の歪み具合は健在でしたｗｗ 　あと光の色がとても奇麗だということが、とても見ていてよかったです。  　さー明日はどこを片付けようかな〜</p>
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+  
+    
+      <h1 class="entry-title"><a href="/blog/2007/11/07/Game-y-game/">ゲームｙゲーム・・・</a></h1>
+      
+      
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2007-11-07T21:47:46+09:00" pubdate data-updated="true">Nov 7<span>th</span>, 2007</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>新しいゲームを買ってみようかと思ったら・・・ 　二代目PS2が埃をかぶり始めたので、新たなゲームでも買ってやろーなんて思っていたんです。  　<img src="upfiles/2007/11/1194439666_1.png" alt="画像" />  　家に帰ってから近くの中古屋に行って、掘り出し物を探そうと思っていたんですが、その前に洗車をしようと準備をしていると、工具や空き箱が散乱していました。  　すごく気になったんです＞＜  　片付けていたら、この辺の工具ってよく使うから、弟の赤箱には入らないから・・・よし！！工具箱を買おう♪と思ったんでしょうねｗ  　<img src="upfiles/2007/11/1194439666_2.png" alt="画像" />  　ホームセンターで1780円で手に入れ、詰め込んだらぴったりでしたｗｗ  　よーし。片付け終わったと思ったら、日は暮れているし、ゲームじゃなくて工具箱買っちゃたよーなんて思いながら、飯食って今に至るわけですｗｗｗ  　工具はたくさんあって困ることないし、赤箱よりプラスチックで軽いから良い買い物でした。  　いろいろなもので、別部屋が埋まってきたので、そろそろ始末を始めないといけないなー</p>
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+  
+    
+      <h1 class="entry-title"><a href="/blog/2007/11/06/Aluminum-foil-and-E2160/">E2160とアルミホイル</a></h1>
+      
+      
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2007-11-06T16:18:30+09:00" pubdate data-updated="true">Nov 6<span>th</span>, 2007</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>FSB800->1066になるって本当？！ 　<img src="upfiles/2007/11/1194333510_1.jpg" alt="画像" />  　本日届きましたよ。メモリとマザーボードがｗ  　こんなに良い所どこを揃えたのは、オーバークロックをしようということで揃えたのですが・・・  　このマザーボード「GA-G33M-DS2R」が使えないんですよ＞＜  　使えないと分かったのは、キャンセルのできないソフマップのオンラインサイトで発注をした後のこと。  　メモリ対比がFSB800の場合、3.33倍が一番下でFSBクロックを250までしか上げれないという始末ｗｗ  　ですが、ただじゃ転ばないのが私ですよｗ 　どうにか、キャンセルをしてやろうと画策をしていると、どうもE2160をFSB800からFSB1066にごまかす方法があるらしい。  　ということで、やってみました♪  　<img src="upfiles/2007/11/1194333510_2.jpg" alt="画像" />  　結果は・・・全く意味がありませんでした！！  　くそぉぉぉぉと叫びながら、１０回くらい加工を繰り返して、止めました。  　もう、新しいマザーボードを買おうと思い始めましたｗ  　私は負けず嫌いでもありますｗｗｗ</p>
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+  
+    
+      <h1 class="entry-title"><a href="/blog/2007/11/05/Holiday-Have-a-holiday/">休み？！休みだよー</a></h1>
+      
+      
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2007-11-05T20:22:12+09:00" pubdate data-updated="true">Nov 5<span>th</span>, 2007</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>金曜日から四連休ですが、今日も学校でモゴモゴしてますー 　今朝はめっちゃハッピーな夢を見ました♪ 　人恋寂しい季節っていいますが、今がその季節のようですｗ  　＊＊＊＊＊  　本日は土・日が津山高専の大きなイベントの１つである「弥生祭」の片付けのため、お休みでした。 　まぁそんな事は知ったか知らないか研究室に籠ってモゴモゴしていました。  　やっとやる気になったらしく、最近はそれっぽいことをしています。  　前期の単位が全部でたので、なんでも来いって感じですよｗｗ  　土曜日に発注をしたメモリとマザーボードが本日届くはずなのに、「午前中指定」のために佐川が気を利かして、１１時に営業所に到着したとのことで、明日の午前中に持ってくるってことらしく・・・持ってくると思っていたよ＞＜  　クロネコは時間を守らずにいつでも最速でもってくるのになー  　さー授業の準備でもするかな〜</p>
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+  
+    
+      <h1 class="entry-title"><a href="/blog/2007/11/02/System-has-been-updated/">システム更新しました。</a></h1>
+      
+      
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2007-11-02T17:31:00+09:00" pubdate data-updated="true">Nov 2<span>nd</span>, 2007</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>10.2→10.3 　昨日の22時くらいから30分ほど前まで、このサーバのOSを入れ替えていましたー  　本当は昨日のうちに終わらせて起きたかっらのですが、インストールDVDが壊れていて断念ｗ 　くそーーと思って家でダウンロードしようかと思って、時間を計算してみたら・・・ 　4.2GBだから4200MBで、この回線は100KB/sでるはずだから、42000秒かかって、60で割ると700分で700分って10時間！？  　諦めて寝ましたｗｗｗ  　＊＊＊＊＊  　そして、学校に持ち込んでインストールするも、2時間くらいで出来上がり♪  　持ち帰って、諸設定で今の状態なわけですー  　やはり、メモリやCPUの性能も然ることながら、インターネットに繋がる回線が速いことは作業時間短縮に比例するようです。 　オンラインアップデートなどを多用するOSであるので、回線は速いことにこしたことはないですね♪ 　ちなにみ学校の回線は3.5MB/sはでるようですー  　（注意：回線が速いというと少し語弊がある。電気の速さは光の速さと等しく3x10<sup>8m</sup>/sで進むので、回線によって電気の速さは変わらない。インターネットが速いということはは、一度に多くのデータを送ることができることであり、帯域が広いという言葉が正しい。帯域とは、いうなれば水道管を思い浮かべてもらえれば分かると思うが、太いものほどたくさんの水を流すことができるというこである。）  　＊＊＊＊＊  　久しぶりに、サーバの中を覗いてみるとクモの巣やホコリが溜まっていましたー  　横蓋を開けて一番に目に付くのがCPUファンです。  　<img src="upfiles/2007/11/1193992260_1.png" alt="画像" />  　これはBOX標準なんでしょうかｗ  　これがサーバの求める安定の形なんだろーと勝手に感心して、閉じました。  　ちなみにメモリはECC付きで512MBながら一枚6500円もするんですよｗ  　サーバとして売ってたけど、やっぱりサーバだなーと思った本日でした。</p>
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+  
+    
+      <h1 class="entry-title"><a href="/blog/2007/11/01/Recommend-the-E2160-OC/">E2160、 OCのススメ</a></h1>
+      
+      
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2007-11-01T17:32:42+09:00" pubdate data-updated="true">Nov 1<span>st</span>, 2007</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>OCは男のロマンだーー 　この記事は<a href="http://baabuu.ddo.jp/blog/?id=1193838895">昨日の記事</a>で紹介したSLAX 6.0をUSBメモリにいれて、起動した環境の上で作業してしています。  　CPUが3GHzでメモリが1GBの環境では全てがメモリの上に乗って動くので全く不満はありませんー 　不満があるとすれば、このふにゃふにゃキーボードが使いにくいくらいです。  　<img src="upfiles/2007/11/1193905962_1.png" alt="画像" />  　これがSLAX 6.0のデスクトップ画面になります。 　KDEが動いているので、とても整った印象をうけます。  　＊＊＊＊＊  　E2160っていうのは、Pentium Dual-CoreというCPUの型番です。 　いま巷でよく目にするのは「Core2Duo」ではないかとおもいますが、E2160は1.8GHでCore2Duoの廉価版という位置づけであるらしいが、これがOC（オーバークロック）の耐性に優れているというデータがいくつか出ている。  　そして、このE2160が安く手に入GA-G33M-DS2Rったので、友達のPCのアップグレードを兼ねて1.8GHzを3.6GHzくらいにしてやろーというのが今回の話。  　オーバークロックを安定させて行うにはCPUの能力よりもM/B（マザーボード）の性能の方が重視される。  　しかも、E2160のオーバークロックにはP33もしくはG33というチップセットでないといけないらしい（FSB1333MHzまで対応しているGA-G33M-DS2Rため）  　そこで候補に上あがったのは、友達の今の攻勢がVGAがオンボードのため、G33を搭載したM/Bである、ギガバイトのハイパフォーマンスモデルである「GA-G33M-DS2R」です。  　価格は安くても1万7000円という明らかに予算をオーバーしますが、私はこれが欲しい！！！ 　っていってみたりwww  　もう、私の中では決定事項になっていますので、後は友達が元手を作ってくれるのを待つばかりですー  　そう注意ですが、オーバークロックは著しくCPU,メモリ及びM/Bの寿命を短くするので、おすすめはできません。 　でも、「虎穴に入らずんば虎児を得ず」ということわざがあるように、危険を冒さなければ、成果は上げられないと考えています。  　なので、やります。  　＊＊＊＊＊  　あと、このキーボードはもう使うことはないだろー</p>
+</div>
+  
+  
+
+
+    </article>
+  
+  <div class="pagination">
+    
+      <a class="prev" href="/blog/page/38/">&larr; Older</a>
+    
+    <a href="/blog/archives">Blog Archives</a>
+    
+    <a class="next" href="/blog/page/36/">Newer &rarr;</a>
+    
+  </div>
+</div>
+<aside class="sidebar">
+  
+    <section>
+  <h1>Recent Posts</h1>
+  <ul id="recent_posts">
+    
+      <li class="post">
+        <a href="/blog/2013/02/02/How-big-reservoir-of-data/">ビックデータの溜め方</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2013/01/28/It-moves-to-the-VPS-Sakura-from-AmazonEC2/">AmazonEC2 から さくらの VPS へお引越し</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2012/08/11/Buy-the-ThinkPad-X61s/">ThinkPad X61s を購入</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2012/03/04/to-start-github/">github をはじめるよ</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2012/03/01/W-that-is-supposed-to-be-amazing-pair-programming-joint-party/">ペアプログラミング合コン&#8230;すごいことになってるｗ</a>
+      </li>
+    
+  </ul>
+</section>
+
+
+
+
+
+  
+</aside>
+
+    </div>
+  </div>
+  <footer role="contentinfo"><p>
+  Copyright &copy; 2014 - はやし <br/>
+  <span class="credit">Powered by <a href="http://octopress.org">Octopress</a>, customized with <a href="https://github.com/mjhea0/whiterspace">whiterspace</a>.</span>
+</p>
+
+</footer>
+  
+
+
+
+
+
+
+
+  <script type="text/javascript">
+    (function(){
+      var twitterWidgets = document.createElement('script');
+      twitterWidgets.type = 'text/javascript';
+      twitterWidgets.async = true;
+      twitterWidgets.src = 'http://platform.twitter.com/widgets.js';
+      document.getElementsByTagName('head')[0].appendChild(twitterWidgets);
+    })();
+  </script>
+
+
+
+
+
+</body>
+</html>

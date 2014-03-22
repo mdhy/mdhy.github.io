@@ -1,0 +1,217 @@
+
+<!DOCTYPE html>
+<!--[if IEMobile 7 ]><html class="no-js iem7"><![endif]-->
+<!--[if lt IE 9]><html class="no-js lte-ie8"><![endif]-->
+<!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <title>SQLって面白いし使いやすい - めだはや</title>
+  <meta name="author" content="はやし">
+
+  
+  <meta name="description" content="　youtubeの再生リストをフルスクリーンで表示できるソフトウェアを作ってみた林です。 　今回は二つのことを書きます。 　＝＝＝＝＝＝ 　一つ目はいまさらyoutubeの新しい使い方を見つけたことについて。 　使った開発環境はVisual Basic 2005 Express Edition( &hellip;">
+  
+
+  <!-- http://t.co/dKP3o1e -->
+  <meta name="HandheldFriendly" content="True">
+  <meta name="MobileOptimized" content="320">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  
+  <link rel="canonical" href="http://mdhy.github.io/blog/2008/10/13/It-is-interesting-to-me-SQL-and-easy-to-use">
+  <link href="/favicon.png" rel="icon">
+  <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
+  <link href="/atom.xml" rel="alternate" title="めだはや" type="application/atom+xml">
+  <script src="/javascripts/modernizr-2.0.js"></script>
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+  <script>!window.jQuery && document.write(unescape('%3Cscript src="./javascripts/lib/jquery.min.js"%3E%3C/script%3E'))</script>
+  <script src="/javascripts/octopress.js" type="text/javascript"></script>
+  <!--Fonts from Google"s Web font directory at http://google.com/webfonts -->
+<link href="http://fonts.googleapis.com/css?family=PT+Serif:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+<link href="http://fonts.googleapis.com/css?family=PT+Sans:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+<link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+<link href='http://fonts.googleapis.com/css?family=Fjalla+One' rel='stylesheet' type='text/css'>
+  
+
+</head>
+
+<body   class="collapse-sidebar sidebar-footer" >
+  <header role="banner">
+</header>
+  <nav role="navigation"><ul class="subscription" data-subscription="rss">
+  <li><a href="/atom.xml" rel="subscribe-rss" title="subscribe via RSS">RSS</a></li>
+  
+</ul>
+  
+<form action="https://www.google.com/search" method="get">
+  <fieldset role="search">
+    <input type="hidden" name="q" value="site:mdhy.github.io" />
+    <input class="search" type="text" name="q" results="0" placeholder="Search"/>
+  </fieldset>
+</form>
+  
+<ul class="main-navigation">
+  <li><a href="/">Blog</a></li>
+  <li><a href="/blog/archives">Archives</a></li>
+  <li><a href="/about">About</a></li>
+</ul>
+
+</nav>
+  <div id="main">
+    <div id="content">
+      <div>
+<article class="hentry" role="article">
+  
+  <header>
+  
+    
+      <h1 class="entry-title">SQLって面白いし使いやすい</h1>
+    
+  
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2008-10-13T21:07:28+09:00" pubdate data-updated="true">Oct 13<span>th</span>, 2008</time>
+        
+      </p>
+    
+  </header>
+
+
+<div class="entry-content"><p>　youtubeの再生リストをフルスクリーンで表示できるソフトウェアを作ってみた林です。  　今回は二つのことを書きます。  　＝＝＝＝＝＝  　一つ目はいまさらyoutubeの新しい使い方を見つけたことについて。  　使った開発環境はVisual Basic 2005 Express Edition(<a href="http://www.microsoft.com/japan/msdn/vstudio/express/past/2005/">http://www.microsoft.com/japan/msdn/vstudio/express/past/2005/</a>)です。  　いつ使っても使いやすいIDE（統合開発環境）ですよ。みなさんつかってますかー  　作りはテキストボックスにyutubeの再生リストのURL「<a href="http://jp.youtube.com/view_play_list?p=xxxxxxxxxxxxxxxx%E3%80%8D%E3%81%AEx%E9%83%A8%E3%82%92%E5%85%A5%E5%8A%9B%E3%81%97%E3%81%A6%E3%83%9C%E3%82%BF%E3%83%B3%E3%82%92%E6%8A%BC%E3%81%99%E3%81%A8%E5%A4%96%E9%83%A8%E3%83%97%E3%83%AC%E3%82%A4%E3%83%A4%E3%83%BC%E3%81%AEURL%E3%81%A7%E3%81%82%E3%82%8B%E3%80%8Chttp://jp.youtube.com/swf/cps.swf?datatype=playlist&amp;eurl=&amp;data=%E3%80%8D%E3%81%A8%E7%B5%90%E5%90%88%E3%81%97%E3%81%A6%E3%80%81%E3%83%96%E3%83%A9%E3%82%A6%E3%82%B6%E3%82%B3%E3%83%B3%E3%83%9D%E3%83%BC%E3%83%8D%E3%83%B3%E3%83%88%E3%81%A7%E8%A1%A8%E7%A4%BA%E3%81%99%E3%82%8B%E3%81%A0%E3%81%91%E3%81%A7%E3%81%99%E3%80%82">http://jp.youtube.com/view_play_list?p=xxxxxxxxxxxxxxxx%E3%80%8D%E3%81%AEx%E9%83%A8%E3%82%92%E5%85%A5%E5%8A%9B%E3%81%97%E3%81%A6%E3%83%9C%E3%82%BF%E3%83%B3%E3%82%92%E6%8A%BC%E3%81%99%E3%81%A8%E5%A4%96%E9%83%A8%E3%83%97%E3%83%AC%E3%82%A4%E3%83%A4%E3%83%BC%E3%81%AEURL%E3%81%A7%E3%81%82%E3%82%8B%E3%80%8Chttp://jp.youtube.com/swf/cps.swf?datatype=playlist&amp;eurl=&amp;data=%E3%80%8D%E3%81%A8%E7%B5%90%E5%90%88%E3%81%97%E3%81%A6%E3%80%81%E3%83%96%E3%83%A9%E3%82%A6%E3%82%B6%E3%82%B3%E3%83%B3%E3%83%9D%E3%83%BC%E3%83%8D%E3%83%B3%E3%83%88%E3%81%A7%E8%A1%A8%E7%A4%BA%E3%81%99%E3%82%8B%E3%81%A0%E3%81%91%E3%81%A7%E3%81%99%E3%80%82</a>  　フルスクリーンに引き延ばすと画質は悪いんですが、んまー楽しめます。  　フルスクリーン以外でも使えるので、自身で再生リストを作成して、エンドレスBGMを流すのも簡単に実現できます♪  　同じようなことやって様々な実装を紹介しているサイトはたくさんありますー  　＝＝＝＝＝  　もうひとつはSQLでけっこうなことができることについて。  　SQLってRDBMSで使われるデータの操作や定義を行う言語のことです。  　参考URL：<a href="http://ja.wikipedia.org/wiki/SQL">http://ja.wikipedia.org/wiki/SQL</a>  　独学で勉強を進めていると「SELECT A,B FROM DATA_TABLE」とかを軸に考えるんですが、あれに触れてしまった私は今回の試練を乗り越えました。  　あれ：<a href="http://www.amazon.co.jp/exec/obidos/ASIN/4873110556/medanohayablo-22/ref=nosim/" name="amazletlink" target="_blank">SQLクイックリファレンス</a>  　ブログのトピックを月ごとに集計して月降順に並べようというものです。↓のように。  　2008年10月（１０）  　2008年7月（５）  　2008年５月（２）  　2008年1月（６）  　2007年12月（２）  　2007年7月（５）   　経過を説明しなければいけないんですが、いろいろと端折ると  　「SELECT YEAR,MONTH,COUNT(<em>) AS C FROM TOPICTABLE GROUP BY MONTH OEDER BY MONTH DESC」  　と書いたら↓のようになってしまい、  　2008年５月（２）  　2008年10月（１０）  　2008年1月（６）  　2007年12月（２）  　2007年7月（１０）   　浅知恵で修正して  　「SELECT CONCAT(YAER,MONTH) AS YM,YEAR,MONTH,COUNT(</em>) AS C FROM TOPICTABLE GROUP BY YM ORDER BY YM DESC」  　としたら↓になり、  　2008年7月（５）  　2008年５月（２）  　2008年10月（１０）  　2008年1月（６）  　2007年12月（２）  　2007年7月（５）  　あれちゃんとソートできてないよって感じで、あれを思い出して↓に至るわけですw  　「SELECT CONCAT(YEAR,CASE CHAR_LENGTH(MONTH) WHEN 1 THEN CONCAT(&squot;0&squot;,MONTH) WHEN 2 THEN MONTH END) AS YM,YEAR,MONTH,COUNT(*) AS C FROM gb_main GROUP BY YM ORDER BY YM DESC」  　人間が理解してソートするように一発関数がなかったので、1,2,3という１文字だったら0を追加して01,02,03となるように制御フロー関数を使ってみました。  　参考URL：<a href="http://dev.mysql.com/doc/refman/5.1/ja/index.html">http://dev.mysql.com/doc/refman/5.1/ja/index.html</a>  　やはり公式のリファレンスが役にたちますよ♪  　てな体育の日でしたー</p>
+</div>
+
+
+  <footer>
+    <p class="meta">
+      
+  
+
+<span class="byline author vcard">Posted by <span class="fn">はやし</span></span>
+
+      
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2008-10-13T21:07:28+09:00" pubdate data-updated="true">Oct 13<span>th</span>, 2008</time>
+      
+
+<span class="categories">
+  
+    <a class='category' href='/blog/categories/diary/'>diary</a>
+  
+</span>
+
+
+    </p>
+    
+      <div class="sharing">
+  
+  <a href="http://twitter.com/share" class="twitter-share-button" data-url="http://mdhy.github.io/blog/2008/10/13/It-is-interesting-to-me-SQL-and-easy-to-use/" data-via="" data-counturl="http://mdhy.github.io/blog/2008/10/13/It-is-interesting-to-me-SQL-and-easy-to-use/" >Tweet</a>
+  
+  
+  
+</div>
+
+    
+    <p class="meta">
+      
+        <a class="basic-alignment left" href="/blog/2008/10/11/We-make-content-with-jQuery/" title="Previous Post: jQueryを使ってコンテンツを作っています">&laquo; jQueryを使ってコンテンツを作っています</a>
+      
+      
+        <a class="basic-alignment right" href="/blog/2008/10/14/W-that-this-happens-when-I-with/" title="Next Post: ついていたらこうなったw">ついていたらこうなったw &raquo;</a>
+      
+    </p>
+  </footer>
+</article>
+
+</div>
+
+<aside class="sidebar">
+  
+    <section>
+  <h1>Recent Posts</h1>
+  <ul id="recent_posts">
+    
+      <li class="post">
+        <a href="/blog/2013/02/02/How-big-reservoir-of-data/">ビックデータの溜め方</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2013/01/28/It-moves-to-the-VPS-Sakura-from-AmazonEC2/">AmazonEC2 から さくらの VPS へお引越し</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2012/08/11/Buy-the-ThinkPad-X61s/">ThinkPad X61s を購入</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2012/03/04/to-start-github/">github をはじめるよ</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2012/03/01/W-that-is-supposed-to-be-amazing-pair-programming-joint-party/">ペアプログラミング合コン...すごいことになってるｗ</a>
+      </li>
+    
+  </ul>
+</section>
+
+
+
+
+
+  
+</aside>
+
+
+    </div>
+  </div>
+  <footer role="contentinfo"><p>
+  Copyright &copy; 2014 - はやし <br/>
+  <span class="credit">Powered by <a href="http://octopress.org">Octopress</a>, customized with <a href="https://github.com/mjhea0/whiterspace">whiterspace</a>.</span>
+</p>
+
+</footer>
+  
+
+
+
+
+
+
+
+  <script type="text/javascript">
+    (function(){
+      var twitterWidgets = document.createElement('script');
+      twitterWidgets.type = 'text/javascript';
+      twitterWidgets.async = true;
+      twitterWidgets.src = 'http://platform.twitter.com/widgets.js';
+      document.getElementsByTagName('head')[0].appendChild(twitterWidgets);
+    })();
+  </script>
+
+
+
+
+
+</body>
+</html>

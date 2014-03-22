@@ -1,0 +1,522 @@
+
+<!DOCTYPE html>
+<!--[if IEMobile 7 ]><html class="no-js iem7"><![endif]-->
+<!--[if lt IE 9]><html class="no-js lte-ie8"><![endif]-->
+<!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <title>めだはや</title>
+  <meta name="author" content="はやし">
+
+  
+  <meta name="description" content="　こんばんは。 　週末の旅行に備えて洗濯とか冷蔵庫の整理とかをしている林です。 　世の中にはBitTorrent（ビットトレント）という技術があって良しも悪しも世界中で使われています。 　私も度々インストールし直して使うことがあるんですが、暇を持て余してまたインストールした話です &hellip;">
+  
+
+  <!-- http://t.co/dKP3o1e -->
+  <meta name="HandheldFriendly" content="True">
+  <meta name="MobileOptimized" content="320">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  
+  <link rel="canonical" href="http://mdhy.github.io/blog/page/11">
+  <link href="/favicon.png" rel="icon">
+  <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
+  <link href="/atom.xml" rel="alternate" title="めだはや" type="application/atom+xml">
+  <script src="/javascripts/modernizr-2.0.js"></script>
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+  <script>!window.jQuery && document.write(unescape('%3Cscript src="./javascripts/lib/jquery.min.js"%3E%3C/script%3E'))</script>
+  <script src="/javascripts/octopress.js" type="text/javascript"></script>
+  <!--Fonts from Google"s Web font directory at http://google.com/webfonts -->
+<link href="http://fonts.googleapis.com/css?family=PT+Serif:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+<link href="http://fonts.googleapis.com/css?family=PT+Sans:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+<link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+<link href='http://fonts.googleapis.com/css?family=Fjalla+One' rel='stylesheet' type='text/css'>
+  
+
+</head>
+
+<body   class="collapse-sidebar sidebar-footer" >
+  <header role="banner">
+</header>
+  <nav role="navigation"><ul class="subscription" data-subscription="rss">
+  <li><a href="/atom.xml" rel="subscribe-rss" title="subscribe via RSS">RSS</a></li>
+  
+</ul>
+  
+<form action="https://www.google.com/search" method="get">
+  <fieldset role="search">
+    <input type="hidden" name="q" value="site:mdhy.github.io" />
+    <input class="search" type="text" name="q" results="0" placeholder="Search"/>
+  </fieldset>
+</form>
+  
+<ul class="main-navigation">
+  <li><a href="/">Blog</a></li>
+  <li><a href="/blog/archives">Archives</a></li>
+  <li><a href="/about">About</a></li>
+</ul>
+
+</nav>
+  <div id="main">
+    <div id="content">
+      <div class="blog-index">
+  
+  
+  
+    <article>
+      
+  <header>
+  
+    
+      <h1 class="entry-title"><a href="/blog/2009/09/18/What-I-w2k8-utorrent/">W2k8 + Utorrent ってどうよ</a></h1>
+      
+      
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2009-09-18T00:20:32+09:00" pubdate data-updated="true">Sep 18<span>th</span>, 2009</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>　こんばんは。  　週末の旅行に備えて洗濯とか冷蔵庫の整理とかをしている林です。  　世の中にはBitTorrent（ビットトレント）という技術があって良しも悪しも世界中で使われています。  　私も度々インストールし直して使うことがあるんですが、暇を持て余してまたインストールした話です。  　＝＝＝＝＝＝＝  　今まで何度も書いてきたようにHyper-V Server 2008 R2を使って3つほどOSを常時稼動させているんですが、リソース（資源）をあまらせています。  　（あっ洗濯1回目終わった）  　そこで4つ目をインストールしてみようと思い立ち、以前にも使った事のあるuTorrentを使うことにしたのはいいのですがOSは何にしようかと考えるわけです。  　見つけましたよ。Windows Server 2008 R2 RCｗ  　RC（製品候補版）でも1年は使えるはずなのでインストールを始めてWindows Server 2008 Enterprise Server-Coreを選んで30分くらいでインストールは完了しました。  　Windows Server 2008になってから何が困ったちゃんかというとファイアウォールが固めてあって思うように外部と通信ができないことです。  　さらにこれがServer-Coreとなるとリモートデスクトップを有効にするのでさえ  >　# cscript c:\windows\syste32\scregedit.wsf /ar 0  　上記のようにコマンドプロンプトから操作を行う必要があります。  　まぁログインするとコマンドプロンプトがひとつしか出てないし、いろいろと使えないものがたくさんありましたｗ  　外部の端末からMMC管理を行えばいいようなんですが、「アクセスが拒否されました」の繰り返しでうまくいかないので断念しました＞＜  　＝＝＝＝＝＝  　次にutorrentのインストールを行うわけですがコマンドプロンプトからutorrent.exeを実行してやればすんなりインストール完了です。  　torrentクライアントの機能として正常に稼動していますが、フォルダダイアログは正常に動作してませんでした。  　まぁもうちょっと使ってみないとわからないんですが・・・様子見ですね。</p>
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+  
+    
+      <h1 class="entry-title"><a href="/blog/2009/09/12/I-know-meetnik/">Meetnik知ってます？</a></h1>
+      
+      
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2009-09-12T12:13:23+09:00" pubdate data-updated="true">Sep 12<span>th</span>, 2009</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>　今日も叔父さん家に遊びに来て発布酒を片手にオリーブを食べながらこれを書いている林です。  　従弟の小学生６年生は親のいない間に自分のノートパソコンをネットに繋いで「meetnik」なるアバターを使ったチャットで同級生の友達と手を組んで告白して回っていますw  　同級生の友達とは家電で連絡を取り合って、どっちが告白するかどっちに「YES」と言わせるかを綿密に打ち合わせしていますww  　＝＝＝＝＝  　私も登録？（登録不要なので国とかを選んで、アバターのテンプレートを選ぶ）してみたんですが、チャットルームが日本語以外のアバターだらけでアレ？という感じで止めました。  　＝＝＝＝＝＝  　従弟は変態ですが、かわいいところはローマ字表を見ながら必死でキーボードを打っているところですw  MEETNIK ( <a href="http://meetnik.jp/">http://meetnik.jp/</a> )</p>
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+  
+    
+      <h1 class="entry-title"><a href="/blog/2009/09/07/3-to-try-2008-R2-Hyper-V-Server/">Hyper-V Server 2008 R2を試してみる３</a></h1>
+      
+      
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2009-09-07T22:29:48+09:00" pubdate data-updated="true">Sep 7<span>th</span>, 2009</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>　いつのまにやらHyper-V Server 2008 R2がダウンロードできるようになっていました。  　ダウンロードの詳細 : Microsoft Hyper-V Server 2008 R2（　<a href="http://www.microsoft.com/downloads/details.aspx?displaylang=ja&amp;FamilyID=48359dd2-1c3d-4506-ae0a-232d0314ccf6%E3%80%80%EF%BC%89">http://www.microsoft.com/downloads/details.aspx?displaylang=ja&amp;FamilyID=48359dd2-1c3d-4506-ae0a-232d0314ccf6%E3%80%80%EF%BC%89</a>  　Hyper-V Server 2008 R2になってからVMWareのESXiと同様にUSBからブートできるようになりました。  　参考にしたのは以下のサイト  　・Hyper-V Server 2008 R2 の Flash Media Boot について &ndash; SE の雑記（　<a href="http://engineer-memo.com/blogs/engineer-memo/archive/2009/08/16/hyper-v-server-2008-r2-flash-media-boot.aspx%E3%80%80%EF%BC%89">http://engineer-memo.com/blogs/engineer-memo/archive/2009/08/16/hyper-v-server-2008-r2-flash-media-boot.aspx%E3%80%80%EF%BC%89</a>  　・VHD ブートの設定方法 &ndash; SE の雑記（　<a href="http://engineer-memo.com/blogs/engineer-memo/archive/2009/07/26/20090726_5F00_1.aspx%E3%80%80%EF%BC%89">http://engineer-memo.com/blogs/engineer-memo/archive/2009/07/26/20090726_5F00_1.aspx%E3%80%80%EF%BC%89</a>  　＝＝＝＝＝  　結果USBでのブートに成功しましたが、とても遅いです。  　８GBで２０００円のUSBフラッシュメモリを買いましたが、止まっているんじゃないかと思うくらいイライラします。  　まだまだ様子を見る必要がありそうです。  　あと安物は役に立ちません＞＜　</p>
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+  
+    
+      <h1 class="entry-title"><a href="/blog/2009/09/06/Japanese-space-development/">日本の宇宙開発</a></h1>
+      
+      
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2009-09-06T22:00:41+09:00" pubdate data-updated="true">Sep 6<span>th</span>, 2009</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>　実はロケットとか大好き林です。  　９月１１日の午前１時３０分から今後の日本の宇宙事業の発 | 展を占うHTV／H−llBの打ち上げがあります。  　JAXA | HTV/H-llB特設サイト　（　<a href="http://www.jaxa.jp/countdown/h2bf1/index_j.html%E3%80%80%EF%BC%89">http://www.jaxa.jp/countdown/h2bf1/index_j.html%E3%80%80%EF%BC%89</a>  　HTVとは、宇宙ステーション補給機（H-ll Transfer Vehicle: HTV）というもので地上から宇宙に補給物資を送り出す無人の輸送機のことです。  　アメリカがスペースシャトルの打ち上げを2010年で終了するという発表を受けで世界中（ヨーロッパ、ロシア、韓国、アメリカもスペースシャトルからロケットへ）が宇宙に補給物資を打ち上げるロケットと輸送機の開発に力を入れているようです。  　アメリカもスペースシャトルを使った補給物資の打ち上げよりもロケットにカプセル型有人宇宙船か補給船を乗っけた方が費用対効果があるということで部品点数が多く保守に手間のかかるスペースシャトルよりも大気圏脱出や大気圏突入の時に抵抗を受ける面積の少ないカプセル型になるようです。  　表面化したスペースシャトル引退延期 &ndash; ビジネスオンライン　（　 <a href="http://www.nikkeibp.co.jp/style/biz/feature/matsuura/space/080918_enki/index1.html%E3%80%80%EF%BC%89">http://www.nikkeibp.co.jp/style/biz/feature/matsuura/space/080918_enki/index1.html%E3%80%80%EF%BC%89</a>   　＝＝＝＝＝  　時期が時期だけに今回のHTV/H-llBの打ち上げは失敗できない状況 です。  　ヨーロッパ勢も赤道直下に打ち上げ場をもっているので競合ですが、打ち上げが成功すれば、日本の宇宙事業は明るいこと間違いなしでしょう。  　そして、三菱重工の株価も爆騰でしょうかｗ  　＝＝＝＝＝  　あぁ打ち上げが待ち遠しい。  　私は日本の宇宙事業を応援しています。</p>
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+  
+    
+      <h1 class="entry-title"><a href="/blog/2009/09/04/It-s-there-recently/">最近あれだよ</a></h1>
+      
+      
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2009-09-04T21:24:30+09:00" pubdate data-updated="true">Sep 4<span>th</span>, 2009</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>ボーとする時間が長くなってます。  　なんか色々考えてしまうので、ボーとしたくない自分がいます。  　こんなネガティブな内容を書きたくないんですが、書いてしまいます。  　</p>
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+  
+    
+      <h1 class="entry-title"><a href="/blog/2009/08/31/Reunion/">再会</a></h1>
+      
+      
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2009-08-31T21:11:27+09:00" pubdate data-updated="true">Aug 31<span>st</span>, 2009</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p> 　先週の土曜日に高校からの親しい友人と一年ぶりに会いました。  　より魅力的により強固になっていました♪  　東京に来るということで観光をなんていってましたが、連れ回されて国際交流をさせてもらいましたww  　感謝してます。ありがどう。  　＝＝＝＝＝  　会うたびに考えさせられます。  　前より言いませんが、感じ取れる（勘違いかもしれませんが）ようになった気がします。  　自身が誰にも相談すること無く人格形成？をしていますが、全く間違っている思い知らされます。  　やはり一人では成長はできないようです＞＜  　もっと人と話をして見識を広める必要があるんだと思います。  　＝＝＝＝＝  　あー彼女とか欲しくなったな。  　彼女募集中。  　あと誰か飲みにいきましょう。</p>
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+  
+    
+      <h1 class="entry-title"><a href="/blog/2009/08/24/obile-email-test-post-4/">携帯メール投稿テスト４</a></h1>
+      
+      
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2009-08-24T12:10:41+09:00" pubdate data-updated="true">Aug 24<span>th</span>, 2009</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>１行目 ２行目 ３行目 全部を一枚に表示します。 <img src="upfiles/2009/8/1251083441_5.jpg" alt="画像" /> <p class="map"><iframe src="upfiles/2009/8/1251083441_1.html" width="450" height="305" frameborder="0"></iframe></p> 新潟と島根 <p class="map"><iframe src="upfiles/2009/8/1251083441_2.html" width="450" height="305" frameborder="0"></iframe></p> 甲府と島根と新潟 <p class="map"><iframe src="upfiles/2009/8/1251083441_3.html" width="450" height="305" frameborder="0"></iframe></p> 東京単独 <p class="map"><iframe src="upfiles/2009/8/1251083441_4.html" width="450" height="305" frameborder="0"></iframe></p></p>
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+  
+    
+      <h1 class="entry-title"><a href="/blog/2009/08/16/obile-email-post-test-2/">携帯メール投稿テスト２</a></h1>
+      
+      
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2009-08-16T01:55:17+09:00" pubdate data-updated="true">Aug 16<span>th</span>, 2009</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>１行目  ２行目  ３行目  ４行目  ５行目  全部を一枚に表示します。  <p class="map"><iframe src="upfiles/2009/8/1250355317_1.html" width="450" height="305" frameborder="0"></iframe></p>  新潟と島根  <p class="map"><iframe src="upfiles/2009/8/1250355317_2.html" width="450" height="305" frameborder="0"></iframe></p>  甲府と島根と新潟  <p class="map"><iframe src="upfiles/2009/8/1250355317_3.html" width="450" height="305" frameborder="0"></iframe></p>  東京単独  <p class="map"><iframe src="upfiles/2009/8/1250355317_4.html" width="450" height="305" frameborder="0"></iframe></p></p>
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+  
+    
+      <h1 class="entry-title"><a href="/blog/2009/08/16/obile-email-post-test-1/">携帯メール投稿テスト１</a></h1>
+      
+      
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2009-08-16T01:45:55+09:00" pubdate data-updated="true">Aug 16<span>th</span>, 2009</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>全部を一枚に表示します。 <p class="map"><iframe src="upfiles/2009/8/1250354755_1.html" width="450" height="305" frameborder="0"></iframe></p> 新潟と島根 <p class="map"><iframe src="upfiles/2009/8/1250354755_2.html" width="450" height="305" frameborder="0"></iframe></p> 甲府と島根と新潟 <p class="map"><iframe src="upfiles/2009/8/1250354755_3.html" width="450" height="305" frameborder="0"></iframe></p> 東京単独 <p class="map"><iframe src="upfiles/2009/8/1250354755_4.html" width="450" height="305" frameborder="0"></iframe></p></p>
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+  
+    
+      <h1 class="entry-title"><a href="/blog/2009/08/15/I-try-to-use-the-google-maps-api/">Google Maps Api を使ってみる</a></h1>
+      
+      
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2009-08-15T17:51:32+09:00" pubdate data-updated="true">Aug 15<span>th</span>, 2009</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>　さいきん夏バテの林です。  　９月に実家に帰るので、ちょっと前に作って数回しか使えなかった「携帯電話からブログの記事を書く with GPSデータを埋め込んだ写真とgoogle mapsを組み合わせる」をもう一回作ってみることにしました。  　日々成長を求められるわけですが、前回とは違って複数マーカーが表示された時のセンターとズームをjavascriptで計算して自動で行うようにしました。  　PHPでちょちょいと計算して静的に埋め込めばいいんですが、ちょっとjavascriptを駆使してみましたw  　ここでサンプルコードとかサンプルのマップを乗っけることができればいいんですが、腹が減ってダメです。</p>
+</div>
+  
+  
+
+
+    </article>
+  
+  <div class="pagination">
+    
+      <a class="prev" href="/blog/page/12/">&larr; Older</a>
+    
+    <a href="/blog/archives">Blog Archives</a>
+    
+    <a class="next" href="/blog/page/10/">Newer &rarr;</a>
+    
+  </div>
+</div>
+<aside class="sidebar">
+  
+    <section>
+  <h1>Recent Posts</h1>
+  <ul id="recent_posts">
+    
+      <li class="post">
+        <a href="/blog/2013/02/02/How-big-reservoir-of-data/">ビックデータの溜め方</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2013/01/28/It-moves-to-the-VPS-Sakura-from-AmazonEC2/">AmazonEC2 から さくらの VPS へお引越し</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2012/08/11/Buy-the-ThinkPad-X61s/">ThinkPad X61s を購入</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2012/03/04/to-start-github/">github をはじめるよ</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2012/03/01/W-that-is-supposed-to-be-amazing-pair-programming-joint-party/">ペアプログラミング合コン&#8230;すごいことになってるｗ</a>
+      </li>
+    
+  </ul>
+</section>
+
+
+
+
+
+  
+</aside>
+
+    </div>
+  </div>
+  <footer role="contentinfo"><p>
+  Copyright &copy; 2014 - はやし <br/>
+  <span class="credit">Powered by <a href="http://octopress.org">Octopress</a>, customized with <a href="https://github.com/mjhea0/whiterspace">whiterspace</a>.</span>
+</p>
+
+</footer>
+  
+
+
+
+
+
+
+
+  <script type="text/javascript">
+    (function(){
+      var twitterWidgets = document.createElement('script');
+      twitterWidgets.type = 'text/javascript';
+      twitterWidgets.async = true;
+      twitterWidgets.src = 'http://platform.twitter.com/widgets.js';
+      document.getElementsByTagName('head')[0].appendChild(twitterWidgets);
+    })();
+  </script>
+
+
+
+
+
+</body>
+</html>

@@ -1,0 +1,522 @@
+
+<!DOCTYPE html>
+<!--[if IEMobile 7 ]><html class="no-js iem7"><![endif]-->
+<!--[if lt IE 9]><html class="no-js lte-ie8"><![endif]-->
+<!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <title>めだはや</title>
+  <meta name="author" content="はやし">
+
+  
+  <meta name="description" content="あけましておめでとうございます。 去年の夏頃から更新をしていませんでした。 林です。 このブログを家から出して運用しようとずーと考えていました。 Google App Engine で動かそうと頑張ってみたものの、Java の上で PHP を動かそうとか考えていたのですが、 &hellip;">
+  
+
+  <!-- http://t.co/dKP3o1e -->
+  <meta name="HandheldFriendly" content="True">
+  <meta name="MobileOptimized" content="320">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  
+  <link rel="canonical" href="http://mdhy.github.io/blog/page/2">
+  <link href="/favicon.png" rel="icon">
+  <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
+  <link href="/atom.xml" rel="alternate" title="めだはや" type="application/atom+xml">
+  <script src="/javascripts/modernizr-2.0.js"></script>
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+  <script>!window.jQuery && document.write(unescape('%3Cscript src="./javascripts/lib/jquery.min.js"%3E%3C/script%3E'))</script>
+  <script src="/javascripts/octopress.js" type="text/javascript"></script>
+  <!--Fonts from Google"s Web font directory at http://google.com/webfonts -->
+<link href="http://fonts.googleapis.com/css?family=PT+Serif:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+<link href="http://fonts.googleapis.com/css?family=PT+Sans:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+<link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+<link href='http://fonts.googleapis.com/css?family=Fjalla+One' rel='stylesheet' type='text/css'>
+  
+
+</head>
+
+<body   class="collapse-sidebar sidebar-footer" >
+  <header role="banner">
+</header>
+  <nav role="navigation"><ul class="subscription" data-subscription="rss">
+  <li><a href="/atom.xml" rel="subscribe-rss" title="subscribe via RSS">RSS</a></li>
+  
+</ul>
+  
+<form action="https://www.google.com/search" method="get">
+  <fieldset role="search">
+    <input type="hidden" name="q" value="site:mdhy.github.io" />
+    <input class="search" type="text" name="q" results="0" placeholder="Search"/>
+  </fieldset>
+</form>
+  
+<ul class="main-navigation">
+  <li><a href="/">Blog</a></li>
+  <li><a href="/blog/archives">Archives</a></li>
+  <li><a href="/about">About</a></li>
+</ul>
+
+</nav>
+  <div id="main">
+    <div id="content">
+      <div class="blog-index">
+  
+  
+  
+    <article>
+      
+  <header>
+  
+    
+      <h1 class="entry-title"><a href="/blog/2012/01/20/I-try-to-restart-in-AWS/">AWS で 再開してみる</a></h1>
+      
+      
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2012-01-20T00:38:30+09:00" pubdate data-updated="true">Jan 20<span>th</span>, 2012</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>あけましておめでとうございます。  去年の夏頃から更新をしていませんでした。  林です。  このブログを家から出して運用しようとずーと考えていました。  Google App Engine で動かそうと頑張ってみたものの、Java の上で PHP を動かそうとか考えていたのですが、 file_get_contents() が 使えないことがわかり放置してました。  その後、AWS (Amazon Web Service) の Amazon EC2 で動かして見ようとマクロインスタンスを作成しようとしたところ、オール英語でうーんで放置。  そうだ！何年か前から契約しているさくらのレンタルサーバがあることを思い出したが BASIC 認証が使えないだよなーで放置。  そして、つい数日前に  AWS、「Windows Server」を無料使用枠に追加 : <a href="http://japan.cnet.com/news/service/35013142/">http://japan.cnet.com/news/service/35013142/</a>  が出てきたー！！  Linux に Apache (ligttpd) + php + MySQL の構成なんで何十台分作ったので、変わった構成でこのブログ動かしたいという気持ちがふつふつ沸いてきてここ（AWS）に引っ越してきましたーw  このブログが動くまでなにしたか以下にかいていきます。  ### 情報収集  Amazon Web Services ブログ ; <a href="http://aws.typepad.com/aws_japan/">http://aws.typepad.com/aws_japan/</a>  ### アカウント作成  AWS Management Console : <a href="http://aws.amazon.com/jp/console/">http://aws.amazon.com/jp/console/</a>  とりあえず、上にあるサインアップをクリックして必要事項を入力していく。  ※クレジットカードが必要  ### インスタンス作成  AWS Management Console を用いたインスタンスの生成 : <a href="http://d.hatena.ne.jp/nishio-dens/20110326/1301133309">http://d.hatena.ne.jp/nishio-dens/20110326/1301133309</a>  ぱっとみよく分からない設定があるので見ようみまねで設定していく。  東京リージョンでマイクロインスタンスの Windows Server 2008 R2 Datacenter Edition でインスタンスを作成する。  Elastic IP をインスタンスにひもづける（無料）  ### インスタンスに接続  Windows なので 3389/tcp でアクセス  ### Web サーバ環境を構築  XAMPP を IE でダウンロードしてインストール、結構はやい  <a href="http://www.apachefriends.org/jp/xampp-windows.html">http://www.apachefriends.org/jp/xampp-windows.html</a>  ファイルのアップロードには freeftpd で SFTP をつかう  FreeFTPDでSSL通信対応のFTPサーバ構築 : <a href="http://iziz.blog.shinobi.jp/Entry/291/">http://iziz.blog.shinobi.jp/Entry/291/</a>  ### 公開完了  PHP のバージョンが上がっているのでエラーログ全開なので細かい修正をして設置完了  ### 感想  日本語になって AWS Management Console も使いやすいし、1 年間月額無料はおいしい  これからこのブログをいじりながら AWS であぞんでみようとおもう。  そして寝る</p>
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+  
+    
+      <h1 class="entry-title"><a href="/blog/2011/09/20/I-ve-been-participating-in-the-meeting-of-the-44th-Information-Science-Young/">第 44 回情報科学若手の会に参加してきた</a></h1>
+      
+      
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2011-09-20T01:19:46+09:00" pubdate data-updated="true">Sep 20<span>th</span>, 2011</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>　もう火曜日です、今日は仕事です。  　さてさて 9 月 17 日から 9 月 19 日まで(社)情報処理学会プログラミングシンポジウム委員会が主催する第 44 回情報科学若手の会に参加してみました。  　参加の経緯としては幹事の一人に締切り当日に誘われて速攻で登録したという流れでした。  　おもにプログラムのできる人が集まるとか、人体ハックが見えるとかすごい人が来るということで即申し込みしました。  > 高校/高専生，学部2年生(未成年)まで　13,000円  > その他学生(成年)　17,000円  > 社会人　25,000円  　社会人はずば抜けて高いですが若人のために投資と考えれば安い、タイに旅行にむりくり行こうとしてしていたのより安いという判断です。 　　　</p>
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+  
+    
+      <h1 class="entry-title"><a href="/blog/2011/09/06/Hyper-V-CentOS5-promiscuous_mode-then/">Hyper-V + CentOS5 + Promiscuous_mode, その後</a></h1>
+      
+      
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2011-09-06T22:02:08+09:00" pubdate data-updated="true">Sep 6<span>th</span>, 2011</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><h3>　Hyper-V って promiscuous_mode 使えない！？  ずーと Hyper-V にはプロミスキャスモードがないものと思ってましたが、Hyper-V 2.0 から機能が追加されていたようです。  MCT の憂鬱 &ndash; Hyper-V 2.0 新機能～ネットワーク編その１： <a href="http://naonao71.wordpress.com/2009/09/01/hyper-v-2-0-%E6%96%B0%E6%A9%9F%E8%83%BD%EF%BD%9E%E3%83%8D%E3%83%83%E3%83%88%E3%83%AF%E3%83%BC%E3%82%AF%E7%B7%A8%E3%81%9D%E3%81%AE%EF%BC%91/">http://naonao71.wordpress.com/2009/09/01/hyper-v-2-0-%E6%96%B0%E6%A9%9F%E8%83%BD%EF%BD%9E%E3%83%8D%E3%83%83%E3%83%88%E3%83%AF%E3%83%BC%E3%82%AF%E7%B7%A8%E3%81%9D%E3%81%AE%EF%BC%91/</a>  > ネットワークの設定において「MACアドレスのスプーフィングを有効にする」という機能が追加されました。  うん、よろしい。  Hyper-V 2.0 on Hyper-V Server 2008 R2 な環境では，ゲストの仮想NICをプロミスキャスモードにできない?： <a href="http://d.hatena.ne.jp/ka_maru/20091119/1258645882">http://d.hatena.ne.jp/ka_maru/20091119/1258645882</a>  > Virtual Server 2005あたりでは，XMLファイルを弄れば行けた模様．が，上記リンク先の最新2POST（lemon75とManuel Godoyのもの）を読む限り多分ムリ．トドメを刺したい人は，試しにwiresharkでも走らせてm9(^Д^)ﾌﾟｷﾞｬｰしてください．  期待とうらはらにできないという見解もあるもよう。  ###　どっちなの？！  かくいう私も最近までできないと思い込んでたけど、結論からというと CentOS でいうと Linux Integration Services v2.1 との組み合わせてでプロミスキャス・モードでけた。  Hyper-V には NIC が2種類ある「レガシー・ネットワーク・アダプタ」「統合サービス・ネットワーク・アダプタ」がある。  「レガシー・ネットワーク・アダプタ」については「MACアドレスのスプーフィングを有効にする」だけでプロミスキャス・モードが使える。  「統合サービス・ネットワーク・アダプタ」はちょっとくせがあった。  【Linux Integration Services v2.1 Read Me.pdf】 の15ページには  > ＃ rmmod netvsc.ko  > ＃ modprobe netvsc promisc_mode=1  と書いてあるが、起動時には有効になっていない。  どうも /etc/modprobe.conf に options 設定を書いても有効にならない  もうこうなったら initrd に手を加えるしかない！！！  結果、initrd を展開した init 内の  > insmod netvsc.ko  を  > insmod netvsc.ko promisc_mode=1  に書き換えて initrd を纏めて /boot にコピーして再起動してはい、出来上がり。</h3>
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+  
+    
+      <h1 class="entry-title"><a href="/blog/2011/04/16/The-root-of-the-au-IS01-then/">Au IS01 をroot化、その後</a></h1>
+      
+      
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2011-04-16T19:29:31+09:00" pubdate data-updated="true">Apr 16<span>th</span>, 2011</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>　最近めっきり元気がなくなって泣きそうになる日々を送っている林です。  　いわゆる８円運用でつかうためにauのIS01を買ったままワンセグを見るくらいでメガネケースと化していました。  　ということで以下になります。  ### 情報収集をする  au IS01 rooter： <a href="http://mobilehackerz.jp/contents/Software/Android/IS01root">http://mobilehackerz.jp/contents/Software/Android/IS01root</a>  au IS01のroot権限を奪取する（ビルド番号01.00.09版）： <a href="http://blog.mobilehackerz.jp/2010/11/au-is01root010009-is01.html">http://blog.mobilehackerz.jp/2010/11/au-is01root010009-is01.html</a>  　しらずしらずにアップデートをしていたらB10（０１．００．１０）になってしまっていてROOTをとりずらくなっているらしい。  Twitter / MIRO　：　<a href="http://twitter.com/MobileHackerz/status/17904226340446208">http://twitter.com/MobileHackerz/status/17904226340446208</a>  > ＃IS01 の01.00.10 でroot取りたい人は、 <a href="http://j.mp/eDMRnU">http://j.mp/eDMRnU</a> このページの一番下にあるtest版でsu使えるようにはなります。起動後毎回Step1,2実行する必要はありますが。（※Step2実行後リブートしろと言われるが無視してそのまま使うこと）  　 GHP:IS01 : <a href="http://yutcc.blogspot.com/search/label/IS01">http://yutcc.blogspot.com/search/label/IS01</a>  　Root化する以外の情報はここがよくまとまっている  BB10に関する資料： <a href="http://www22.atwiki.jp/is01next/pages/44.html">http://www22.atwiki.jp/is01next/pages/44.html</a></p>
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+  
+    
+      <h1 class="entry-title"><a href="/blog/2011/04/14/I-fix-the-Android-development-environment-on-Ubuntu/">UbuntuでAndroidの開発環境を整える</a></h1>
+      
+      
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2011-04-14T22:22:14+09:00" pubdate data-updated="true">Apr 14<span>th</span>, 2011</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>　会社が金をだしてくれるAndroidアプリ開発研修に参加することになったため、予習をしようとしています。  　Windows7が入っていたネットブックが買って、その日のうちにFreeBSDによってリカバリ領域ごと消されてしまって持ち歩けるのはUbuntuだけとなってしまったため、UbuntuでAndroidアプリの開発環境を整える記録です。  ### AVD Manager がうごくまで  2010-10-17 Ubuntu 10.10 上に Android 開発環境を構築する。： <a href="http://d.hatena.ne.jp/genius_strategy/20101017/1287322157">http://d.hatena.ne.jp/genius_strategy/20101017/1287322157</a></p>
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+  
+    
+      <h1 class="entry-title"><a href="/blog/2011/04/12/I-try-to-put-Ubuntu-10-10-1/">Ubuntu 10.10 をいれてみる（１）</a></h1>
+      
+      
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2011-04-12T21:45:25+09:00" pubdate data-updated="true">Apr 12<span>th</span>, 2011</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>もうすぐです、４月２８日にUbuntu 11.04がFinal Releaseされます。  １年くらい前にXubuntuをインストールしたんですが、放置していました。  11.04もBeta版が公開されているんですが、Ubutnu Japanese Teamに日本語環境を作るための追加パッケージがまだ公開されていないので10.10を入れてみることにしました。  ### 過去の記事  Xubuntu入れてみる（1）： <a href="http://www.medanohaya.net/?p=510">http://www.medanohaya.net/?p=510</a>  Xubuntuをいれてみる（2）： <a href="http://www.medanohaya.net/?p=511">http://www.medanohaya.net/?p=511</a>  Xubuntuを入れてみる（3）： <a href="http://www.medanohaya.net/?p=516">http://www.medanohaya.net/?p=516</a>  ### インストールLive CDを手に入れる  Ubuntu 10.10 (Maverick Meerkat)： <a href="http://releases.ubuntu.com/10.10/">http://releases.ubuntu.com/10.10/</a>  メモリが４GB載まれているのでamd64版をtorrentをダウンロードします。  ubuntu-10.10-desktop-amd64.iso.torrent  ### インストールメディアを用意する  １回しかつかわないのにCDに焼くのはもったいないのでUSB Flashメモリからインストールできるようにします。  メインで使っているのでmacbook proでGUIで簡単にインストールUSBメモリを作れるソフトウェアを探していたら、ありました。  ubuntuをUSBメモリからインストール： <a href="http://www.artsnet.jp/archives/16">http://www.artsnet.jp/archives/16</a>  UNetbootin, Universal Netboot Installer： <a href="http://sourceforge.jp/projects/sfnet_unetbootin/releases/">http://sourceforge.jp/projects/sfnet_unetbootin/releases/</a>  mac os x版も用意されています。  unetbootin-mac-549.zip  ### 日本語環境を導入する  Ubuntuの日本語環境： <a href="http://www.ubuntulinux.jp/products/JA-localized">http://www.ubuntulinux.jp/products/JA-localized</a>  ### ibus-mozac (Google日本語入力のオープンソース版) を導入する  システム　→　システム管理　→　日本語環境セットアップ・ヘルパ から ibus-mozac にチェックを入れてウィザードを進めます。  ログオフ　→　ログイン　→　システム　→　設定　→　キーボード・インプット・メソッドを開いてインプットメソッドタブで日本語 &ndash; Mozac を追加します。  ### ネットワークプリンタ(Canon PIXUS MX850)を設定する  UbuntuからMX-850にネットワーク経由で印刷 ： <a href="http://kopo3.blog106.fc2.com/blog-entry-144.html">http://kopo3.blog106.fc2.com/blog-entry-144.html</a>  ### Google Chrome を導入する  10.10からSynapticからchromeでインストールできます。  Ubuntu 10.10 64bitのGoogle ChromeにてFlashを有効にする方法： <a href="http://petitec.com/2010/11/google-chrome-enable-flash-ubuntu10-10/">http://petitec.com/2010/11/google-chrome-enable-flash-ubuntu10-10/</a>  ### LibreOffice を導入する  Install libreoffice in ubuntu 11.04/10.10/10.04 using PPA： <a href="http://www.ubuntugeek.com/install-libreoffice-in-ubuntu-11-0410-1010-04-using-ppa.html">http://www.ubuntugeek.com/install-libreoffice-in-ubuntu-11-0410-1010-04-using-ppa.html</a>  ### Skype を導入する  Ubuntu Tips/アプリケーション/Skypeをインストールするには： <a href="https://wiki.ubuntulinux.jp/UbuntuTips/Application/HowToInstallSkype">https://wiki.ubuntulinux.jp/UbuntuTips/Application/HowToInstallSkype</a></p>
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+  
+    
+      <h1 class="entry-title"><a href="/blog/2011/01/30/Annoyed-to-spam-comment/">スパムコメントに悩まされて</a></h1>
+      
+      
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2011-01-30T01:44:51+09:00" pubdate data-updated="true">Jan 30<span>th</span>, 2011</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>　このブログのサーバを移転するときにDBのバックアップを取ったんですが、なんと１００MBもありおかしいなーと思っていたらコメントが300,000もあるｗｗ  　これか！！ですｗ  　さっそく削除してスパムアクセスをIPベースで拒否するコードを加えました。</p>
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+  
+    
+      <h1 class="entry-title"><a href="/blog/2011/01/24/Auto-width/">自動よこ幅</a></h1>
+      
+      
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2011-01-24T19:59:23+09:00" pubdate data-updated="true">Jan 24<span>th</span>, 2011</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>　※JavaScriptが使えるブラウザに限る。  　スマホでこのブログを見ると横幅600pxの設定なので、横スクロールしなければいけない。  　なのでJavaScriptによこ幅を計算させてよこスクロールを不要にしてみた。  　うん、良くなった♪</p>
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+  
+    
+      <h1 class="entry-title"><a href="/blog/2011/01/21/Virtualization-m-virtualization/">仮想化ですよ仮想化</a></h1>
+      
+      
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2011-01-21T00:20:19+09:00" pubdate data-updated="true">Jan 21<span>st</span>, 2011</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>　仮想化それはロマン！！  　なんて言っても、金なし、場所なし、甲斐性なし、と揃っているとPCサーバ1台で盛りだくさんのOSを動かしたくなるわけです。  　XenServerというよりCentOSにXenを入れて動かしていたことは、負荷がかかるとネットワーク周りが不安定になり落ちる現象に悩まされおりました。  　でかいファイル（例えばDVDのISOファイルとか数百MBのファイル数十個）をNAS代わりに転送してやるともうだめだったりしてました。  　そしてXPが勝手に再起動する。  　&mdash;&mdash;&ndash;  　なんかないかなーVMWareのESXiがよさそうだったんですが、ハードウェア要件の敷居が高い；；  　当時はアンチMSなんて気取った態度をとっていましたが、今の現場がMS尽くしということもあってMSの仮想化ブランド「Hyper-V」を使ってみました。  　<a href="http://www.microsoft.com/japan/servers/hyper-v-server/default.mspx">http://www.microsoft.com/japan/servers/hyper-v-server/default.mspx</a>  　もちろん金はないので、無償のHyper-V　Server 2008を使ってます。  　そして、これが安定して使える！！XP再起動しない！！！  　ハードウェア要件はWindows server 2008が動けばOK、キミに決めた！  　そしてそして、Linuxも動いてディスク、NICの専用ドライバが配られていて時計も狂わないYO  　&mdash;&mdash;&ndash;  　Linux動くのでこの上でも仮想化したいと思ったら、Hyper-Vがいろいろと使っているのでXenとかKVMとかだめらしい。  　あきらめることなかれ、OpenVZというFreeBSDでいうところのJailみたいなのは使えるらしい。  　しかもLinuxなら他のディストリビューションも動くらしい。  　使ってみる、ちょー使える  　なので、WEBサーバもそこに移転したんです  　このサイトはHyper-V（仮想化）の上のCentOS5.5の上のOpenVZ（仮想化）の上のCentOS5で提供しています。  　メモリ８GBもあるのに512MBで運用しております。  　眠いのでお休みなさい。</p>
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+  
+    
+      <h1 class="entry-title"><a href="/blog/2011/01/20/SCCM-aggregate/">SCCM集計</a></h1>
+      
+      
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2011-01-20T17:33:22+09:00" pubdate data-updated="true">Jan 20<span>th</span>, 2011</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>Set oShell = CreateObject(&ldquo;WScript.Shell&rdquo;)  Set oReg = CreateObject(&ldquo;VBScript.RegExp&rdquo;)  Set oExec = oShell.Exec(&ldquo;CMD /C TYPE all.txt&rdquo;)  Do Until oExec.StdOut.AtEndOfStream  ary1=Split(oExec.StdOut.ReadLine, vbTab)  ary2=Split(ary1(2), &ldquo;, &rdquo;)  ary3=Split(ary1(3), &ldquo;, &rdquo;)  oReg.pattern = &ldquo;192.168.160.+&rdquo;  remote=&ldquo;&rdquo;  If oReg.execute(ary1(4)).Count > 0 Then  remote=&ldquo;A&rdquo;  End If  flg = true  For i = 0 To UBound(ary2)  j = i  If StrComp(ary2(i),&ldquo;&rdquo;&ldquo;Heartbeat Discovery&rdquo;&ldquo;&rdquo;) = 0 Then  If i = 0 then  j = 2  End If  Wscript.Echo ary1(0) &amp; &ldquo;,&rdquo;&ldquo;&rdquo; &amp; ary1(1) &amp; &ldquo;&rdquo;&ldquo;,&rdquo;&ldquo;&rdquo; &amp; ary3(j) &amp; &ldquo;&rdquo;&ldquo;,&rdquo;&ldquo;&rdquo; &amp; remote &amp; &ldquo;&rdquo;&ldquo;&rdquo;  flg = false  End If  Next  If flg Then  Wscript.Echo ary1(0) &amp; &ldquo;,&rdquo;&ldquo;&rdquo;&ldquo;,&rdquo;&ldquo;&rdquo;&ldquo;,&rdquo;&ldquo;&rdquo;&ldquo;&rdquo;  End If  Loop</p>
+</div>
+  
+  
+
+
+    </article>
+  
+  <div class="pagination">
+    
+      <a class="prev" href="/blog/page/3/">&larr; Older</a>
+    
+    <a href="/blog/archives">Blog Archives</a>
+    
+    <a class="next" href="/">Newer &rarr;</a>
+    
+  </div>
+</div>
+<aside class="sidebar">
+  
+    <section>
+  <h1>Recent Posts</h1>
+  <ul id="recent_posts">
+    
+      <li class="post">
+        <a href="/blog/2013/02/02/How-big-reservoir-of-data/">ビックデータの溜め方</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2013/01/28/It-moves-to-the-VPS-Sakura-from-AmazonEC2/">AmazonEC2 から さくらの VPS へお引越し</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2012/08/11/Buy-the-ThinkPad-X61s/">ThinkPad X61s を購入</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2012/03/04/to-start-github/">github をはじめるよ</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2012/03/01/W-that-is-supposed-to-be-amazing-pair-programming-joint-party/">ペアプログラミング合コン&#8230;すごいことになってるｗ</a>
+      </li>
+    
+  </ul>
+</section>
+
+
+
+
+
+  
+</aside>
+
+    </div>
+  </div>
+  <footer role="contentinfo"><p>
+  Copyright &copy; 2014 - はやし <br/>
+  <span class="credit">Powered by <a href="http://octopress.org">Octopress</a>, customized with <a href="https://github.com/mjhea0/whiterspace">whiterspace</a>.</span>
+</p>
+
+</footer>
+  
+
+
+
+
+
+
+
+  <script type="text/javascript">
+    (function(){
+      var twitterWidgets = document.createElement('script');
+      twitterWidgets.type = 'text/javascript';
+      twitterWidgets.async = true;
+      twitterWidgets.src = 'http://platform.twitter.com/widgets.js';
+      document.getElementsByTagName('head')[0].appendChild(twitterWidgets);
+    })();
+  </script>
+
+
+
+
+
+</body>
+</html>

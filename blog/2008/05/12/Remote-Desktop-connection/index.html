@@ -1,0 +1,217 @@
+
+<!DOCTYPE html>
+<!--[if IEMobile 7 ]><html class="no-js iem7"><![endif]-->
+<!--[if lt IE 9]><html class="no-js lte-ie8"><![endif]-->
+<!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <title>リモートデスクトップ関連 - めだはや</title>
+  <meta name="author" content="はやし">
+
+  
+  <meta name="description" content="　”リモートデスクトップ”と単に聞くと，MS-Windowsの一般的な機能を思い浮かべます。 　また”リモートデスクトップ機能”というものは，アクセスされる側（リモートで接続されるPC）のOSに機能があることを指します。 　ということは，接続する方（クライアント）はなんでもいいわけです♪ 　 &hellip;">
+  
+
+  <!-- http://t.co/dKP3o1e -->
+  <meta name="HandheldFriendly" content="True">
+  <meta name="MobileOptimized" content="320">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  
+  <link rel="canonical" href="http://mdhy.github.io/blog/2008/05/12/Remote-Desktop-connection">
+  <link href="/favicon.png" rel="icon">
+  <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
+  <link href="/atom.xml" rel="alternate" title="めだはや" type="application/atom+xml">
+  <script src="/javascripts/modernizr-2.0.js"></script>
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+  <script>!window.jQuery && document.write(unescape('%3Cscript src="./javascripts/lib/jquery.min.js"%3E%3C/script%3E'))</script>
+  <script src="/javascripts/octopress.js" type="text/javascript"></script>
+  <!--Fonts from Google"s Web font directory at http://google.com/webfonts -->
+<link href="http://fonts.googleapis.com/css?family=PT+Serif:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+<link href="http://fonts.googleapis.com/css?family=PT+Sans:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+<link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+<link href='http://fonts.googleapis.com/css?family=Fjalla+One' rel='stylesheet' type='text/css'>
+  
+
+</head>
+
+<body   class="collapse-sidebar sidebar-footer" >
+  <header role="banner">
+</header>
+  <nav role="navigation"><ul class="subscription" data-subscription="rss">
+  <li><a href="/atom.xml" rel="subscribe-rss" title="subscribe via RSS">RSS</a></li>
+  
+</ul>
+  
+<form action="https://www.google.com/search" method="get">
+  <fieldset role="search">
+    <input type="hidden" name="q" value="site:mdhy.github.io" />
+    <input class="search" type="text" name="q" results="0" placeholder="Search"/>
+  </fieldset>
+</form>
+  
+<ul class="main-navigation">
+  <li><a href="/">Blog</a></li>
+  <li><a href="/blog/archives">Archives</a></li>
+  <li><a href="/about">About</a></li>
+</ul>
+
+</nav>
+  <div id="main">
+    <div id="content">
+      <div>
+<article class="hentry" role="article">
+  
+  <header>
+  
+    
+      <h1 class="entry-title">リモートデスクトップ関連</h1>
+    
+  
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2008-05-12T00:53:46+09:00" pubdate data-updated="true">May 12<span>th</span>, 2008</time>
+        
+      </p>
+    
+  </header>
+
+
+<div class="entry-content"><p>　”リモートデスクトップ”と単に聞くと，MS-Windowsの一般的な機能を思い浮かべます。  　また”リモートデスクトップ機能”というものは，アクセスされる側（リモートで接続されるPC）のOSに機能があることを指します。  　ということは，接続する方（クライアント）はなんでもいいわけです♪  　リモートデスクトップ機能を有しているOSは，Windows Serverであったり，Windows Xp Professionalであったり，Windows vista Businessであったりします。  　これらの通信の規格（プロトコル）は標準化（誰でも見れる）されているために，通信（データ送受信）ができるクライアント・ソフトを誰でも作ることができてしまいます。  　そして，それらは存在しています。  　Windowsでは，リモートデスクトップであり，Mac OS Xでは，Remote Desktop Connection Client for mac(<a href="http://www.microsoft.com/japan/mac/products/rdc/default.mspx">http://www.microsoft.com/japan/mac/products/rdc/default.mspx</a>)であったり，LinuxやUnixでは，rdesktop(<a href="http://www.rdesktop.org/">http://www.rdesktop.org/</a>)であったりと，現存するOSからのWindowsデスクトップの利用が可能になっています♪  　MacOSXを使っいて，Unixは神でLinuxは最高！とか書いてきましたが，実際にWindowsで動作するソフトウェアは有用なものが数多くあり，利用しない手はありませんが，Windowsはコンソールからは操れません。  　なので，VNCとかではなく，リモートデスクトップなわけですw  　実際に動作は軽快です。  　FreeNX（VNCとは，違ったSSH通信でグラフィカル・インターフェイスが利用できる。これも最高）の上から，rdesktopでリモートデスクトップなんてやっも軽快です。  　＝＝＝＝＝＝＝＝  　ということで，自宅サーバを所有することでしか味わえない世界の偉人が作った有り難いソフトウェアのレビューでしたw  　こういうことが，やりたいときにすぐできるのは，有ってよかったなーと思います。  　あぁ投資を回収できるWebコンテンツを作らないといけないなーそもそも，何をつくろーか  　だれか，組みませんか？w</p>
+</div>
+
+
+  <footer>
+    <p class="meta">
+      
+  
+
+<span class="byline author vcard">Posted by <span class="fn">はやし</span></span>
+
+      
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2008-05-12T00:53:46+09:00" pubdate data-updated="true">May 12<span>th</span>, 2008</time>
+      
+
+<span class="categories">
+  
+    <a class='category' href='/blog/categories/diary/'>diary</a>
+  
+</span>
+
+
+    </p>
+    
+      <div class="sharing">
+  
+  <a href="http://twitter.com/share" class="twitter-share-button" data-url="http://mdhy.github.io/blog/2008/05/12/Remote-Desktop-connection/" data-via="" data-counturl="http://mdhy.github.io/blog/2008/05/12/Remote-Desktop-connection/" >Tweet</a>
+  
+  
+  
+</div>
+
+    
+    <p class="meta">
+      
+        <a class="basic-alignment left" href="/blog/2008/05/10/I-server-transfer/" title="Previous Post: サーバ移転しました">&laquo; サーバ移転しました</a>
+      
+      
+        <a class="basic-alignment right" href="/blog/2008/05/31/Do-let-s-open-application-development/" title="Next Post: オープンアプリ開発をしてみようか">オープンアプリ開発をしてみようか &raquo;</a>
+      
+    </p>
+  </footer>
+</article>
+
+</div>
+
+<aside class="sidebar">
+  
+    <section>
+  <h1>Recent Posts</h1>
+  <ul id="recent_posts">
+    
+      <li class="post">
+        <a href="/blog/2013/02/02/How-big-reservoir-of-data/">ビックデータの溜め方</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2013/01/28/It-moves-to-the-VPS-Sakura-from-AmazonEC2/">AmazonEC2 から さくらの VPS へお引越し</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2012/08/11/Buy-the-ThinkPad-X61s/">ThinkPad X61s を購入</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2012/03/04/to-start-github/">github をはじめるよ</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2012/03/01/W-that-is-supposed-to-be-amazing-pair-programming-joint-party/">ペアプログラミング合コン...すごいことになってるｗ</a>
+      </li>
+    
+  </ul>
+</section>
+
+
+
+
+
+  
+</aside>
+
+
+    </div>
+  </div>
+  <footer role="contentinfo"><p>
+  Copyright &copy; 2014 - はやし <br/>
+  <span class="credit">Powered by <a href="http://octopress.org">Octopress</a>, customized with <a href="https://github.com/mjhea0/whiterspace">whiterspace</a>.</span>
+</p>
+
+</footer>
+  
+
+
+
+
+
+
+
+  <script type="text/javascript">
+    (function(){
+      var twitterWidgets = document.createElement('script');
+      twitterWidgets.type = 'text/javascript';
+      twitterWidgets.async = true;
+      twitterWidgets.src = 'http://platform.twitter.com/widgets.js';
+      document.getElementsByTagName('head')[0].appendChild(twitterWidgets);
+    })();
+  </script>
+
+
+
+
+
+</body>
+</html>
