@@ -1,0 +1,291 @@
+
+<!DOCTYPE html>
+<!--[if IEMobile 7 ]><html class="no-js iem7"><![endif]-->
+<!--[if lt IE 9]><html class="no-js lte-ie8"><![endif]-->
+<!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <title>SSHで証明書を使ってログインする - めだはや</title>
+  <meta name="author" content="はやし">
+
+  
+  <meta name="description" content="PuTTYを使ってSSHをしている林です。 最近になって PuTTY Tray という最小化するとタスクトレイに納まってしまうステキなSSHクライアントを使っています。 PuTTY Tray：http://haanstra.eu/putty/ ※蛇足ですがPuTTY Portable &hellip;">
+  
+
+  <!-- http://t.co/dKP3o1e -->
+  <meta name="HandheldFriendly" content="True">
+  <meta name="MobileOptimized" content="320">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  
+  <link rel="canonical" href="http://mdhy.github.io/blog/2009/07/22/I-log-in-using-the-certificate-in-SSH">
+  <link href="/favicon.png" rel="icon">
+  <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
+  <link href="/atom.xml" rel="alternate" title="めだはや" type="application/atom+xml">
+  <script src="/javascripts/modernizr-2.0.js"></script>
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+  <script>!window.jQuery && document.write(unescape('%3Cscript src="./javascripts/lib/jquery.min.js"%3E%3C/script%3E'))</script>
+  <script src="/javascripts/octopress.js" type="text/javascript"></script>
+  <!--Fonts from Google"s Web font directory at http://google.com/webfonts -->
+<link href="http://fonts.googleapis.com/css?family=PT+Serif:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+<link href="http://fonts.googleapis.com/css?family=PT+Sans:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+<link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+<link href='http://fonts.googleapis.com/css?family=Fjalla+One' rel='stylesheet' type='text/css'>
+  
+
+</head>
+
+<body   class="collapse-sidebar sidebar-footer" >
+  <header role="banner">
+</header>
+  <nav role="navigation"><ul class="subscription" data-subscription="rss">
+  <li><a href="/atom.xml" rel="subscribe-rss" title="subscribe via RSS">RSS</a></li>
+  
+</ul>
+  
+<form action="https://www.google.com/search" method="get">
+  <fieldset role="search">
+    <input type="hidden" name="q" value="site:mdhy.github.io" />
+    <input class="search" type="text" name="q" results="0" placeholder="Search"/>
+  </fieldset>
+</form>
+  
+<ul class="main-navigation">
+  <li><a href="/">Blog</a></li>
+  <li><a href="/blog/archives">Archives</a></li>
+  <li><a href="/about">About</a></li>
+</ul>
+
+</nav>
+  <div id="main">
+    <div id="content">
+      <div>
+<article class="hentry" role="article">
+  
+  <header>
+  
+    
+      <h1 class="entry-title">SSHで証明書を使ってログインする</h1>
+    
+  
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2009-07-22T20:45:25+09:00" pubdate data-updated="true">Jul 22<span>nd</span>, 2009</time>
+        
+      </p>
+    
+  </header>
+
+
+<div class="entry-content"><p>PuTTYを使ってSSHをしている林です。</p>
+
+<p>最近になって PuTTY Tray という最小化するとタスクトレイに納まってしまうステキなSSHクライアントを使っています。</p>
+
+<p>PuTTY Tray：<a href="http://haanstra.eu/putty/">http://haanstra.eu/putty/</a></p>
+
+<p>※蛇足ですがPuTTY Portable に入れて使えるようです。</p>
+
+<p>＝＝＝＝＝</p>
+
+<p>PuTTYでぽちぽちすると</p>
+
+<p>login as :</p>
+
+<p>ログインアカウントと求められ、</p>
+
+<p><a href="&#109;&#x61;&#105;&#108;&#x74;&#111;&#58;&#104;&#x6f;&#103;&#101;&#64;&#x68;&#111;&#x67;&#101;&#46;&#110;&#101;&#116;">&#x68;&#x6f;&#103;&#x65;&#64;&#104;&#111;&#103;&#x65;&#x2e;&#110;&#x65;&#116;</a>&rsquo;s password:</p>
+
+<p>次にパスワードを求められます。</p>
+
+<p>もし間違えると</p>
+
+<p>Access denied</p>
+
+<p><a href="&#109;&#97;&#x69;&#108;&#116;&#x6f;&#58;&#x68;&#x6f;&#103;&#101;&#x40;&#x68;&#111;&#x67;&#x65;&#x2e;&#x6e;&#x65;&#116;">&#104;&#111;&#103;&#101;&#64;&#104;&#x6f;&#x67;&#101;&#x2e;&#x6e;&#x65;&#x74;</a>&rsquo;s password:</p>
+
+<p>とエンドレスです。</p>
+
+<p>＝＝＝＝＝＝</p>
+
+<p>正直、うざいです</p>
+
+<p>＝＝＝＝＝＝</p>
+
+<p>そこでOpenSSHを使って証明書をパスフレーズを付けずに作ってやることにしました。</p>
+
+<p>通常？では</p>
+
+<h1>ssh-keygen -t dsa -b 1024 -N <passphrase> -f key</h1>
+
+<p>として、パスフレーズを設定するですが</p>
+
+<h1>ssh-keygen -t dsa -b 1024 -N &lsquo;&rsquo; -f key</h1>
+
+<p>として、パスフレーズを空で証明書を作成します。</p>
+
+<p>keyとkey.pubが作成されたら片方をサーバ側（接続される側）に登録します。</p>
+
+<h1>cat key.pub >> .ssh/authorized_keys</h1>
+
+<p>※必要に応じてsshdの設定を変更する必要があります。CentOSの場合は/etc/ssh/sshd_configなります。</p>
+
+<blockquote><p>[/etc/ssh/sshd_config]</p>
+
+<h1>ServerKeyBits 768 &ndash;> ServerKeyBits 1024</h1>
+
+<p>PubkeyAuthentication yes</p>
+
+<p>AuthorizedKeysFile      .ssh/authorized_keys</p>
+
+<p>↑の２行を追加</p></blockquote>
+
+<p>SSHクライアント側にはkeyの方を読み込ませるわけですが、私はPuTTYを使っているのでOpenSSHの証明書はそのままでは読み込めません。</p>
+
+<p>どうもppkというPuTTY形式に変換しないといけないようです。</p>
+
+<p>参考にしたサイト</p>
+
+<p><a href="http://tortoisesvn.net/docs/nightly/TortoiseSVN_ja/tsvn-ssh-create-keys.html">http://tortoisesvn.net/docs/nightly/TortoiseSVN_ja/tsvn-ssh-create-keys.html</a></p>
+
+<p>＝＝＝＝＝</p>
+
+<p>パスフレーズなしというのは非常に危険な使い方ですが、家庭LANで使うにはさほど問題なさそうです。</p>
+
+<p>これで少しは楽になります。</p>
+</div>
+
+
+  <footer>
+    <p class="meta">
+      
+  
+
+<span class="byline author vcard">Posted by <span class="fn">はやし</span></span>
+
+      
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2009-07-22T20:45:25+09:00" pubdate data-updated="true">Jul 22<span>nd</span>, 2009</time>
+      
+
+<span class="categories">
+  
+    <a class='category' href='/blog/categories/diary/'>diary</a>
+  
+</span>
+
+
+    </p>
+    
+      <div class="sharing">
+  
+  <a href="http://twitter.com/share" class="twitter-share-button" data-url="http://mdhy.github.io/blog/2009/07/22/I-log-in-using-the-certificate-in-SSH/" data-via="" data-counturl="http://mdhy.github.io/blog/2009/07/22/I-log-in-using-the-certificate-in-SSH/" >Tweet</a>
+  
+  
+  
+</div>
+
+    
+    <p class="meta">
+      
+        <a class="basic-alignment left" href="/blog/2009/07/18/1-I-will-to-rewrite-the-blog/" title="Previous Post: ブログを書き直そうと思う１">&laquo; ブログを書き直そうと思う１</a>
+      
+      
+        <a class="basic-alignment right" href="/blog/2009/07/26/2-I-will-to-rewrite-the-blog/" title="Next Post: ブログを書き直そうと思う2">ブログを書き直そうと思う2 &raquo;</a>
+      
+    </p>
+  </footer>
+</article>
+
+</div>
+
+<aside class="sidebar">
+  
+    <section>
+  <h1>Recent Posts</h1>
+  <ul id="recent_posts">
+    
+      <li class="post">
+        <a href="/blog/2013/02/02/How-big-reservoir-of-data/">ビックデータの溜め方</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2013/01/28/It-moves-to-the-VPS-Sakura-from-AmazonEC2/">AmazonEC2 から さくらの VPS へお引越し</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2012/08/11/Buy-the-ThinkPad-X61s/">ThinkPad X61s を購入</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2012/03/04/to-start-github/">github をはじめるよ</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2012/03/01/W-that-is-supposed-to-be-amazing-pair-programming-joint-party/">ペアプログラミング合コン...すごいことになってるｗ</a>
+      </li>
+    
+  </ul>
+</section>
+
+
+
+
+
+  
+</aside>
+
+
+    </div>
+  </div>
+  <footer role="contentinfo"><p>
+  Copyright &copy; 2014 - はやし <br/>
+  <span class="credit">Powered by <a href="http://octopress.org">Octopress</a>, customized with <a href="https://github.com/mjhea0/whiterspace">whiterspace</a>.</span>
+</p>
+
+</footer>
+  
+
+
+
+
+
+
+
+  <script type="text/javascript">
+    (function(){
+      var twitterWidgets = document.createElement('script');
+      twitterWidgets.type = 'text/javascript';
+      twitterWidgets.async = true;
+      twitterWidgets.src = 'http://platform.twitter.com/widgets.js';
+      document.getElementsByTagName('head')[0].appendChild(twitterWidgets);
+    })();
+  </script>
+
+
+
+
+
+</body>
+</html>

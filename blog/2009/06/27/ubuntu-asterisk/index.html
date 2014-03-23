@@ -1,0 +1,488 @@
+
+<!DOCTYPE html>
+<!--[if IEMobile 7 ]><html class="no-js iem7"><![endif]-->
+<!--[if lt IE 9]><html class="no-js lte-ie8"><![endif]-->
+<!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <title>ubuntu + asterisk - めだはや</title>
+  <meta name="author" content="はやし">
+
+  
+  <meta name="description" content="久しぶりにルーティングについて解らない頭で勉強してみると昔やってたことを思い出しました。 AsteriskでSIPサーバです。 http://ja.wikipedia.org/wiki/Asterisk_(PBX) 懐かしたを覚えて、ちょっと調べてみるとこんなの見つけました↓ http://www &hellip;">
+  
+
+  <!-- http://t.co/dKP3o1e -->
+  <meta name="HandheldFriendly" content="True">
+  <meta name="MobileOptimized" content="320">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  
+  <link rel="canonical" href="http://mdhy.github.io/blog/2009/06/27/ubuntu-asterisk">
+  <link href="/favicon.png" rel="icon">
+  <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
+  <link href="/atom.xml" rel="alternate" title="めだはや" type="application/atom+xml">
+  <script src="/javascripts/modernizr-2.0.js"></script>
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+  <script>!window.jQuery && document.write(unescape('%3Cscript src="./javascripts/lib/jquery.min.js"%3E%3C/script%3E'))</script>
+  <script src="/javascripts/octopress.js" type="text/javascript"></script>
+  <!--Fonts from Google"s Web font directory at http://google.com/webfonts -->
+<link href="http://fonts.googleapis.com/css?family=PT+Serif:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+<link href="http://fonts.googleapis.com/css?family=PT+Sans:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+<link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+<link href='http://fonts.googleapis.com/css?family=Fjalla+One' rel='stylesheet' type='text/css'>
+  
+
+</head>
+
+<body   class="collapse-sidebar sidebar-footer" >
+  <header role="banner">
+</header>
+  <nav role="navigation"><ul class="subscription" data-subscription="rss">
+  <li><a href="/atom.xml" rel="subscribe-rss" title="subscribe via RSS">RSS</a></li>
+  
+</ul>
+  
+<form action="https://www.google.com/search" method="get">
+  <fieldset role="search">
+    <input type="hidden" name="q" value="site:mdhy.github.io" />
+    <input class="search" type="text" name="q" results="0" placeholder="Search"/>
+  </fieldset>
+</form>
+  
+<ul class="main-navigation">
+  <li><a href="/">Blog</a></li>
+  <li><a href="/blog/archives">Archives</a></li>
+  <li><a href="/about">About</a></li>
+</ul>
+
+</nav>
+  <div id="main">
+    <div id="content">
+      <div>
+<article class="hentry" role="article">
+  
+  <header>
+  
+    
+      <h1 class="entry-title">Ubuntu + Asterisk</h1>
+    
+  
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2009-06-27T09:44:15+09:00" pubdate data-updated="true">Jun 27<span>th</span>, 2009</time>
+        
+      </p>
+    
+  </header>
+
+
+<div class="entry-content"><p>久しぶりにルーティングについて解らない頭で勉強してみると昔やってたことを思い出しました。</p>
+
+<p>AsteriskでSIPサーバです。</p>
+
+<p><a href="http://ja.wikipedia.org/wiki/Asterisk_">http://ja.wikipedia.org/wiki/Asterisk_</a>(PBX)</p>
+
+<p>懐かしたを覚えて、ちょっと調べてみるとこんなの見つけました↓</p>
+
+<p><a href="http://www.kenti.jp/dat/2006/06/asterisk050.html">http://www.kenti.jp/dat/2006/06/asterisk050.html</a></p>
+
+<p>おー面白いじゃないか！！とやってみました。</p>
+
+<p><a href="http://voip-info.jp/index.php/Asterisk">http://voip-info.jp/index.php/Asterisk</a></p>
+
+<p>↑を参考にソースから入れてみました。</p>
+
+<p>＝＝＝＝＝＝＝</p>
+
+<p>今回の構成は(Hyper-Vで仮想化されています)</p>
+
+<p>・Ubuntu 8.04 Server版</p>
+
+<p>・Asterisk 1.4.25.1（ソース）</p>
+
+<p>Ubuntu Server版はJeOSらしいので何も入っていませんｗ</p>
+
+<h1>apt-get -y install gcc g++ libncurses5-dev make patch</h1>
+
+<p>↑を実行しておきます。</p>
+
+<p>今回はzaptelを入れないので</p>
+
+<h1>./configure &mdash;without-zaptel</h1>
+
+<p>これでコンパイルは通りました。</p>
+
+<p>＝＝＝＝＝＝＝＝＝</p>
+
+<p>この日のためにso-netフォンを月額８円で契約しましたw</p>
+
+<p>設定したのはsip.confとextensions.confの２つです。</p>
+
+<p>sip.confの内容</p>
+
+<blockquote><p>[general]</p>
+
+<p>maxexpirey=3600</p>
+
+<p>defaultexpirey=3600</p>
+
+<p>registertimeout=300</p>
+
+<p>context=default</p>
+
+<p>port=5060</p>
+
+<p>bindaddr=0.0.0.0</p>
+
+<p>srvlookup=no</p>
+
+<p>allowguest=no</p>
+
+<p>disallow=all</p>
+
+<p>allow=ulaw</p>
+
+<p>allow=alaw</p>
+
+<p>allow=gsm</p>
+
+<p>language=jp</p>
+
+<p>dtmfmode=inband</p>
+
+<p>nat=never</p>
+
+<p>localnet=192.168.1.0/255.255.255.0</p>
+
+<p>;</p>
+
+<p>;</p>
+
+<p>register => 7:123:0007@192.168.1.10/0123456789</p>
+
+<p>register => 05012345678@so-
+net.ne.jp:xxxxxxxx:Axxxxxxx@voipxx.so-net.ne.jp/05012345678</p>
+
+<p>;</p>
+
+<p>;</p>
+
+<p>[ntttel]</p>
+
+<p>type=friend</p>
+
+<p>username=0007</p>
+
+<p>secret=123</p>
+
+<p>host=192.168.1.10</p>
+
+<p>canreinvite=no</p>
+
+<p>dtmfmode=inband</p>
+
+<p>disallow=all</p>
+
+<p>allow=ulaw</p>
+
+<p>allow=alaw</p>
+
+<p>context=fromntttel</p>
+
+<p>insecure=very</p>
+
+<p>[iptel]</p>
+
+<p>type=friend</p>
+
+<p>username=Axxxxxxx</p>
+
+<p>secret=xxxxxxxx</p>
+
+<p>host=voipxx.so-net.ne.jp</p>
+
+<p>fromdomain=so-net.ne.jp</p>
+
+<p>fromuser=05012345678</p>
+
+<p>canreinvite=no</p>
+
+<p>dtmfmode=inband</p>
+
+<p>disallow=all</p>
+
+<p>allow=ulaw</p>
+
+<p>allow=alaw</p>
+
+<p>context=fromiptel</p>
+
+<p>insecure=very</p>
+
+<p>;</p>
+
+<p>;</p>
+
+<p>[201]</p>
+
+<p>type=friend</p>
+
+<p>username=201</p>
+
+<p>secret=123</p>
+
+<p>host=dynamic</p>
+
+<p> canreinvite=no</p>
+
+<p>dtmfmode=inband</p>
+
+<p>;</p>
+
+<p>;</p></blockquote>
+
+<p>extensions.confの内容</p>
+
+<blockquote><p>[general]</p>
+
+<p>static=yes</p>
+
+<p>writeprotect=yes</p>
+
+<p>[globals]</p>
+
+<p>IPTEL=05012345678</p>
+
+<p>NTTTEL=0123456789</p>
+
+<p>NTTRT=7</p>
+
+<p>[fromiptel]</p>
+
+<p>exten => ${IPTEL},1,Ringing</p>
+
+<p>exten => ${IPTEL},2,Wait,5</p>
+
+<p>exten => ${IPTEL},3,HangUp</p>
+
+<p>[fromntttel]</p>
+
+<p>exten => ${NTTTEL},1,Dial(SIP/201,30)</p>
+
+<p>exten => ${NTTTEL},2,HangUp</p>
+
+<p>;</p>
+
+<p>;</p>
+
+<p>[ipout]</p>
+
+<p>exten => _050.,1,SetCallerId,${IPTEL}</p>
+
+<p>exten => _050.,2,Dial(SIP/${EXTEN}@iptel,60,r)</p>
+
+<p>exten => _050.,3,Congestion</p>
+
+<p>include => nttout</p>
+
+<p>[nttout]</p>
+
+<p>exten => _0.,1,SetCallerId,${NTTRT}</p>
+
+<p>exten => _0.,2,Dial(SIP/${EXTEN}@ntttel,60,r)</p>
+
+<p>exten => _0.,3,Congestion</p>
+
+<p>[dtmf-debug]</p>
+
+<p>exten => s,1,Ringing</p>
+
+<p>exten => s,2,Wait,10</p>
+
+<p>exten => s,3,Answer</p>
+
+<p>exten => s,4,WaitExten(1)</p>
+
+<p>exten => _X,1,SayDigits(${EXTEN})</p>
+
+<p>exten => _X,2,Goto(s,4)</p>
+
+<p>exten => t,1,Goto(s,4)</p>
+
+<p>[default]</p>
+
+<p>include => ipout</p>
+
+<p>include => nttout</p>
+
+<p>include => inner</p>
+
+<p>[inner]</p>
+
+<p>; ip-in-debug</p>
+
+<p>exten => 111,1,Goto(fromiptel,${IPTEL},1)</p>
+
+<p>; Local SIP Telephones 201-208</p>
+
+<p>exten => 201,1,Dial(SIP/201,30,tT)</p>
+
+<p>exten => 201,2,Answer()</p>
+
+<p>exten => 201,3,Voicemail(${EXTEN})</p>
+
+<p>exten => 201,4,Hangup</p>
+
+<p>exten => 201,102,Answer()</p>
+
+<p>exten => 201,103,Voicemail(${EXTEN})</p>
+
+<p>exten => 201,104,Hangup</p>
+
+<p>;</p>
+
+<p>;</p></blockquote>
+
+<p>＝＝＝＝＝＝</p>
+
+<p>といった感じでVoIPアダプタが無くてもIP電話がつかえるようになりました。</p>
+
+<p>設定は1.2系をコピペしたものですが、動いているので良しとします。</p>
+</div>
+
+
+  <footer>
+    <p class="meta">
+      
+  
+
+<span class="byline author vcard">Posted by <span class="fn">はやし</span></span>
+
+      
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2009-06-27T09:44:15+09:00" pubdate data-updated="true">Jun 27<span>th</span>, 2009</time>
+      
+
+<span class="categories">
+  
+    <a class='category' href='/blog/categories/diary/'>diary</a>
+  
+</span>
+
+
+    </p>
+    
+      <div class="sharing">
+  
+  <a href="http://twitter.com/share" class="twitter-share-button" data-url="http://mdhy.github.io/blog/2009/06/27/ubuntu-asterisk/" data-via="" data-counturl="http://mdhy.github.io/blog/2009/06/27/ubuntu-asterisk/" >Tweet</a>
+  
+  
+  
+</div>
+
+    
+    <p class="meta">
+      
+        <a class="basic-alignment left" href="/blog/2009/06/21/ubuntu-quagga/" title="Previous Post: ubuntu + quagga">&laquo; ubuntu + quagga</a>
+      
+      
+        <a class="basic-alignment right" href="/blog/2009/07/04/ovie-weather/" title="Next Post: 映画日和">映画日和 &raquo;</a>
+      
+    </p>
+  </footer>
+</article>
+
+</div>
+
+<aside class="sidebar">
+  
+    <section>
+  <h1>Recent Posts</h1>
+  <ul id="recent_posts">
+    
+      <li class="post">
+        <a href="/blog/2013/02/02/How-big-reservoir-of-data/">ビックデータの溜め方</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2013/01/28/It-moves-to-the-VPS-Sakura-from-AmazonEC2/">AmazonEC2 から さくらの VPS へお引越し</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2012/08/11/Buy-the-ThinkPad-X61s/">ThinkPad X61s を購入</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2012/03/04/to-start-github/">github をはじめるよ</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2012/03/01/W-that-is-supposed-to-be-amazing-pair-programming-joint-party/">ペアプログラミング合コン...すごいことになってるｗ</a>
+      </li>
+    
+  </ul>
+</section>
+
+
+
+
+
+  
+</aside>
+
+
+    </div>
+  </div>
+  <footer role="contentinfo"><p>
+  Copyright &copy; 2014 - はやし <br/>
+  <span class="credit">Powered by <a href="http://octopress.org">Octopress</a>, customized with <a href="https://github.com/mjhea0/whiterspace">whiterspace</a>.</span>
+</p>
+
+</footer>
+  
+
+
+
+
+
+
+
+  <script type="text/javascript">
+    (function(){
+      var twitterWidgets = document.createElement('script');
+      twitterWidgets.type = 'text/javascript';
+      twitterWidgets.async = true;
+      twitterWidgets.src = 'http://platform.twitter.com/widgets.js';
+      document.getElementsByTagName('head')[0].appendChild(twitterWidgets);
+    })();
+  </script>
+
+
+
+
+
+</body>
+</html>

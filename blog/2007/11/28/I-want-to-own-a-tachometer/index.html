@@ -1,0 +1,297 @@
+
+<!DOCTYPE html>
+<!--[if IEMobile 7 ]><html class="no-js iem7"><![endif]-->
+<!--[if lt IE 9]><html class="no-js lte-ie8"><![endif]-->
+<!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <title>タコメータを自作する - めだはや</title>
+  <meta name="author" content="はやし">
+
+  
+  <meta name="description" content="PICって何でもできるんだねー 久しぶりに本格的な電子工作を楽しみました♪ ブレッドボードを使って回路を作り、オシレータで回転信号を模擬して、オシロスコープで各部の出力を確認する・・・三日かかりました。 LEDとかを使って本当のタコメータっぽくしたら手間がかかるので、LCD（バックライト付） &hellip;">
+  
+
+  <!-- http://t.co/dKP3o1e -->
+  <meta name="HandheldFriendly" content="True">
+  <meta name="MobileOptimized" content="320">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  
+  <link rel="canonical" href="http://mdhy.github.io/blog/2007/11/28/I-want-to-own-a-tachometer">
+  <link href="/favicon.png" rel="icon">
+  <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
+  <link href="/atom.xml" rel="alternate" title="めだはや" type="application/atom+xml">
+  <script src="/javascripts/modernizr-2.0.js"></script>
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+  <script>!window.jQuery && document.write(unescape('%3Cscript src="./javascripts/lib/jquery.min.js"%3E%3C/script%3E'))</script>
+  <script src="/javascripts/octopress.js" type="text/javascript"></script>
+  <!--Fonts from Google"s Web font directory at http://google.com/webfonts -->
+<link href="http://fonts.googleapis.com/css?family=PT+Serif:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+<link href="http://fonts.googleapis.com/css?family=PT+Sans:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+<link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+<link href='http://fonts.googleapis.com/css?family=Fjalla+One' rel='stylesheet' type='text/css'>
+  
+
+</head>
+
+<body   class="collapse-sidebar sidebar-footer" >
+  <header role="banner">
+</header>
+  <nav role="navigation"><ul class="subscription" data-subscription="rss">
+  <li><a href="/atom.xml" rel="subscribe-rss" title="subscribe via RSS">RSS</a></li>
+  
+</ul>
+  
+<form action="https://www.google.com/search" method="get">
+  <fieldset role="search">
+    <input type="hidden" name="q" value="site:mdhy.github.io" />
+    <input class="search" type="text" name="q" results="0" placeholder="Search"/>
+  </fieldset>
+</form>
+  
+<ul class="main-navigation">
+  <li><a href="/">Blog</a></li>
+  <li><a href="/blog/archives">Archives</a></li>
+  <li><a href="/about">About</a></li>
+</ul>
+
+</nav>
+  <div id="main">
+    <div id="content">
+      <div>
+<article class="hentry" role="article">
+  
+  <header>
+  
+    
+      <h1 class="entry-title">タコメータを自作する</h1>
+    
+  
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2007-11-28T21:40:19+09:00" pubdate data-updated="true">Nov 28<span>th</span>, 2007</time>
+        
+      </p>
+    
+  </header>
+
+
+<div class="entry-content"><p>PICって何でもできるんだねー</p>
+
+<p>久しぶりに本格的な電子工作を楽しみました♪</p>
+
+<p><img src="upfiles/2007/11/1196253619_1.png" alt="画像" /></p>
+
+<p>ブレッドボードを使って回路を作り、オシレータで回転信号を模擬して、オシロスコープで各部の出力を確認する・・・三日かかりました。</p>
+
+<p><img src="upfiles/2007/11/1196253619_2.png" alt="画像" /></p>
+
+<p>LEDとかを使って本当のタコメータっぽくしたら手間がかかるので、LCD（バックライト付）を利用しました。
+PICで制御していて、プログラムはネットに落ちていたものを再利用しています。</p>
+
+<p>プログラム</p>
+
+<p>PICってカウントも出来るみたいで、でも、７Vをかけると動作がおかしくなるんですよｗｗ
+なんで、NANDのTTLを間に入れて、５Vにしてやっています。
+周波数が行っても１００Hzなんで、十分です。（研究室から拝借）</p>
+
+<p>タコメータって丸くて、固定するのが当たり前みたいですが、私は考えた末に正した結論は、これです↓</p>
+
+<p><img src="upfiles/2007/11/1196253619_3.png" alt="画像" /></p>
+
+<p>どうでしょうｗこの斬新な発想〜〜
+いろんな角度から回転数が確認できて、ナビシートの人も手にもって回転数を見ることができるんです！</p>
+
+<p>無意味でかつタコメータの本来の意味を無視した、このまるでだめなタコメータ・・・そうだ、まるでだめなタコメータだから「マダコ」と呼ぼうー</p>
+
+<p>今回の制作費は</p>
+
+<p>  PIC16F648A 200 yen</p>
+
+<p>三端子レギュレータ(TA4805S) 100 yen</p>
+
+<p>LCDキャラクタディスプレイモジュール(SB1602BSLB) 800 yen</p>
+
+<p>ケース100 yen</p>
+
+<p>ねじ類 100 yen</p>
+
+<p>後の部品 0 yen (研究室から)</p>
+
+<p> ==========================================================</p>
+
+<p> 合計 1300 yen</p>
+
+<p>ということで、第一次電子工作ブームはこうして幕を閉じました。。。</p>
+
+<p>＊＊＊＊＊</p>
+
+<p>タコメータを取り付けて、（うれしくなって）テストをしてみました。</p>
+
+<p>・・・なんと、プレオの特徴がウキボリになってしまいましたｗ</p>
+
+<p>アクセルには、１５００ｒｐｍくらい、２０００ｒｐｍくらい、３０００ｒｐｍくらい、４０００ｒｐｍくらい、５０００ｒｐｍくらいの5段階があります。</p>
+
+<p>アクセルを踏まずに、車輪が動いていると、１５００ｒｐｍくらい。</p>
+
+<p>アクセルをちょっと踏み普通に加速する２０００ｒｐｍくらいをキープ。</p>
+
+<p>ちょい早めに加速する、８０ｋｍ/ｈ巡航で３０００ｒｐｍくらいをキープ。</p>
+
+<p>（８０ｋｍ/ｈからの加速、１００ｋｍ/ｈ巡航３５００ｐｒｍくらいをキープ。）</p>
+
+<p>１１０km/ｈ以上、ベタ踏み寸前、４０００ｒｐｍくらいをキープ。</p>
+
+<p>ベタ踏み、５０００ｒｐｍをキープ。（ここで、最大馬力が出ると思われる、４８ｐｓですが、何かｗ）</p>
+
+<p>ゆるい上り坂でも、８０ｋｍ/ｈ巡航では、ある程度の回転数が変わるのが普通ですが、３０００ｒｐｍキープで全く変化なし。</p>
+
+<p>CVTが変速をして、トルクを出している模様ｗｗｗ</p>
+
+<p>思わず、へーでした＞＜</p>
+
+<p>あと、下り坂はアクセルを離すと２５００ｒｐｍをキープして、エンブレをかけている様子。</p>
+
+<p>今回の「マダコ」のテストで、分かったことはコレくらいです。（もうないでしょうけど・・・）</p>
+
+<p>もっと頻繁に回転数が変わっていると、思っていたので、（CVTでギヤ比を変えているんですね。当たり前かｗ）結構とおりこうさんなんだと感心しました。</p>
+
+<p>みなさんもCVTの車に乗ってみましょーめっさ、違和感があると思いますが、上では８０ｋｍ/ｈで３０００ｒｐｍと書きましたが、高速道路走行では思っている以上に静かに感じます。</p>
+</div>
+
+
+  <footer>
+    <p class="meta">
+      
+  
+
+<span class="byline author vcard">Posted by <span class="fn">はやし</span></span>
+
+      
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2007-11-28T21:40:19+09:00" pubdate data-updated="true">Nov 28<span>th</span>, 2007</time>
+      
+
+<span class="categories">
+  
+    <a class='category' href='/blog/categories/diary/'>diary</a>
+  
+</span>
+
+
+    </p>
+    
+      <div class="sharing">
+  
+  <a href="http://twitter.com/share" class="twitter-share-button" data-url="http://mdhy.github.io/blog/2007/11/28/I-want-to-own-a-tachometer/" data-via="" data-counturl="http://mdhy.github.io/blog/2007/11/28/I-want-to-own-a-tachometer/" >Tweet</a>
+  
+  
+  
+</div>
+
+    
+    <p class="meta">
+      
+        <a class="basic-alignment left" href="/blog/2007/11/27/Amazing-Ya-I-PIC/" title="Previous Post: PICってすごいやー">&laquo; PICってすごいやー</a>
+      
+      
+        <a class="basic-alignment right" href="/blog/2007/11/28/VB-NET-3-minutes-cooking/" title="Next Post: VB.NET 3分クッキング">VB.NET 3分クッキング &raquo;</a>
+      
+    </p>
+  </footer>
+</article>
+
+</div>
+
+<aside class="sidebar">
+  
+    <section>
+  <h1>Recent Posts</h1>
+  <ul id="recent_posts">
+    
+      <li class="post">
+        <a href="/blog/2013/02/02/How-big-reservoir-of-data/">ビックデータの溜め方</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2013/01/28/It-moves-to-the-VPS-Sakura-from-AmazonEC2/">AmazonEC2 から さくらの VPS へお引越し</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2012/08/11/Buy-the-ThinkPad-X61s/">ThinkPad X61s を購入</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2012/03/04/to-start-github/">github をはじめるよ</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2012/03/01/W-that-is-supposed-to-be-amazing-pair-programming-joint-party/">ペアプログラミング合コン...すごいことになってるｗ</a>
+      </li>
+    
+  </ul>
+</section>
+
+
+
+
+
+  
+</aside>
+
+
+    </div>
+  </div>
+  <footer role="contentinfo"><p>
+  Copyright &copy; 2014 - はやし <br/>
+  <span class="credit">Powered by <a href="http://octopress.org">Octopress</a>, customized with <a href="https://github.com/mjhea0/whiterspace">whiterspace</a>.</span>
+</p>
+
+</footer>
+  
+
+
+
+
+
+
+
+  <script type="text/javascript">
+    (function(){
+      var twitterWidgets = document.createElement('script');
+      twitterWidgets.type = 'text/javascript';
+      twitterWidgets.async = true;
+      twitterWidgets.src = 'http://platform.twitter.com/widgets.js';
+      document.getElementsByTagName('head')[0].appendChild(twitterWidgets);
+    })();
+  </script>
+
+
+
+
+
+</body>
+</html>

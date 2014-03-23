@@ -1,0 +1,265 @@
+
+<!DOCTYPE html>
+<!--[if IEMobile 7 ]><html class="no-js iem7"><![endif]-->
+<!--[if lt IE 9]><html class="no-js lte-ie8"><![endif]-->
+<!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <title>WINDOWS7の管理者アカウントって - めだはや</title>
+  <meta name="author" content="はやし">
+
+  
+  <meta name="description" content="「管理者権限のアカウントでダブルクリックでプログラムを実行しても、管理者で実行したことにならないんですね」 あれ！？ですよねー ＝＝＝＝＝ UAC?おいしいの??と思っていましたが4日間拘束され続けやっと理解した林です。 説明書をちゃんと読まない私ですが、4日苦しめられた挙句に説明書（ &hellip;">
+  
+
+  <!-- http://t.co/dKP3o1e -->
+  <meta name="HandheldFriendly" content="True">
+  <meta name="MobileOptimized" content="320">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  
+  <link rel="canonical" href="http://mdhy.github.io/blog/2010/09/11/What-administrator-account-WINDOWS7">
+  <link href="/favicon.png" rel="icon">
+  <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
+  <link href="/atom.xml" rel="alternate" title="めだはや" type="application/atom+xml">
+  <script src="/javascripts/modernizr-2.0.js"></script>
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+  <script>!window.jQuery && document.write(unescape('%3Cscript src="./javascripts/lib/jquery.min.js"%3E%3C/script%3E'))</script>
+  <script src="/javascripts/octopress.js" type="text/javascript"></script>
+  <!--Fonts from Google"s Web font directory at http://google.com/webfonts -->
+<link href="http://fonts.googleapis.com/css?family=PT+Serif:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+<link href="http://fonts.googleapis.com/css?family=PT+Sans:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+<link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+<link href='http://fonts.googleapis.com/css?family=Fjalla+One' rel='stylesheet' type='text/css'>
+  
+
+</head>
+
+<body   class="collapse-sidebar sidebar-footer" >
+  <header role="banner">
+</header>
+  <nav role="navigation"><ul class="subscription" data-subscription="rss">
+  <li><a href="/atom.xml" rel="subscribe-rss" title="subscribe via RSS">RSS</a></li>
+  
+</ul>
+  
+<form action="https://www.google.com/search" method="get">
+  <fieldset role="search">
+    <input type="hidden" name="q" value="site:mdhy.github.io" />
+    <input class="search" type="text" name="q" results="0" placeholder="Search"/>
+  </fieldset>
+</form>
+  
+<ul class="main-navigation">
+  <li><a href="/">Blog</a></li>
+  <li><a href="/blog/archives">Archives</a></li>
+  <li><a href="/about">About</a></li>
+</ul>
+
+</nav>
+  <div id="main">
+    <div id="content">
+      <div>
+<article class="hentry" role="article">
+  
+  <header>
+  
+    
+      <h1 class="entry-title">WINDOWS7の管理者アカウントって</h1>
+    
+  
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2010-09-11T11:01:41+09:00" pubdate data-updated="true">Sep 11<span>th</span>, 2010</time>
+        
+      </p>
+    
+  </header>
+
+
+<div class="entry-content"><p>「管理者権限のアカウントでダブルクリックでプログラムを実行しても、管理者で実行したことにならないんですね」</p>
+
+<p>あれ！？ですよねー</p>
+
+<p>＝＝＝＝＝</p>
+
+<p>UAC?おいしいの??と思っていましたが4日間拘束され続けやっと理解した林です。</p>
+
+<p>説明書をちゃんと読まない私ですが、4日苦しめられた挙句に説明書（デベロッパー向け資料）を読みながらデバックしてみたら、1時間で解決しました＞＜</p>
+
+<p>教訓１</p>
+
+<p>『説明書や仕様書ははじめにじっくりよみましょう』</p>
+
+<hr />
+
+<p>いままでもそうでしたが、英語のフォーラムやリファレンスサイトはとても役にたちます。</p>
+
+<p>知りたいことを手に入れるまでに、英文だと行数がすくないのと、無駄なことが書いてないので読みやすいし、投稿している人々の感情表現が面白くて息抜きになります♪</p>
+
+<p>教訓２</p>
+
+<p>『海外（言語なんでも大体わかる）フォーラムを見に行ってみる、そしてじっくり読みましょう』</p>
+
+<hr />
+
+<p>動くはずなのに動かない！アプリ作っていてよくあることですが、経験から大体絶対に動くはず（コードは間違ってない）なのにと思うときがありますが、そういう時は想定していない（モニターしていない）問題に邪魔されている可能性があります。</p>
+
+<p>こういうときは、ログを見たり、処理の途中で変数から値を取り出して確認したりするわけですが、参照しているＤＬＬが間違っているのでは？処理の順番が間違っているのではと何百通りの組み合わせを試して撃沈しても、ログを確認したり、デバックを行うことで一瞬で解決します。</p>
+
+<p>教訓３</p>
+
+<p>『動作がおかしければ、コストがかかってもログ取りやデバックは行うようにしましょう。わからないことを一生懸命考えても何も解決しません。』</p>
+
+<hr />
+
+<p>エラーが出てくれるってことはすごくありがたいことで、一番ありがたいのは一発で動いてくれることなんですが、よのなかそんなに甘くありません；；</p>
+
+<p>条件分岐の条件式が間違っていたり、取り出した値が空だったりすると何も出力さなかったり、処理されなかったりするわけが、デバイスの設定を変更するときもエラーを起こさないように作ってあるので、希望通りの動作をしてくれません。</p>
+
+<p>ＷinＸＰで日曜プログラミングしてきた身としては、アカウントが管理者権限を持っているものさらに管理者として実行しなければいけないとは思いもしていませんでしたｗ</p>
+
+<p>教訓４</p>
+
+<p>『Ｗｉｎ７では自作アプリは管理者権限のアカウントであってもとりあえず管理者として実行しましよう。』</p>
+
+<hr />
+
+<p>というわけでした。</p>
+</div>
+
+
+  <footer>
+    <p class="meta">
+      
+  
+
+<span class="byline author vcard">Posted by <span class="fn">はやし</span></span>
+
+      
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2010-09-11T11:01:41+09:00" pubdate data-updated="true">Sep 11<span>th</span>, 2010</time>
+      
+
+<span class="categories">
+  
+    <a class='category' href='/blog/categories/diary/'>diary</a>
+  
+</span>
+
+
+    </p>
+    
+      <div class="sharing">
+  
+  <a href="http://twitter.com/share" class="twitter-share-button" data-url="http://mdhy.github.io/blog/2010/09/11/What-administrator-account-WINDOWS7/" data-via="" data-counturl="http://mdhy.github.io/blog/2010/09/11/What-administrator-account-WINDOWS7/" >Tweet</a>
+  
+  
+  
+</div>
+
+    
+    <p class="meta">
+      
+        <a class="basic-alignment left" href="/blog/2010/09/03/Celebration-Internet-Cartoon-AZ-cafe-open/" title="Previous Post: 祝！　インターネット＆まんが　ＡＺカフェ　オープン！！">&laquo; 祝！　インターネット＆まんが　ＡＺカフェ　オープン！！</a>
+      
+      
+        <a class="basic-alignment right" href="/blog/2010/09/11/1000-If-I-notice/" title="Next Post: 気がつけば1000+">気がつけば1000+ &raquo;</a>
+      
+    </p>
+  </footer>
+</article>
+
+</div>
+
+<aside class="sidebar">
+  
+    <section>
+  <h1>Recent Posts</h1>
+  <ul id="recent_posts">
+    
+      <li class="post">
+        <a href="/blog/2013/02/02/How-big-reservoir-of-data/">ビックデータの溜め方</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2013/01/28/It-moves-to-the-VPS-Sakura-from-AmazonEC2/">AmazonEC2 から さくらの VPS へお引越し</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2012/08/11/Buy-the-ThinkPad-X61s/">ThinkPad X61s を購入</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2012/03/04/to-start-github/">github をはじめるよ</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2012/03/01/W-that-is-supposed-to-be-amazing-pair-programming-joint-party/">ペアプログラミング合コン...すごいことになってるｗ</a>
+      </li>
+    
+  </ul>
+</section>
+
+
+
+
+
+  
+</aside>
+
+
+    </div>
+  </div>
+  <footer role="contentinfo"><p>
+  Copyright &copy; 2014 - はやし <br/>
+  <span class="credit">Powered by <a href="http://octopress.org">Octopress</a>, customized with <a href="https://github.com/mjhea0/whiterspace">whiterspace</a>.</span>
+</p>
+
+</footer>
+  
+
+
+
+
+
+
+
+  <script type="text/javascript">
+    (function(){
+      var twitterWidgets = document.createElement('script');
+      twitterWidgets.type = 'text/javascript';
+      twitterWidgets.async = true;
+      twitterWidgets.src = 'http://platform.twitter.com/widgets.js';
+      document.getElementsByTagName('head')[0].appendChild(twitterWidgets);
+    })();
+  </script>
+
+
+
+
+
+</body>
+</html>

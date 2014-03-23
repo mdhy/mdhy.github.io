@@ -1,0 +1,846 @@
+
+<!DOCTYPE html>
+<!--[if IEMobile 7 ]><html class="no-js iem7"><![endif]-->
+<!--[if lt IE 9]><html class="no-js lte-ie8"><![endif]-->
+<!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <title>めだはや</title>
+  <meta name="author" content="はやし">
+
+  
+  <meta name="description" content="ってか、作ったんですがｗ 自分の作ったアプリケーションを心ばかりに紹介してきたのですが、はっきり言って、私の作るモノを８割パクリですｗｗｗ といっても、ブラックボックス化しているWEBアプリケーションをオリジナルでコードに起こしているんですが、オリジナリティはほとんどありません。 &hellip;">
+  
+
+  <!-- http://t.co/dKP3o1e -->
+  <meta name="HandheldFriendly" content="True">
+  <meta name="MobileOptimized" content="320">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  
+  <link rel="canonical" href="http://mdhy.github.io/blog/page/34">
+  <link href="/favicon.png" rel="icon">
+  <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
+  <link href="/atom.xml" rel="alternate" title="めだはや" type="application/atom+xml">
+  <script src="/javascripts/modernizr-2.0.js"></script>
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+  <script>!window.jQuery && document.write(unescape('%3Cscript src="./javascripts/lib/jquery.min.js"%3E%3C/script%3E'))</script>
+  <script src="/javascripts/octopress.js" type="text/javascript"></script>
+  <!--Fonts from Google"s Web font directory at http://google.com/webfonts -->
+<link href="http://fonts.googleapis.com/css?family=PT+Serif:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+<link href="http://fonts.googleapis.com/css?family=PT+Sans:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+<link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+<link href='http://fonts.googleapis.com/css?family=Fjalla+One' rel='stylesheet' type='text/css'>
+  
+
+</head>
+
+<body   class="collapse-sidebar sidebar-footer" >
+  <header role="banner">
+</header>
+  <nav role="navigation"><ul class="subscription" data-subscription="rss">
+  <li><a href="/atom.xml" rel="subscribe-rss" title="subscribe via RSS">RSS</a></li>
+  
+</ul>
+  
+<form action="https://www.google.com/search" method="get">
+  <fieldset role="search">
+    <input type="hidden" name="q" value="site:mdhy.github.io" />
+    <input class="search" type="text" name="q" results="0" placeholder="Search"/>
+  </fieldset>
+</form>
+  
+<ul class="main-navigation">
+  <li><a href="/">Blog</a></li>
+  <li><a href="/blog/archives">Archives</a></li>
+  <li><a href="/about">About</a></li>
+</ul>
+
+</nav>
+  <div id="main">
+    <div id="content">
+      <div class="blog-index">
+  
+  
+  
+    <article>
+      
+  <header>
+  
+    
+      <h1 class="entry-title"><a href="/blog/2007/12/21/I-get-the-long-sought-source-viewer/">念願のソースビューワを手に入れる</a></h1>
+      
+      
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2007-12-21T00:33:39+09:00" pubdate data-updated="true">Dec 21<span>st</span>, 2007</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>ってか、作ったんですがｗ</p>
+
+<p>自分の作ったアプリケーションを心ばかりに紹介してきたのですが、はっきり言って、私の作るモノを８割パクリですｗｗｗ</p>
+
+<p>といっても、ブラックボックス化しているWEBアプリケーションをオリジナルでコードに起こしているんですが、オリジナリティはほとんどありません。</p>
+
+<p>私の目標としているものは、自分にも役に立って、他の人には直感的に理解して頂けるものを目指しています。
+なので、私の理論（そんなものありませんがｗ）をぶつけるのではなく、世間一般で受け入れられているものを組込めば大丈夫だろーみたいな事を考えて８割パクリなわけです。</p>
+
+<p>８割パクリといっても、それは見える部分だけで、ソースコードはオリジナルそのものです（私は特別に自慢できるようなコードや独創性に富んだコードを書けるわけでない平凡な才能なんですが、ソースコードの書き方にも世間一般に受け入れられているものがあるので、結構とパクっていますがｗ）。</p>
+
+<p>まーパクった表面的な部分をみて評価してして貰うのは、アレなので、ソースコードを公開できるようにしたいなーなんて考えるわけです。</p>
+
+<p>んで、作りました！！</p>
+
+<p>PHPは簡単に実装できるが、奇麗なコードが書けないということで有名ですが、今回作成した「mySourceViewer」はPHPの優れた関数の一つであるhightlight_file()でコードを奇麗にデコレーションしてくれます。</p>
+
+<p><a href="http://baabuu.ddo.jp/share/msv/?id=2">実例</a></p>
+
+<p>＊＊＊＊＊</p>
+
+<p>今日、KDDIのネットからDVDファイルをダウンロードして、DVD-Rに書き込めばDVDが出来上がるというサービスをみていると、「オーシャンズ１３」が昨日から発売されていることを知って、早速借りて観ましたー</p>
+
+<p>「１３」は良くまとまっていて、感動ありで、オーシャンズの行動に心打たれましたー
+余暇には、ぜひご覧ください。</p>
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+  
+    
+      <h1 class="entry-title"><a href="/blog/2007/12/18/Tool-of-today/">本日の道具</a></h1>
+      
+      
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2007-12-18T21:04:34+09:00" pubdate data-updated="true">Dec 18<span>th</span>, 2007</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>道具には用途があって、ぴったりハマれば最高に役に立つ！！</p>
+
+<p>今日は友達の家にサンドバッグを取り付けに行ってきましたｗ</p>
+
+<p>・・・ｗ</p>
+
+<p>そこで役に立った道具達を紹介したいと思いますー</p>
+
+<p><img src="upfiles/2007/12/1197979474_1.jpg" alt="画像" /></p>
+
+<p>  まず、切断から研磨までなんでもごされのディスクグラインダーです。</p>
+
+<p>サンドバッグを取り付ける為に梁を新たしく掛けたんですが、さすがに固定しないとまずいだろーということで、L字の金具を求めていたのですが、友達の家にはありませんでした。
+代わりに、3mmくらいのステーがあり、これ切って曲げたら、イケる？って感じで、金切りノコでも面倒いなーって場合も、ディスクグラインダーはギュイーン、ギュイーン、スパーンですｗｗ</p>
+
+<p>これは重宝します♪</p>
+
+<p><img src="upfiles/2007/12/1197979474_2.jpg" alt="画像" /></p>
+
+<p>続いて、DIYで役に立つ道具の一つであるインパクトドライバーです。</p>
+
+<p>コードレスの充電池型だったのですが、充電器が無くなっていて、急いでいたので、コード付きになってしまいましたｗｗｗ
+最大２５Aまで供給できる電源付の最狂インパクトドライバーです。</p>
+
+<p>笑うところです。笑ってくださいｗｗ</p>
+
+<p>以上、本日の道具紹介（たぶん一回目）でしたー</p>
+
+<p>＊＊＊＊＊</p>
+
+<p>もう一つ。
+DVDプレーヤーが壊れてから数週間立ちましたが、DVDをマックブックで見なくて良い方法を見つけました♪</p>
+
+<p><img src="upfiles/2007/12/1197979474_3.jpg" alt="画像" /></p>
+
+<p>そう、PS2です。
+私はPS2を持っていました＾＾；）</p>
+
+<p>あー焦ってDVDプレーヤ買わなくて良かった＞＜</p>
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+  
+    
+      <h1 class="entry-title"><a href="/blog/2007/12/17/Wow-want-to-body-pain/">うわぁ体痛てぇ</a></h1>
+      
+      
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2007-12-17T21:18:01+09:00" pubdate data-updated="true">Dec 17<span>th</span>, 2007</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>気を張りすぎるのも考えものです。</p>
+
+<p>結構と緊張していたのでしょう。</p>
+
+<p>ってか帰りの高速バスでの居眠りに仕方に問題があったのか</p>
+
+<p>上半身が軋みますｗ</p>
+
+<p>風呂にでも入ってみますかー</p>
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+  
+    
+      <h1 class="entry-title"><a href="/blog/2007/12/16/Heikki-ride/">イッキ乗り！</a></h1>
+      
+      
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2007-12-16T19:08:47+09:00" pubdate data-updated="true">Dec 16<span>th</span>, 2007</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>やっと山を越えましたｗ</p>
+
+<p>今日は将来がかかっている（私はそんなに関係ない）試験がありました。</p>
+
+<p>その名は「平成19年度10月期大学評価・学位授与機構試験」ｗ</p>
+
+<p>要するに、学位〔私は学士（工学）〕を頂くための試験で、小論文試験で評価されます。</p>
+
+<p>私も意気込んで、何の山も張らずに前日は全く関係のないことをして、あっ2時だ！！とねて起きたのは6時のバスに乗るために5時起きで、今はもう頭がフラフラする中で研究室から記事を書いていますｗｗ</p>
+
+<p>やっぱりちゃんと復習をしておけば良かったと反省しながらも、運良く簡単な問題が出て「棚ぼた」があった少数派に私も入れたようです。</p>
+
+<p>はっきり言って楽勝でしたｗｗｗ（題意が漠然としていたので、私の勘違いなら終わった）</p>
+
+<p>＊＊＊＊＊</p>
+
+<p>さっさと帰ろうという事になって、15時くらいには帰ってきたのですが、友達が三菱自動車の発売を始めた「ランサーエボリューションX（テン）」を試乗して、すげぇーやべーｗと言っていたので一人で行ってきましたｗｗ</p>
+
+<p><img src="upfiles/2007/12/1197799727_1.png" alt="画像" /></p>
+
+<p>感想は、アクセルを踏むとターボが自然に入ってきて、滑らかに車速を高めます。
+ハンドルが常に重たいので、速度感があまり感じられませんでした。
+私が思ったのは、待ち乗りはアクセルに気を使いながらなので（踏みすぎると、バビューン）疲れるだろうなーと思いましたが、あまり良くありませんが、1速の所を2速で回転数があからさまにエンストする所でもエンストしないんですよｗ
+へぇーでした。
+格好つけてスマートに試乗してみるよりも、日常の怠慢さをぶつけてみるとスポーツカーながら、関心させられますが、クラッチは重たいです。
+シートは硬いです。
+ハンドルは取られます。
+バネが硬いです。</p>
+
+<p>私はちょっとなーと思いましたｗ</p>
+
+<p>ついでに「i」にも試乗させて貰いました。
+RR（リアエンジン、リア駆動）なので、何かを期待していましたが、NAはいたって普通でしたｗ
+お勧めはターボの4WDで、燃費も１４Km/Lはいけるとのことでした。
+水温は試乗中は常に「低い」というランプが付いていましたｗ
+あと背中にもっこりとくるシートが気にいりません＞＜
+あと、足回りは硬いです。私のプレオさんくらい突き上げますｗｗ
+あとは平凡そのものでした。</p>
+
+<p>＊＊＊＊＊</p>
+
+<p>エボXが順番待ちで、営業の人がチラッと「インプレッサは乗られました？」と言ったので、ついでにインプレッサも試乗して来ましたｗｗｗ</p>
+
+<p><img src="upfiles/2007/12/1197799727_2.png" alt="画像" /></p>
+
+<p>今回試乗したのは「インプレッサ WRX STI」というフラッグシップモデル。
+エボXは人気のために、市街地コースを５ｋｍほど走っただけで、所々でアクセル踏んでバビューンをしていましたが、スバルは、どうぞ。と一人で好きにしてくださいでしたｗ</p>
+
+<p>フッ高速しかないぜ！！！となるわけです。</p>
+
+<p>〔予備知識として、インプレッサ WRX STIには、現行のレガシーに搭載されているSI-DRIVE（エスアイ−ドライブ）が搭載されています。SI-DRIVEは、Iモード（エコモード）、Sモード（スポーツモード）、S#モード（ロケットモード）の三つのエンジン制御が切り替えれるようになっています。〕</p>
+
+<p>乗り始めは、Sモード（オート）にセットしてありました。
+加速間はエボXに劣るものの（同じようなアクセルの踏み方）、車重が重いからだろーなんて思っていましたが、アクセル軽踏みでスーと追い抜きができて、エボXよりも好感が持てました。</p>
+
+<p>次にIモードを試してみると、加速が遅い、吹けが悪い？と思わせるような、ターボの付いてないNAの2.0L車のような振る舞いをしますが、私はこのIモードを使って一気にインプレッサに惚れ込みました！！</p>
+
+<p>エボXはアクセル踏めばバビューンで、高回転まで引っ張ることが怖いんですが、インプレッサのIモードはちょうどいいんですよ。
+回転あげて追い抜いて、エンブレで減速ってのができるんです。
+でも、エンストしやすくなりますｗ
+私は2回ぐらい路上でエンストしましたｗｗ</p>
+
+<p>でも、高回転まで引っ張って加速するあの快感はいいですよ！！</p>
+
+<p>そして、真打のS#モード（ロケットモード）はどうかというと、気づけば１６０ｋｍ/hで加速感を楽しんでいれば、180km/hで燃料カットされます。
+もうねぇー180km/hは通過地点のような260km/hまで刻んであるメータが物語っていたｗ</p>
+
+<p>でも、まさに走る棺おけです。あの加速を続けていたらいつか必ず死にますｗ
+ですが、まさに羊の皮をかぶった狼です。
+よほど車を腕に自身がない限りは、インプレッサ WRX STIと勝負しないほうがいいでしょう。
+あっと思った次の瞬間には、フロントガラスに点になっているはずｗ
+乗り心地は抜群で、エボXみたいな突き上げもなくジェントルです。
+車重が重いように感じますが、エボXのほうがカタログ値では重いです。
+シートも安っぽいですが、私はあの方がいいです。
+いろんな姿勢で運転できます。
+ブレーキはめっちゃ効きます180km/hからの減速もちょい踏みで大丈夫ｗ</p>
+
+<p>一度、新型インプレッサ WRX STIに試乗して、Iモードで走ってみてください。
+これ、良いと思うはずです。
+走り始めたら、良い車かどうか分かるなんて、話がありますが、あるかもしれませんｗｗｗ
+私はディーラから路上にでる縁石段差で分かりましたｗ</p>
+
+<p><img src="upfiles/2007/12/1197799727_3.png" alt="画像" /></p>
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+  
+    
+      <h1 class="entry-title"><a href="/blog/2007/12/15/Hey-If-Re-ll-s-what/">オイ？！なんだぞりゃ！！</a></h1>
+      
+      
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2007-12-15T19:20:27+09:00" pubdate data-updated="true">Dec 15<span>th</span>, 2007</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>シンタックスエラー？？</p>
+
+<p>なぜ私が声を荒げているかというと、配布されていたソースファイルに記述ミスがあったからですｗ</p>
+
+<p>ソースファイルっていうのは、クリックしたら動作するプログラム（バイナリ）の動作が人間の理解しやすいように書かれたテキストファイルです。</p>
+
+<p>＊＊＊＊＊</p>
+
+<p>もし、「Hoge World」と画面に表示させたい場合は、以下で実現できます。</p>
+
+<h1>include &lt;stdio.h></h1>
+
+<p>int main(){
+ printf(&ldquo;Hoge World&rdquo;);
+}</p>
+
+<p>これは、C言語というプログラミング言語で、古くから今でも良く使われているものです。</p>
+
+<p>これを、保存→コンパイルしてやると、画面に「Hoge World」を表示させる事ができます。</p>
+
+<p>＊＊＊＊＊</p>
+
+<p>普通は、ダウンロードしたプログラムはバイナリ（コンパイラで変換された形）になっていますが、私が良く扱うものはソース（ファイル）で配られているものを使って、自分の使いたいOS（LinuxとかUNIXとか）に合わせてコンパイルして、プログラムを使うんです。</p>
+
+<p>ですが、稀にソース（ファイル）の記述ミスでコンパイルが完了しない時があります＞＜
+そういう時は、吐き出されたエラーを見ながら、エディタで修正をするんです。
+私には簡単な作業ながら、これが敷居の高さなんだなーとか思ったりしてましたｗ</p>
+
+<p>っていう話です。</p>
+
+<h3>Comments</h3>
+
+<hr />
+
+<p>実はソースのミスではなくて、環境変数依存のコンパイルオプション、
+最適化によるアセンブリコードの変化、ライブラリ依存 (.so は特に) だったりすることが多くありません？
+| Q | 2007-12-16 04:03:25 +0900 |</p>
+
+<hr />
+
+<p>それが一番ある！！
+ほんとイライラするよなｗ
+| 林 | 2007-12-16 18:00:14 +0900 |</p>
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+  
+    
+      <h1 class="entry-title"><a href="/blog/2007/12/14/Avuai/">アヴァイ</a></h1>
+      
+      
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2007-12-14T20:20:21+09:00" pubdate data-updated="true">Dec 14<span>th</span>, 2007</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>・・・</p>
+
+<p>風邪が治ったみたいだー</p>
+
+<p>ってか・・・</p>
+
+<p>インフルでもなかったみたいだー</p>
+
+<p>さーアレ、やるか。</p>
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+  
+    
+      <h1 class="entry-title"><a href="/blog/2007/12/13/Yavuai/">ヤヴァイ</a></h1>
+      
+      
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2007-12-13T21:45:21+09:00" pubdate data-updated="true">Dec 13<span>th</span>, 2007</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>風邪をひいてしまった・・・</p>
+
+<p>学位の小論までを何日だっけ？</p>
+
+<p>二日？</p>
+
+<p>たぶん、インフルではないかと思う・・・</p>
+
+<p>もう、ねよー</p>
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+  
+    
+      <h1 class="entry-title"><a href="/blog/2007/12/10/I-try-to-lower-the-vehicle-height-8mm/">車高を８mm下げてみる</a></h1>
+      
+      
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2007-12-10T21:34:55+09:00" pubdate data-updated="true">Dec 10<span>th</span>, 2007</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>すげーハの字になってるよー</p>
+
+<p>久しぶりに、車高を落としてみました。</p>
+
+<p>トーの調整を覚えたので、トー０に調整して、テスト走行。</p>
+
+<p>ハの字になっているので、タイヤが食いつきません＞＜</p>
+
+<p>明日は元に戻そー</p>
+
+<p>小論まであと一週間ですー</p>
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+  
+    
+      <h1 class="entry-title"><a href="/blog/2007/12/08/I-try-to-make-the-Chaku-Uta-full/">着うた（フル）を作ってみる</a></h1>
+      
+      
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2007-12-08T01:59:26+09:00" pubdate data-updated="true">Dec 8<span>th</span>, 2007</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>携帯って結構と再生能力が高いんですねー</p>
+
+<p>着うた（フル）とか、むしろ携帯電話で音楽を聴くなんて必要なんてないとか思っていたのですが、いつものように<a href="http://gigazine.net/index.php?/news/20071207_headline/">GIGAZINE</a>でヘッドラインを眺めていると、「<a href="http://k-tai.impress.co.jp/cda/article/news_toppage/37565.html">宇多田ヒカルの「Automatic」、4日間限定で着うた無料配信</a>」と言う記事を見て・・・
+そういえば、着うたって金いったんだよなーなんてぼんやり思いました。</p>
+
+<p>そういえば、自分でも作れたけ・・・やるしかないｗｗ</p>
+
+<p>ってなわけで、ググってみるとあるあるｗ</p>
+
+<p>どうやら、「携帯動画変換君」っていうのを使うと比較的簡単に作れるようだ。</p>
+
+<p>携帯動画変換君を<a href="http://www.nurs.or.jp/~calcium/wiki/">まとめたwiki</a>を参考に設定作業をすすめる。</p>
+
+<p>一つ作ってみる・・・ん？！</p>
+
+<p>いまいちだなー</p>
+
+<p>色々調べてみると、もうちょっと高音質にする方法があるようです。</p>
+
+<p>AACという形式の拡張であるAAC-LCで圧縮すれば、結構良くなるということ</p>
+
+<p>・・・</p>
+
+<p>今度は、いい音出してますよー
+これで、メモリースティックに入れてやれば、パケ代いらずの購入代金入らずです</p>
+
+<p>注意ですが、この方法で悪いことを考えた人は、確実に著作権に触れていますので、逮捕されます。
+無茶をしないでください。</p>
+
+<p>＊＊＊＊＊</p>
+
+<p>今日のデスクトップ</p>
+
+<p><img src="upfiles/2007/12/1197046766_1.png" alt="画像" /></p>
+
+<p>気になるのは、エロげーばかり・・・私のデスクトップではないですよｗ</p>
+
+<p><img src="upfiles/2007/12/1197046766_2.png" alt="画像" /></p>
+
+<p>こちらは、学校関連で使うデスクトップです。</p>
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+  
+    
+      <h1 class="entry-title"><a href="/blog/2007/12/05/Toe-toe/">トー（toe）</a></h1>
+      
+      
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2007-12-05T22:33:34+09:00" pubdate data-updated="true">Dec 5<span>th</span>, 2007</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>つま先のことではありませんー</p>
+
+<p>今回の「トー」とは、四輪自動車のタイヤの向いている方向のことですｗ</p>
+
+<p>図で説明すると、(上から見た時）タイヤが</p>
+
+<p>／ &mdash;&mdash;&ndash; ＼</p>
+
+<p>になったり、</p>
+
+<p>＼ &mdash;&mdash;&ndash; ／</p>
+
+<p>のようになっているときの状態を表す言葉です。</p>
+
+<p>（進行方向）
+／ &mdash;&mdash;&ndash; ＼この進行方向が狭くなっている状態をトーインといいます。</p>
+
+<p>（進行方向）
+＼ &mdash;&mdash;&ndash; ／逆に広くなっている状態をトーアウトといいます。</p>
+
+<p>＊＊＊＊＊</p>
+
+<p>うんちくはこのくらいにして、何がいいたいか！？というと・・・</p>
+
+<p>車高調を入れてから、前輪の内側の片減りがもの凄くかったんです・・・
+原因は分かっていたのですが、プレオはキャンバーは調節できないので、諦めていました。</p>
+
+<p>ちなみにキャンバーっていうのは、車を前方からみるとタイヤが</p>
+
+<p>／ &mdash;&mdash;&ndash; ＼（ネガティブキャンバー）</p>
+
+<p>になっていたり</p>
+
+<p>＼ &mdash;&mdash;&ndash; ／（ポジティブキャンバー）</p>
+
+<p>だったりすること表しています。</p>
+
+<p>当然、車高を落とすと</p>
+
+<p>／ &mdash;&mdash;&ndash; ＼ （ネガティブキャンバー）</p>
+
+<p>になってしまいますｗ</p>
+
+<p>私はネガティブキャンバーだからと思いこんでいたのですが、今日知ってしまったのです・・・</p>
+
+<p>トーアウトになっていると、片減りすることを！！</p>
+
+<p>考えてみれば、タイヤが「ムンクの叫び」みたくなっていれば、バリバリ削れるのは分かりますｗｗ</p>
+
+<p>＊＊＊＊＊</p>
+
+<p>そして、知ってしまった私は、どう見てもトーアウトになっているプレオのフロントをトー０にしてやろーと思い立つわけですｗｗｗ</p>
+
+<p>やりましたよｗ終わった頃には外は真っ暗でした＞＜</p>
+
+<p>フロントのトーをはかってみると、トーアウト１３ｍｍでした＞＜
+そりゃー減るわなー；；</p>
+
+<p>そして、ジャッキアップして、タイヤはずして、５５６吹いて、１９と１３のスパナを使って、トーインに少しずつして、テスト走行して、ハンドルセンターを合わせて、なんとか調整できました。</p>
+
+<p>フロントをトーイン0.5mmで、リアはトーイン1mm（計ったらピッタリでした。調整してません）というところに収まりましたー</p>
+
+<p>＊＊＊＊＊</p>
+
+<p>学位小論の受験表が届きました・・・が、受験時間が午前１１時からなんです；；
+もう、前日に大阪入り確定です。。。</p>
+</div>
+  
+  
+
+
+    </article>
+  
+  <div class="pagination">
+    
+      <a class="prev" href="/blog/page/35/">&larr; Older</a>
+    
+    <a href="/blog/archives">Blog Archives</a>
+    
+    <a class="next" href="/blog/page/33/">Newer &rarr;</a>
+    
+  </div>
+</div>
+<aside class="sidebar">
+  
+    <section>
+  <h1>Recent Posts</h1>
+  <ul id="recent_posts">
+    
+      <li class="post">
+        <a href="/blog/2013/02/02/How-big-reservoir-of-data/">ビックデータの溜め方</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2013/01/28/It-moves-to-the-VPS-Sakura-from-AmazonEC2/">AmazonEC2 から さくらの VPS へお引越し</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2012/08/11/Buy-the-ThinkPad-X61s/">ThinkPad X61s を購入</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2012/03/04/to-start-github/">github をはじめるよ</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2012/03/01/W-that-is-supposed-to-be-amazing-pair-programming-joint-party/">ペアプログラミング合コン&#8230;すごいことになってるｗ</a>
+      </li>
+    
+  </ul>
+</section>
+
+
+
+
+
+  
+</aside>
+
+    </div>
+  </div>
+  <footer role="contentinfo"><p>
+  Copyright &copy; 2014 - はやし <br/>
+  <span class="credit">Powered by <a href="http://octopress.org">Octopress</a>, customized with <a href="https://github.com/mjhea0/whiterspace">whiterspace</a>.</span>
+</p>
+
+</footer>
+  
+
+
+
+
+
+
+
+  <script type="text/javascript">
+    (function(){
+      var twitterWidgets = document.createElement('script');
+      twitterWidgets.type = 'text/javascript';
+      twitterWidgets.async = true;
+      twitterWidgets.src = 'http://platform.twitter.com/widgets.js';
+      document.getElementsByTagName('head')[0].appendChild(twitterWidgets);
+    })();
+  </script>
+
+
+
+
+
+</body>
+</html>

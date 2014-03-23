@@ -1,0 +1,744 @@
+
+<!DOCTYPE html>
+<!--[if IEMobile 7 ]><html class="no-js iem7"><![endif]-->
+<!--[if lt IE 9]><html class="no-js lte-ie8"><![endif]-->
+<!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <title>めだはや</title>
+  <meta name="author" content="はやし">
+
+  
+  <meta name="description" content="Option Explicit On Error Resume Next Yday=DateAdd(&ldquo;d&rdquo;,-1,Date()) &lsquo; 昨日のyyyymmdd Wscript.Echo Year(Yday) &amp; Right(&ldquo;0&rdquo;& &hellip;">
+  
+
+  <!-- http://t.co/dKP3o1e -->
+  <meta name="HandheldFriendly" content="True">
+  <meta name="MobileOptimized" content="320">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  
+  <link rel="canonical" href="http://mdhy.github.io/blog/page/3">
+  <link href="/favicon.png" rel="icon">
+  <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
+  <link href="/atom.xml" rel="alternate" title="めだはや" type="application/atom+xml">
+  <script src="/javascripts/modernizr-2.0.js"></script>
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+  <script>!window.jQuery && document.write(unescape('%3Cscript src="./javascripts/lib/jquery.min.js"%3E%3C/script%3E'))</script>
+  <script src="/javascripts/octopress.js" type="text/javascript"></script>
+  <!--Fonts from Google"s Web font directory at http://google.com/webfonts -->
+<link href="http://fonts.googleapis.com/css?family=PT+Serif:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+<link href="http://fonts.googleapis.com/css?family=PT+Sans:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+<link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+<link href='http://fonts.googleapis.com/css?family=Fjalla+One' rel='stylesheet' type='text/css'>
+  
+
+</head>
+
+<body   class="collapse-sidebar sidebar-footer" >
+  <header role="banner">
+</header>
+  <nav role="navigation"><ul class="subscription" data-subscription="rss">
+  <li><a href="/atom.xml" rel="subscribe-rss" title="subscribe via RSS">RSS</a></li>
+  
+</ul>
+  
+<form action="https://www.google.com/search" method="get">
+  <fieldset role="search">
+    <input type="hidden" name="q" value="site:mdhy.github.io" />
+    <input class="search" type="text" name="q" results="0" placeholder="Search"/>
+  </fieldset>
+</form>
+  
+<ul class="main-navigation">
+  <li><a href="/">Blog</a></li>
+  <li><a href="/blog/archives">Archives</a></li>
+  <li><a href="/about">About</a></li>
+</ul>
+
+</nav>
+  <div id="main">
+    <div id="content">
+      <div class="blog-index">
+  
+  
+  
+    <article>
+      
+  <header>
+  
+    
+      <h1 class="entry-title"><a href="/blog/2011/01/20/Yyyymmdd-yesterday/">昨日のyyyymmdd</a></h1>
+      
+      
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2011-01-20T17:30:39+09:00" pubdate data-updated="true">Jan 20<span>th</span>, 2011</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>Option Explicit</p>
+
+<p>On Error Resume Next</p>
+
+<p>Yday=DateAdd(&ldquo;d&rdquo;,-1,Date())</p>
+
+<p>&lsquo; 昨日のyyyymmdd</p>
+
+<p>Wscript.Echo Year(Yday) &amp; Right(&ldquo;0&rdquo;&amp;Month(Yday),2) &amp;Right(&ldquo;0&rdquo;&amp; Day(Yday),2)</p>
+
+<p>LogFolderPath=&ldquo;D:\Log&rdquo;</p>
+
+<p>Set oFso = CreateObject(&ldquo;Scripting.FileSystemObject&rdquo;)</p>
+
+<p>&lsquo;If  oFso.FolderExists(LogFolderPath)  = False Then</p>
+
+<p> oFso.CreateFolder()</p>
+
+<p> CatchErr &ldquo;フォルダが作成されました&rdquo;</p>
+
+<p>&lsquo;End If</p>
+
+<p>Set oFso = Nothing</p>
+
+<p>Sub CatchErr(inMesg)</p>
+
+<p> strMesg=Err.Description</p>
+
+<p> If  Err.Number = 0 Then</p>
+
+<p>   strMesg=inMesg</p>
+
+<p> End If</p>
+
+<p> Wscript.Echo strMesg</p>
+
+<p>End Sub</p>
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+  
+    
+      <h1 class="entry-title"><a href="/blog/2011/01/18/E-mail-address-then-life/">生涯メールアドレス　その後</a></h1>
+      
+      
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2011-01-18T20:39:09+09:00" pubdate data-updated="true">Jan 18<span>th</span>, 2011</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>今日ボーとしながらメールを整理していたら、津山高専からメールが届いていました。</p>
+
+<p>生涯メールアドレス （ <a href="http://www.medanohaya.net/?p=500">http://www.medanohaya.net/?p=500</a> )</p>
+
+<p>の続編です。</p>
+
+<p>Google Apps Education Edition （ <a href="http://www.google.co.jp/a/help/intl/ja/edu/index.html">http://www.google.co.jp/a/help/intl/ja/edu/index.html</a> )</p>
+
+<p>のようです。</p>
+
+<p>ストレージ容量は個人といっしょ7.5GBくらいでした。</p>
+
+<p>ドメインは「tnct-g.jp」、意味はよくわからんが短くてよい。</p>
+
+<p>どんな場面で使おうかなー</p>
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+  
+    
+      <h1 class="entry-title"><a href="/blog/2011/01/17/Celebration-Server-transfer/">祝！サーバ移転</a></h1>
+      
+      
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2011-01-17T19:35:27+09:00" pubdate data-updated="true">Jan 17<span>th</span>, 2011</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>さて、思い立ったら吉日といわれますが、１５世代目のサーバに引越しました。</p>
+
+<p>何かがよくなったかといえば、仮想ドライバをバージョンアップしたため「ディスクアクセス」「ネットワークレスポンス」が向上しています。</p>
+
+<p>あれです、気分転換です。</p>
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+  
+    
+      <h1 class="entry-title"><a href="/blog/2011/01/15/2011-Employee-Training-Travel/">2011社員研修旅行</a></h1>
+      
+      
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2011-01-15T15:02:11+09:00" pubdate data-updated="true">Jan 15<span>th</span>, 2011</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>飲みすぎました、林です。</p>
+
+<p>昨日から一泊二日で千葉の富浦まで行って帰ってきて帰りの電車の中です。</p>
+
+<p>いつものごとく5時間くらい酒を飲みながら真剣に仕事の話をしていましたよ。</p>
+
+<p>有意義な時間でしたが、飲み過ぎは良くないと再認識しまし。</p>
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+  
+    
+      <h1 class="entry-title"><a href="/blog/2010/11/22/Evernote-Premium/">エバーノート　プレミアム</a></h1>
+      
+      
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2010-11-22T22:22:03+09:00" pubdate data-updated="true">Nov 22<span>nd</span>, 2010</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>年末にむけて片付けを始めた林です。</p>
+
+<p>以前にエバーノートというクラウド系ストレージサービスに登録していたのを思い出して使うことにしたました。</p>
+
+<p><a href="http://www.google.co.jp/search?sourceid=chrome&amp;ie=UTF-8&amp;q=%E3%82%A8%E3%83%90%E3%83%BC%E3%83%8E%E3%83%BC%E3%83%88">http://www.google.co.jp/search?sourceid=chrome&amp;ie=UTF-8&amp;q=%E3%82%A8%E3%83%90%E3%83%BC%E3%83%8E%E3%83%BC%E3%83%88</a></p>
+
+<p>使い方がよくわからないんですが、見つけたものをすぐさまに記録するのに使えるそうです。</p>
+
+<p>Google Docsでもいいような気がしますが、Androidアプリがバージョンアップしたそうなので、使ってみました。</p>
+
+<p><a href="http://blog.evernote.com/jp/?cat=3">http://blog.evernote.com/jp/?cat=3</a></p>
+
+<p>すると、なんということでしょうw</p>
+
+<p>１１月９日付けで「プレミアムユーザ」になってる！？</p>
+
+<p>金払った覚えないけど？いちおう端末はドコモで回線もドコモですがドコモにお金払ってませんけど。</p>
+
+<p><a href="http://www.nttdocomo.co.jp/campaign_event/evernote/">http://www.nttdocomo.co.jp/campaign_event/evernote/</a></p>
+
+<p>ん？これですか。</p>
+
+<p>たしかに対象機種に入ってますが・・・棚ぼたですね♪</p>
+
+<p>存分に使わせていただきますよー</p>
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+  
+    
+      <h1 class="entry-title"><a href="/blog/2010/11/17/IS01-apparently-not-been-upgraded/">IS01はバージョンアップされないらしいよ</a></h1>
+      
+      
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2010-11-17T21:20:10+09:00" pubdate data-updated="true">Nov 17<span>th</span>, 2010</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p> いまさらっぽいですが、がっかりな林です。</p>
+
+<p> まーー投げ売りされていたので予想はできていましが、トイレでワンセグ見たり、ブログ更新したりするには不自由ありませんw</p>
+
+<p> 家電量販店で買っていればポイントがガッポリだなーなんてビックカメラ東池袋店に行ってみたら、新規7800円になっていて７８０ポイントしか付かないなら無視するレベルでちょっとホッとしました。</p>
+
+<p> ハードウェアキーボードが付いているので十分に快適で、サクサク動くのでとても幸せですよw</p>
+
+<p> 今もトイレからIS01でお送りしています♪</p>
+
+<p> さて歯磨きでもして、Amazon EC2について勉強しようかな</p>
+
+<p> ※完全なる趣味です。</p>
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+  
+    
+      <h1 class="entry-title"><a href="/blog/2010/11/15/I-have-updated-the-b-mobile/">B-mobileを更新した</a></h1>
+      
+      
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2010-11-15T22:12:56+09:00" pubdate data-updated="true">Nov 15<span>th</span>, 2010</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p> 先週末はフジスピードウェイに行ってきた林です。</p>
+
+<p> やっぱり生サーキット、生カーレースは迫力ありました。</p>
+
+<p> ＝＝＝＝</p>
+
+<p> 日本通信のb-mobile U300というデータ通信サービスを30日で3000円で利用してましたが、そこそこ使えるので６ヶ月パックを購入しました。</p>
+
+<p> これでベストエフォートで上限３００kbpsのデータ通信が月々2230円くらいで利用できるようになるわけです。</p>
+
+<p> これで月々1500円くらい通信費が削れました。</p>
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+  
+    
+      <h1 class="entry-title"><a href="/blog/2010/11/11/I-try-to-use-the-PHOTO-U/">PHOTO-Uをつかってみる</a></h1>
+      
+      
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2010-11-11T21:14:35+09:00" pubdate data-updated="true">Nov 11<span>th</span>, 2010</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p> きのう調布駅前のauショップでIS01を衝動買いして、付いてきたPHOTO-Uを設定して使ってみた。</p>
+
+<p> 使い方</p>
+
+<p> ・電源を入れて指定されたメールアドレスに画像等を添付してメールを送る。</p>
+
+<p> ・受信されて添付画像とメール本文が表示される</p>
+
+<p> ・添付画像はスライドショーに登録される</p>
+
+<p> ＝＝＝＝＝</p>
+
+<p> なかなか面白い仕組みです♪</p>
+
+<p> 一時期は無線LANに対応したフォトフレームを探していたので、願ったり叶ったりだということに気がつきました。</p>
+
+<p> せっかく2011年5月まで定額390円なので使い倒してみようかなと思ってます。</p>
+
+<p> たとえば、</p>
+
+<p> ・サーバリソースのグラフ</p>
+
+<p> ・今日はなんのゴミの日メール</p>
+
+<p> ・todo</p>
+
+<p> ・アドレスを公開して何が届くか実験</p>
+
+<p> とかとか</p>
+
+<p> ＝＝＝＝＝</p>
+
+<p> ということで、アドレスは give.give.me●photo-u.jp です。</p>
+
+<p> ※ 各種携帯キャリアとgmailからの受信を許可しています。</p>
+
+<p> 暇があれば何か送ってみてくださいww</p>
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+  
+    
+      <h1 class="entry-title"><a href="/blog/2010/11/10/Greed-does-not-stop-5/">物欲がとまらない（５）</a></h1>
+      
+      
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2010-11-10T23:54:35+09:00" pubdate data-updated="true">Nov 10<span>th</span>, 2010</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>さいきんくしゃみが止まらない林です。</p>
+
+<p>風邪は直りました。</p>
+
+<p>巷ではauから発売されたアンドロイド第一弾であるIS01がタダ当然で配っていているらしいので、帰り近くにあるauショップ調布駅前店に行ってきました。</p>
+
+<p><a href="http://gadget-live.com/archives/1518433.html">http://gadget-live.com/archives/1518433.html</a></p>
+
+<p>新規・MNP一括０円！残り5台！！と書かれたポップを見つけ整理券を取っておとなしく座りました。</p>
+
+<p>ほどなくして、順番になりました。</p>
+
+<p>詳細は、こうでした。</p>
+
+<p>IS01 本体０円※条件あり</p>
+
+<p><a href="http://www.au.kddi.com/seihin/ichiran/kishu/is01/index.html">http://www.au.kddi.com/seihin/ichiran/kishu/is01/index.html</a></p>
+
+<p>条件１PHOTO-Uという製品と同時契約</p>
+
+<p>条件２けいたいサーポート同時加入</p>
+
+<p>PHOTO-U 本体０円※条件あり</p>
+
+<p><a href="http://www.au.kddi.com/seihin/ichiran/photo_flame/photo_u/index.html">http://www.au.kddi.com/seihin/ichiran/photo_flame/photo_u/index.html</a></p>
+
+<p>条件月額３９０円を2年縛り</p>
+
+<p>料金的には</p>
+
+<p>・IS01</p>
+
+<p>初期費用：2835円（事務手数料）</p>
+
+<p>月額：780円（プランEシンプル）＋315円（IS NET）＋３１５円（ケータイサポート）＋８円ー1095円（ISデビュー割）＝３２３円</p>
+
+<p>・PHOTO-U</p>
+
+<p>初期費用：2835円（事務手数料）</p>
+
+<p>月額：390円（基本使用料）＝390円</p>
+
+<p>合わせると</p>
+
+<p>初期費用：5670円</p>
+
+<p>月額：713円〜（ケイタイサポート解約で323円〜）</p>
+
+<p>＝＝＝＝＝</p>
+
+<p>PHOTO-Uは無線LANではなくで３G回線なのが面白い。画像を送りつければauのエリアであれば見れるという優れもの♪</p>
+
+<p>サーバ監視とかに使おうと思ったりしてます。</p>
+
+<p>３G回線なので用途無限大？w</p>
+
+<p>８円運用とは行きませんでしたが、ハイスペックなアンドロイド携帯が格安で手に入って結構満足ですー</p>
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+  
+    
+      <h1 class="entry-title"><a href="/blog/2010/11/05/Room-makeover/">部屋の模様替え</a></h1>
+      
+      
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2010-11-05T21:45:45+09:00" pubdate data-updated="true">Nov 5<span>th</span>, 2010</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>風邪をひいてしまった林です。</p>
+
+<p>はなずるずるです、苦しい＞＜</p>
+
+<p>さて、物欲が爆発してダンボールが部屋にあふれかえり、トランクルームでも借りて入れておこうなんて考えてみたけれど、月額６０００円超は見合いません。</p>
+
+<p><a href="http://www.kyoshin-soko.co.jp/SERVICE/trunk.html">http://www.kyoshin-soko.co.jp/SERVICE/trunk.html</a></p>
+
+<p>というわけで、部屋の片付けをすることにしました♪</p>
+
+<p>そして、2年ぶりに模様替えをしてみました。</p>
+
+<p>ニトリで買った折りたたみデスクを２つ使ってL字に配置。</p>
+
+<p><a href="http://www.nitori-net.jp/shop/goods/goods.aspx?goods=8766002">http://www.nitori-net.jp/shop/goods/goods.aspx?goods=8766002</a></p>
+
+<p>L字デスクに22インチの液晶モニタをモニタアームで固定。</p>
+
+<p><a href="http://www.thanko.jp/product/lcdarm/1-type/marmgus191b.html">http://www.thanko.jp/product/lcdarm/1-type/marmgus191b.html</a></p>
+
+<p>椅子はずっと使っているセーフティチェア。</p>
+
+<p><a href="http://item.rakuten.co.jp/e-kurashi/465974/">http://item.rakuten.co.jp/e-kurashi/465974/</a></p>
+
+<p>さー続き続き</p>
+</div>
+  
+  
+
+
+    </article>
+  
+  <div class="pagination">
+    
+      <a class="prev" href="/blog/page/4/">&larr; Older</a>
+    
+    <a href="/blog/archives">Blog Archives</a>
+    
+    <a class="next" href="/blog/page/2/">Newer &rarr;</a>
+    
+  </div>
+</div>
+<aside class="sidebar">
+  
+    <section>
+  <h1>Recent Posts</h1>
+  <ul id="recent_posts">
+    
+      <li class="post">
+        <a href="/blog/2013/02/02/How-big-reservoir-of-data/">ビックデータの溜め方</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2013/01/28/It-moves-to-the-VPS-Sakura-from-AmazonEC2/">AmazonEC2 から さくらの VPS へお引越し</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2012/08/11/Buy-the-ThinkPad-X61s/">ThinkPad X61s を購入</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2012/03/04/to-start-github/">github をはじめるよ</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2012/03/01/W-that-is-supposed-to-be-amazing-pair-programming-joint-party/">ペアプログラミング合コン&#8230;すごいことになってるｗ</a>
+      </li>
+    
+  </ul>
+</section>
+
+
+
+
+
+  
+</aside>
+
+    </div>
+  </div>
+  <footer role="contentinfo"><p>
+  Copyright &copy; 2014 - はやし <br/>
+  <span class="credit">Powered by <a href="http://octopress.org">Octopress</a>, customized with <a href="https://github.com/mjhea0/whiterspace">whiterspace</a>.</span>
+</p>
+
+</footer>
+  
+
+
+
+
+
+
+
+  <script type="text/javascript">
+    (function(){
+      var twitterWidgets = document.createElement('script');
+      twitterWidgets.type = 'text/javascript';
+      twitterWidgets.async = true;
+      twitterWidgets.src = 'http://platform.twitter.com/widgets.js';
+      document.getElementsByTagName('head')[0].appendChild(twitterWidgets);
+    })();
+  </script>
+
+
+
+
+
+</body>
+</html>

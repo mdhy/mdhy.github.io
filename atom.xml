@@ -4,7 +4,7 @@
   <title><![CDATA[めだはや]]></title>
   <link href="http://mdhy.github.io/atom.xml" rel="self"/>
   <link href="http://mdhy.github.io/"/>
-  <updated>2014-03-23T10:32:29+09:00</updated>
+  <updated>2014-03-23T16:51:13+09:00</updated>
   <id>http://mdhy.github.io/</id>
   <author>
     <name><![CDATA[はやし]]></name>
@@ -12,5 +12,794 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    
+    <title type="html"><![CDATA[ビックデータの溜め方]]></title>
+    <link href="http://mdhy.github.io/blog/2013/02/02/How-big-reservoir-of-data/"/>
+    
+    <updated>2013-02-02T17:05:11+09:00</updated>
+    <id>http://mdhy.github.io/blog/2013/02/02/How-big-reservoir-of-data</id>
+    
+    <content type="html"><![CDATA[<p>debian の dotdeb とか backports とかで php-pdo を見つけられずにソースからインストールすることになってしまった林です。</p>
+
+<p>あとこれまでに人生オワタとおもう瞬間はいくつかありましたが、またひとつ乗り越えました、php-pdo とは関係ないですが（笑</p>
+
+<p>最近、いろんなログをアーカイブしたり、リアルタイムに書き込だりするときにどんな溜め方をするのがいいんだろうと考えてたりしてます。</p>
+
+<p>好きなだけストレージ買えとも、ちゃんと作れとも言われるけどどうしたものか、コントローラにアレイをぶら下げるか、ネットワークにつなげるだけですケースアウトしてくれるのを買うかまよう、物理的な制約や電源容量とか、うーん説得できるかな&hellip;</p>
+]]></content>
+    
+  </entry>
+  
+  <entry>
+    
+    <title type="html"><![CDATA[AmazonEC2 から さくらの VPS へお引越し]]></title>
+    <link href="http://mdhy.github.io/blog/2013/01/28/It-moves-to-the-VPS-Sakura-from-AmazonEC2/"/>
+    
+    <updated>2013-01-28T23:22:02+09:00</updated>
+    <id>http://mdhy.github.io/blog/2013/01/28/It-moves-to-the-VPS-Sakura-from-AmazonEC2</id>
+    
+    <content type="html"><![CDATA[<p>おひさしぶりです、林です。</p>
+
+<p>Amazon EC2 の無料 Tier が今月末で終了するので、無料期間をとおりすぎて契約している さくらの VPS に引っ越してをしてきました。</p>
+
+<p>おもに使ったコマンドは</p>
+
+<ul>
+<li><p>mysqldump</p></li>
+<li><p>scp</p></li>
+</ul>
+
+
+<p>です。</p>
+]]></content>
+    
+  </entry>
+  
+  <entry>
+    
+    <title type="html"><![CDATA[ThinkPad X61s を購入]]></title>
+    <link href="http://mdhy.github.io/blog/2012/08/11/Buy-the-ThinkPad-X61s/"/>
+    
+    <updated>2012-08-11T23:43:39+09:00</updated>
+    <id>http://mdhy.github.io/blog/2012/08/11/Buy-the-ThinkPad-X61s</id>
+    
+    <content type="html"><![CDATA[<p>愛用していた Aspire AS1410 がどうも調子が悪いので Macbook Air の購入を検討していましたが、 80k 円を払って手に入れてもそれほど使わないかもしれないので、どうしようか悩んだりしていましたが、なにか買わないと気が済まない物欲にかられて買いました。</p>
+
+<p>ThinkPad X61s</p>
+
+<p>中古 ThinkPad 販売専門店 Be-Stock！: <a href="http://www.be-stock.com/shop/">http://www.be-stock.com/shop/</a></p>
+
+<p>一部破損とモニタを動かすとノイズが入るということで価格は送料込みで 9.4k 円でした。</p>
+
+<p>”中古”ということで、期待していませんでしたが、とてもきれいな状態で届いて非常に満足しています。おすすめです。</p>
+]]></content>
+    
+  </entry>
+  
+  <entry>
+    
+    <title type="html"><![CDATA[github をはじめるよ]]></title>
+    <link href="http://mdhy.github.io/blog/2012/03/04/to-start-github/"/>
+    
+    <updated>2012-03-04T10:12:52+09:00</updated>
+    <id>http://mdhy.github.io/blog/2012/03/04/to-start-github</id>
+    
+    <content type="html"><![CDATA[<p>ペアプログラミング関連で github でRoR と CakePHP が使えることを示せといわれたけど、 github (ギットハブ) を使うためには Git (ギット) を使えないと始まらないなーと思い、ちょっと調べてみた。</p>
+
+<h3>github (ギットハブ)とは</h3>
+
+<p>とっても優しい github の使い方 : <a href="http://d.hatena.ne.jp/keita_yamaguchi/20080409/1207752188">http://d.hatena.ne.jp/keita_yamaguchi/20080409/1207752188</a></p>
+
+<p>github 超入門 : <a href="http://blog.glasses-factory.net/2011/04/14/github">http://blog.glasses-factory.net/2011/04/14/github</a></p>
+
+<p>github : <a href="https://github.com/">https://github.com/</a></p>
+
+<p>ふむふむ、遠隔地にリポジトリを作れれて、インターネットに公開できるサービスのようで、プログラマ間のコミュニケーションもできるみたい</p>
+]]></content>
+    
+  </entry>
+  
+  <entry>
+    
+    <title type="html"><![CDATA[ペアプログラミング合コン...すごいことになってるｗ]]></title>
+    <link href="http://mdhy.github.io/blog/2012/03/01/W-that-is-supposed-to-be-amazing-pair-programming-joint-party/"/>
+    
+    <updated>2012-03-01T22:12:21+09:00</updated>
+    <id>http://mdhy.github.io/blog/2012/03/01/W-that-is-supposed-to-be-amazing-pair-programming-joint-party</id>
+    
+    <content type="html"><![CDATA[<p>最近は Amazon EC2 の調子がよく再起動してないようです。</p>
+
+<p>「ペアプログラミング合コン」なるものを以前から小耳に挟んだので、速攻申し込んでみたけど、参加者 100 名超となり、先着順でなく申込者から選考になったようです。</p>
+
+<p>うはｗww RoR は何年か前に社内にこんなーに簡単ですよって Scaffold で簡単ブログをハンズオンして紹介したきりだし、Cake は Lighttpd で動くようにして Scaffold が動いてウッフォーイってなってそれからさわってない&hellip;</p>
+
+<p>さーて環境作って勉強するかなぁぁぁ</p>
+
+<p>第1回ペアプログラミング合コン(男子枠) : <a href="http://www.zusaar.com/event/221051">http://www.zusaar.com/event/221051</a></p>
+]]></content>
+    
+  </entry>
+  
+  <entry>
+    
+    <title type="html"><![CDATA[Aspire 1410 に Linux Mint 12 を入れた]]></title>
+    <link href="http://mdhy.github.io/blog/2012/02/20/I-put-the-Linux-Mint-12-on-Aspire-1410/"/>
+    
+    <updated>2012-02-20T00:44:05+09:00</updated>
+    <id>http://mdhy.github.io/blog/2012/02/20/I-put-the-Linux-Mint-12-on-Aspire-1410</id>
+    
+    <content type="html"><![CDATA[<p>メインで使ってる ネットブックを Ubuntu 11.10 から Linux Mint 12 Gnome に入替えました。</p>
+
+<p>動機は DistroWatch でラインキング1位になっていたから&hellip;</p>
+
+<p>DistroWatch.com : <a href="http://distrowatch.com/">http://distrowatch.com/</a></p>
+
+<p>Ubuntu は重たいらしく、すごい差がついていましたよｗ</p>
+
+<p>この時間になるとヤル気がでるので、簡単にやったことまとめるよ</p>
+
+<h3>インストール</h3>
+
+<p>※ CD (or DVD) に焼くんじゃなくて USB メモリで作業をすすめる</p>
+
+<p>Download Linux Mint 12 Lisa : <a href="http://www.linuxmint.com/download.php">http://www.linuxmint.com/download.php</a></p>
+
+<ol>
+<li>メモリ 4 GB あるので DVD 64-bit をダウンロードする</li>
+</ol>
+
+
+<p>12 になって&#8221;ハイブリットISO&#8221;とやらになって dd してもいけるというのでやってみるも、not active partition ? とかでるのでいつもの</p>
+
+<p> UNetbootin &ndash; Homepage and Downloads : <a href="http://unetbootin.sourceforge.net/">http://unetbootin.sourceforge.net/</a></p>
+
+<ol>
+<li>Linux 版をダウンロードする</li>
+</ol>
+
+
+<p>※ USB メモリを FAT32 でフォーマットしておけば認識されるはず</p>
+
+<p>Installation &amp; Screenshots : <a href="http://unetbootin.sourceforge.net/#install">http://unetbootin.sourceforge.net/#install</a></p>
+
+<ol>
+<li>Distribution で 「Linux Mint」 「10_Live_x64」 で落としてきた ISO を指定して書きこむ</li>
+</ol>
+
+
+<p>Official documentation : <a href="http://www.linuxmint.com/documentation.php">http://www.linuxmint.com/documentation.php</a></p>
+
+<ol>
+<li>USB メモリでブートしたら、このへんを見てインストールすすめる</li>
+</ol>
+
+
+<p>※ ユーザフォルダが日本語になるといちいちイライラするので English でインストール</p>
+
+<ol>
+<li>ベースは Ubuntu 11.10 なので、インストーラの雰囲気もおんなじでなんなくログイン</li>
+</ol>
+
+
+<p>Ubuntuの日本語環境 : <a href="http://www.ubuntulinux.jp/products/JA-Localized">http://www.ubuntulinux.jp/products/JA-Localized</a></p>
+
+<ol>
+<li>「方法２・Japanese Teamのパッケージレポジトリを追加する」 以下をコピペですすめる</li>
+</ol>
+
+
+<p>Linux Mint 12 “Lisa” と Google 日本語入力 : <a href="http://wellvil.com/blog/archives/2011/1127194836.html">http://wellvil.com/blog/archives/2011/1127194836.html</a></p>
+
+<p>Linux Mint 12 を使いやすく設定する : <a href="http://shiroichi.sakura.ne.jp/2011/12/20111224mintsetting/">http://shiroichi.sakura.ne.jp/2011/12/20111224mintsetting/</a></p>
+
+<ol>
+<li>メニューとかの日本語かとか日本語入力とかを整える</li>
+</ol>
+
+
+<p>まーこんなもんで、さあ寝るか</p>
+
+<h3>番外編</h3>
+
+<p>最近 こんな使ってます</p>
+
+<p>YouTube Streamの目覚しい進化｜3G通信対応、バックグランド再生、Twitter投稿 : <a href="http://d.hatena.ne.jp/RyoAnna/20100902/1283445248">http://d.hatena.ne.jp/RyoAnna/20100902/1283445248</a></p>
+]]></content>
+    
+  </entry>
+  
+  <entry>
+    
+    <title type="html"><![CDATA[EC2 勝手に再起動している]]></title>
+    <link href="http://mdhy.github.io/blog/2012/02/19/I-have-restarted-EC2-without-permission/"/>
+    
+    <updated>2012-02-19T14:25:23+09:00</updated>
+    <id>http://mdhy.github.io/blog/2012/02/19/I-have-restarted-EC2-without-permission</id>
+    
+    <content type="html"><![CDATA[<p>なんかアクセスできないなーと思っていたらEC2 上の w2k8 が再起動していました&hellip;</p>
+
+<p>聞いていたけど、こんなことがあるなんて((；ﾟДﾟ)</p>
+
+<p>ふと不安になって&hellip; : <a href="http://www.medanohaya.net/?p=564">http://www.medanohaya.net/?p=564</a></p>
+
+<p>確認しておいてよかったー</p>
+]]></content>
+    
+  </entry>
+  
+  <entry>
+    
+    <title type="html"><![CDATA[ふと不安になって...]]></title>
+    <link href="http://mdhy.github.io/blog/2012/02/14/In-some-alarm/"/>
+    
+    <updated>2012-02-14T21:53:53+09:00</updated>
+    <id>http://mdhy.github.io/blog/2012/02/14/In-some-alarm</id>
+    
+    <content type="html"><![CDATA[<p>最近は Parallels Desktop やら Virtual Box やら VMware Player やらと戯れる時間が増えるにつれて帰りが遅くなっている林です。</p>
+
+<p>ふと不安になったことがあります。</p>
+
+<p>Amaozn EC2 ってインスタンス終了するとデータ全滅しなかったけ&hellip;と</p>
+
+<p>ぐぐったら、再起動は消えないけど、終了すると消えるそうな</p>
+
+<p>さらに調べていくと Amazon EBS (Elastic Block Store) ってのにデータを保存すると消えないらしい</p>
+
+<p>さて現状はどうなっているのかと、AWS Management Console をみてみると w2k8 がインストールされているディスクは EBS にあるようで不安は解消ー♪</p>
+]]></content>
+    
+  </entry>
+  
+  <entry>
+    
+    <title type="html"><![CDATA[初代 ipod nano がリボーン]]></title>
+    <link href="http://mdhy.github.io/blog/2012/02/08/First-generation-ipod-nano-is-Reborn/"/>
+    
+    <updated>2012-02-08T21:56:26+09:00</updated>
+    <id>http://mdhy.github.io/blog/2012/02/08/First-generation-ipod-nano-is-Reborn</id>
+    
+    <content type="html"><![CDATA[<p>当時（2006 年）に背面が鏡面加工された ipod nano （初代）の 2GB モデルを 20,000 円くらい出して買ったのを思い出します。</p>
+
+<p>カラーでしたが小さい画面で電池の持ちがわるく、音も弟がもっていた Panasonic の SD プレイヤーよりも劣悪でこれが Apple 品質か！！と SONY の WALKMAN を布教してまわってましたのも思い出します。</p>
+
+<p>まったく使ってなかったので、状態もキレイで捨てるにももったいなく、電池の持ちが悪いので貰い手もなくでしたが、なぜかなくならず目の届くところにいつもあったのが今でも不思議でした。</p>
+
+<p>が、ある日こんなのを見つけました。</p>
+
+<p>アップル、バッテリー過熱で初代iPod nanoの交換プログラムを発表 : <a href="http://www.gizmodo.jp/2011/11/ipod_nano_19.html">http://www.gizmodo.jp/2011/11/ipod_nano_19.html</a></p>
+
+<p>初代iPod nanoを交換してもらったら第6世代nanoが送られてきた！ : <a href="http://www.gizmodo.jp/2011/12/apples-recalled-first-gen-ipod-nanos-are-now-being-replaced-with-new-models.html">http://www.gizmodo.jp/2011/12/apples-recalled-first-gen-ipod-nanos-are-now-being-replaced-with-new-models.html</a></p>
+
+<p>おおおおおーと騒いでいると、まわりでも事例がちらほらと出てきて、私ものってみました、このビックウェーブに</p>
+
+<p><a href="http://photozou.jp/photo/show/107795/121005139"><img src="http://art61.photozou.jp/pub/795/107795/photo/121005139.jpg" alt="ipod nano 6g" style="border:0" /></a></p>
+
+<p>うん、届きました。</p>
+
+<p>第6世代はタッチパネルでラジオも付いてるんだーなんて考えながら充電してます。</p>
+
+<p>しかながら事前情報にあったようにサポートは受け取った途端にサポート終了となりましたー</p>
+
+<p><a href="http://photozou.jp/photo/show/107795/121010199"><img src="http://art59.photozou.jp/pub/795/107795/photo/121010199.png" style="border:0" /></a></p>
+
+<p>おまけ</p>
+
+<p>こんな使い方もできるそうな</p>
+
+<p>iPod nanoを腕時計として利用する技 : <a href="http://ascii.jp/elem/000/000/641/641344/">http://ascii.jp/elem/000/000/641/641344/</a></p>
+]]></content>
+    
+  </entry>
+  
+  <entry>
+    
+    <title type="html"><![CDATA[Xi (クロッシー) トーク 24]]></title>
+    <link href="http://mdhy.github.io/blog/2012/01/22/Xi-Kurosshi-Talk-24/"/>
+    
+    <updated>2012-01-22T01:25:32+09:00</updated>
+    <id>http://mdhy.github.io/blog/2012/01/22/Xi-Kurosshi-Talk-24</id>
+    
+    <content type="html"><![CDATA[<p>今日は 1 日中電話をしていた気がする林です。</p>
+
+<p>昨年の暮れにドコモ回線の音声通話回線が必要になり、検討しているところに「Xiトーク24」の情報がチラホラとネットでと見つけた。</p>
+
+<p>Xi料金プラン | 料金・割引 | NTTドコモ : <a href="http://www.nttdocomo.co.jp/charge/bill_plan/xi/">http://www.nttdocomo.co.jp/charge/bill_plan/xi/</a></p>
+
+<p>ドコモ「Xiトーク24」のひみつ・・・のその後 : <a href="http://wnyan.jp/2725">http://wnyan.jp/2725</a></p>
+
+<p>ドコモ同士の通話が24時間無料の「Xiトーク24」発表、さらにテザリング無料に : <a href="http://gigazine.net/news/20111018_xi_talk_24_tethering/">http://gigazine.net/news/20111018_xi_talk_24_tethering/</a></p>
+
+<p>docomo Xiトーク24スタート。FOMAスマホでXiカケホーダイにしてみた。 : <a href="http://smart-style.seesaa.net/article/236828089.html">http://smart-style.seesaa.net/article/236828089.html</a></p>
+
+<p>とりあえず、ドコモショップに行ってみた。</p>
+
+<p>Xi のプランについて聞きたいと整理券を受け取って 90 分待たされる、年齢層が結構高い。</p>
+
+<p>A プラン、B プラン、C プランを提示されるも家電量販店で FOMA 契約をして Xi にプラン変更するのが一番お得とのことｗ</p>
+
+<p>ということで、量販店に行ってみると L-07C が新規 0 円となっていたので速攻契約しました。</p>
+
+<p>その足でドコモショップに行って Xi プラン変更をお願いするとすんなり手続き終了♪</p>
+
+<p>なんのこともなく、初月は新規契約事務手数料 3150 円＋Xi プラン変更手数料 2100 円 ＋ FOMA プランの日割料金 ＋ Xi カケ・ホーダイ  700 円 = 約 6500 円</p>
+
+<p>次月以降は、タイプ Xi にねん 780 円 + Xi カケ・ホーダイ 700 円 = 1480 円</p>
+
+<p>で、ドコモ向けにカケ・ホーダイ端末が完成になる。</p>
+
+<p>音声専用でわりきれば、Xi 契約では SP モードの契約をしなくてもいいので、 SP モードを解約してしまえばパケホーダイを契約しなくてもよいらしい。</p>
+
+<p>My docomo から確認したら通話料 10 万超えで割引 100% で 0 円とか、ひさしぶりにワロタ。</p>
+
+<p>My docomo（マイドコモ） ホーム | NTTドコモ : <a href="http://www.mydocomo.com/web/home/">http://www.mydocomo.com/web/home/</a></p>
+
+<p>ドコモさんも総務省とのお約束があるのだろうけど、やることがいつも大胆でとても好印象です。</p>
+
+<p>すでにデータ専用 2 回線、音声 1 回線を契約していますが、メインは au を使ってます。</p>
+
+<p>au by KDDI : <a href="http://www.au.kddi.com/">http://www.au.kddi.com/</a></p>
+]]></content>
+    
+  </entry>
+  
+  <entry>
+    
+    <title type="html"><![CDATA[AWS で 再開してみる]]></title>
+    <link href="http://mdhy.github.io/blog/2012/01/20/I-try-to-restart-in-AWS/"/>
+    
+    <updated>2012-01-20T00:38:30+09:00</updated>
+    <id>http://mdhy.github.io/blog/2012/01/20/I-try-to-restart-in-AWS</id>
+    
+    <content type="html"><![CDATA[<p>あけましておめでとうございます。</p>
+
+<p>去年の夏頃から更新をしていませんでした。</p>
+
+<p>林です。</p>
+
+<p>このブログを家から出して運用しようとずーと考えていました。</p>
+
+<p>Google App Engine で動かそうと頑張ってみたものの、Java の上で PHP を動かそうとか考えていたのですが、 file_get_contents() が
+使えないことがわかり放置してました。</p>
+
+<p>その後、AWS (Amazon Web Service) の Amazon EC2 で動かして見ようとマクロインスタンスを作成しようとしたところ、オール英語でうーんで放置。</p>
+
+<p>そうだ！何年か前から契約しているさくらのレンタルサーバがあることを思い出したが BASIC 認証が使えないだよなーで放置。</p>
+
+<p>そして、つい数日前に</p>
+
+<p>AWS、「Windows Server」を無料使用枠に追加  : <a href="http://japan.cnet.com/news/service/35013142/">http://japan.cnet.com/news/service/35013142/</a></p>
+
+<p>が出てきたー！！</p>
+
+<p>Linux に Apache (ligttpd) + php + MySQL の構成なんで何十台分作ったので、変わった構成でこのブログ動かしたいという気持ちがふつふつ沸いてきてここ（AWS）に引っ越してきましたーw</p>
+
+<p>このブログが動くまでなにしたか以下にかいていきます。</p>
+
+<h3>情報収集</h3>
+
+<p>Amazon Web Services ブログ ; <a href="http://aws.typepad.com/aws_japan/">http://aws.typepad.com/aws_japan/</a></p>
+
+<h3>アカウント作成</h3>
+
+<p>AWS Management Console : <a href="http://aws.amazon.com/jp/console/">http://aws.amazon.com/jp/console/</a></p>
+
+<p>とりあえず、上にあるサインアップをクリックして必要事項を入力していく。</p>
+
+<p>※クレジットカードが必要</p>
+
+<h3>インスタンス作成</h3>
+
+<p>AWS Management Console を用いたインスタンスの生成 : <a href="http://d.hatena.ne.jp/nishio-dens/20110326/1301133309">http://d.hatena.ne.jp/nishio-dens/20110326/1301133309</a></p>
+
+<p>ぱっとみよく分からない設定があるので見ようみまねで設定していく。</p>
+
+<p>東京リージョンでマイクロインスタンスの Windows Server 2008 R2 Datacenter Edition でインスタンスを作成する。</p>
+
+<p>Elastic IP をインスタンスにひもづける（無料）</p>
+
+<h3>インスタンスに接続</h3>
+
+<p>Windows なので 3389/tcp でアクセス</p>
+
+<h3>Web サーバ環境を構築</h3>
+
+<p>XAMPP を IE でダウンロードしてインストール、結構はやい</p>
+
+<p><a href="http://www.apachefriends.org/jp/xampp-windows.html">http://www.apachefriends.org/jp/xampp-windows.html</a></p>
+
+<p>ファイルのアップロードには freeftpd で SFTP をつかう</p>
+
+<p>FreeFTPDでSSL通信対応のFTPサーバ構築 : <a href="http://iziz.blog.shinobi.jp/Entry/291/">http://iziz.blog.shinobi.jp/Entry/291/</a></p>
+
+<h3>公開完了</h3>
+
+<p>PHP のバージョンが上がっているのでエラーログ全開なので細かい修正をして設置完了</p>
+
+<h3>感想</h3>
+
+<p>日本語になって AWS Management Console も使いやすいし、1 年間月額無料はおいしい</p>
+
+<p>これからこのブログをいじりながら AWS であぞんでみようとおもう。</p>
+
+<p>そして寝る</p>
+]]></content>
+    
+  </entry>
+  
+  <entry>
+    
+    <title type="html"><![CDATA[第 44 回情報科学若手の会に参加してきた]]></title>
+    <link href="http://mdhy.github.io/blog/2011/09/20/I-ve-been-participating-in-the-meeting-of-the-44th-Information-Science-Young/"/>
+    
+    <updated>2011-09-20T01:19:46+09:00</updated>
+    <id>http://mdhy.github.io/blog/2011/09/20/I-ve-been-participating-in-the-meeting-of-the-44th-Information-Science-Young</id>
+    
+    <content type="html"><![CDATA[<p>もう火曜日です、今日は仕事です。</p>
+
+<p>さてさて 9 月 17 日から 9 月 19 日まで(社)情報処理学会プログラミングシンポジウム委員会が主催する第 44 回情報科学若手の会に参加してみました。</p>
+
+<p>参加の経緯としては幹事の一人に締切り当日に誘われて速攻で登録したという流れでした。</p>
+
+<p>おもにプログラムのできる人が集まるとか、人体ハックが見えるとかすごい人が来るということで即申し込みしました。</p>
+
+<blockquote><p>高校/高専生，学部2年生(未成年)まで13,000円</p>
+
+<p>その他学生(成年)17,000円</p>
+
+<p>社会人25,000円</p></blockquote>
+
+<p>社会人はずば抜けて高いですが若人のために投資と考えれば安い、タイに旅行にむりくり行こうとしてしていたのより安いという判断です。</p>
+]]></content>
+    
+  </entry>
+  
+  <entry>
+    
+    <title type="html"><![CDATA[Hyper-V + CentOS5 + promiscuous_mode, その後]]></title>
+    <link href="http://mdhy.github.io/blog/2011/09/06/Hyper-V-CentOS5-promiscuous_mode-then/"/>
+    
+    <updated>2011-09-06T22:02:08+09:00</updated>
+    <id>http://mdhy.github.io/blog/2011/09/06/Hyper-V-CentOS5-promiscuous_mode-then</id>
+    
+    <content type="html"><![CDATA[<h3>Hyper-V って  promiscuous_mode 使えない！？</h3>
+
+<p>ずーと Hyper-V にはプロミスキャスモードがないものと思ってましたが、Hyper-V 2.0 から機能が追加されていたようです。</p>
+
+<p>MCT の憂鬱 &ndash; Hyper-V 2.0 新機能～ネットワーク編その１：
+<a href="http://naonao71.wordpress.com/2009/09/01/hyper-v-2-0-%E6%96%B0%E6%A9%9F%E8%83%BD%EF%BD%9E%E3%83%8D%E3%83%83%E3%83%88%E3%83%AF%E3%83%BC%E3%82%AF%E7%B7%A8%E3%81%9D%E3%81%AE%EF%BC%91/">http://naonao71.wordpress.com/2009/09/01/hyper-v-2-0-%E6%96%B0%E6%A9%9F%E8%83%BD%EF%BD%9E%E3%83%8D%E3%83%83%E3%83%88%E3%83%AF%E3%83%BC%E3%82%AF%E7%B7%A8%E3%81%9D%E3%81%AE%EF%BC%91/</a></p>
+
+<blockquote><p>ネットワークの設定において「MACアドレスのスプーフィングを有効にする」という機能が追加されました。</p></blockquote>
+
+<p>うん、よろしい。</p>
+
+<p>Hyper-V 2.0 on Hyper-V Server 2008 R2 な環境では，ゲストの仮想NICをプロミスキャスモードにできない?：
+<a href="http://d.hatena.ne.jp/ka_maru/20091119/1258645882">http://d.hatena.ne.jp/ka_maru/20091119/1258645882</a></p>
+
+<blockquote><p>Virtual Server 2005あたりでは，XMLファイルを弄れば行けた模様．が，上記リンク先の最新2POST（lemon75とManuel Godoyのもの）を読む限り多分ムリ．トドメを刺したい人は，試しにwiresharkでも走らせてm9(^Д^)ﾌﾟｷﾞｬｰしてください．</p></blockquote>
+
+<p>期待とうらはらにできないという見解もあるもよう。</p>
+
+<h3>どっちなの？！</h3>
+
+<p>かくいう私も最近までできないと思い込んでたけど、結論からというと CentOS でいうと Linux Integration Services v2.1 との組み合わせてでプロミスキャス・モードでけた。</p>
+
+<p>Hyper-V には NIC が2種類ある「レガシー・ネットワーク・アダプタ」「統合サービス・ネットワーク・アダプタ」がある。</p>
+
+<p>「レガシー・ネットワーク・アダプタ」については「MACアドレスのスプーフィングを有効にする」だけでプロミスキャス・モードが使える。</p>
+
+<p>「統合サービス・ネットワーク・アダプタ」はちょっとくせがあった。</p>
+
+<p>【Linux Integration Services v2.1 Read Me.pdf】 の15ページには</p>
+
+<blockquote><p>＃ rmmod netvsc.ko</p>
+
+<p>＃ modprobe netvsc promisc_mode=1</p></blockquote>
+
+<p>と書いてあるが、起動時には有効になっていない。</p>
+
+<p>どうも /etc/modprobe.conf に options 設定を書いても有効にならない</p>
+
+<p>もうこうなったら initrd に手を加えるしかない！！！</p>
+
+<p>結果、initrd を展開した init 内の</p>
+
+<blockquote><p>insmod netvsc.ko</p></blockquote>
+
+<p>を</p>
+
+<blockquote><p>insmod netvsc.ko promisc_mode=1</p></blockquote>
+
+<p>に書き換えて initrd を纏めて /boot にコピーして再起動してはい、出来上がり。</p>
+]]></content>
+    
+  </entry>
+  
+  <entry>
+    
+    <title type="html"><![CDATA[au IS01 をroot化、その後]]></title>
+    <link href="http://mdhy.github.io/blog/2011/04/16/The-root-of-the-au-IS01-then/"/>
+    
+    <updated>2011-04-16T19:29:31+09:00</updated>
+    <id>http://mdhy.github.io/blog/2011/04/16/The-root-of-the-au-IS01-then</id>
+    
+    <content type="html"><![CDATA[<p>最近めっきり元気がなくなって泣きそうになる日々を送っている林です。</p>
+
+<p>いわゆる８円運用でつかうためにauのIS01を買ったままワンセグを見るくらいでメガネケースと化していました。</p>
+
+<p>ということで以下になります。</p>
+
+<h3>情報収集をする</h3>
+
+<p>au IS01 rooter： <a href="http://mobilehackerz.jp/contents/Software/Android/IS01root">http://mobilehackerz.jp/contents/Software/Android/IS01root</a></p>
+
+<p>au IS01のroot権限を奪取する（ビルド番号01.00.09版）： <a href="http://blog.mobilehackerz.jp/2010/11/au-is01root010009-is01.html">http://blog.mobilehackerz.jp/2010/11/au-is01root010009-is01.html</a></p>
+
+<p>しらずしらずにアップデートをしていたらB10（０１．００．１０）になってしまっていてROOTをとりずらくなっているらしい。</p>
+
+<p>Twitter / MIRO：<a href="http://twitter.com/MobileHackerz/status/17904226340446208">http://twitter.com/MobileHackerz/status/17904226340446208</a></p>
+
+<blockquote><p>＃IS01 の01.00.10 でroot取りたい人は、 <a href="http://j.mp/eDMRnU">http://j.mp/eDMRnU</a> このページの一番下にあるtest版でsu使えるようにはなります。起動後毎回Step1,2実行する必要はありますが。（※Step2実行後リブートしろと言われるが無視してそのまま使うこと）</p></blockquote>
+
+<p>GHP:IS01 : <a href="http://yutcc.blogspot.com/search/label/IS01">http://yutcc.blogspot.com/search/label/IS01</a></p>
+
+<p>Root化する以外の情報はここがよくまとまっている</p>
+
+<p>BB10に関する資料： <a href="http://www22.atwiki.jp/is01next/pages/44.html">http://www22.atwiki.jp/is01next/pages/44.html</a></p>
+]]></content>
+    
+  </entry>
+  
+  <entry>
+    
+    <title type="html"><![CDATA[UbuntuでAndroidの開発環境を整える]]></title>
+    <link href="http://mdhy.github.io/blog/2011/04/14/I-fix-the-Android-development-environment-on-Ubuntu/"/>
+    
+    <updated>2011-04-14T22:22:14+09:00</updated>
+    <id>http://mdhy.github.io/blog/2011/04/14/I-fix-the-Android-development-environment-on-Ubuntu</id>
+    
+    <content type="html"><![CDATA[<p>会社が金をだしてくれるAndroidアプリ開発研修に参加することになったため、予習をしようとしています。</p>
+
+<p>Windows7が入っていたネットブックが買って、その日のうちにFreeBSDによってリカバリ領域ごと消されてしまって持ち歩けるのはUbuntuだけとなってしまったため、UbuntuでAndroidアプリの開発環境を整える記録です。</p>
+
+<h3>AVD Manager がうごくまで</h3>
+
+<p>2010-10-17 Ubuntu 10.10 上に Android 開発環境を構築する。： <a href="http://d.hatena.ne.jp/genius_strategy/20101017/1287322157">http://d.hatena.ne.jp/genius_strategy/20101017/1287322157</a></p>
+]]></content>
+    
+  </entry>
+  
+  <entry>
+    
+    <title type="html"><![CDATA[Ubuntu 10.10 をいれてみる（１）]]></title>
+    <link href="http://mdhy.github.io/blog/2011/04/12/I-try-to-put-Ubuntu-10-10-1/"/>
+    
+    <updated>2011-04-12T21:45:25+09:00</updated>
+    <id>http://mdhy.github.io/blog/2011/04/12/I-try-to-put-Ubuntu-10-10-1</id>
+    
+    <content type="html"><![CDATA[<p>もうすぐです、４月２８日にUbuntu 11.04がFinal Releaseされます。</p>
+
+<p>１年くらい前にXubuntuをインストールしたんですが、放置していました。</p>
+
+<p>11.04もBeta版が公開されているんですが、Ubutnu Japanese Teamに日本語環境を作るための追加パッケージがまだ公開されていないので10.10を入れてみることにしました。</p>
+
+<h3>過去の記事</h3>
+
+<p>Xubuntu入れてみる（1）： <a href="http://www.medanohaya.net/?p=510">http://www.medanohaya.net/?p=510</a></p>
+
+<p>Xubuntuをいれてみる（2）： <a href="http://www.medanohaya.net/?p=511">http://www.medanohaya.net/?p=511</a></p>
+
+<p>Xubuntuを入れてみる（3）： <a href="http://www.medanohaya.net/?p=516">http://www.medanohaya.net/?p=516</a></p>
+
+<h3>インストールLive CDを手に入れる</h3>
+
+<p>Ubuntu 10.10 (Maverick Meerkat)： <a href="http://releases.ubuntu.com/10.10/">http://releases.ubuntu.com/10.10/</a></p>
+
+<p>メモリが４GB載まれているのでamd64版をtorrentをダウンロードします。</p>
+
+<p>ubuntu-10.10-desktop-amd64.iso.torrent</p>
+
+<h3>インストールメディアを用意する</h3>
+
+<p>１回しかつかわないのにCDに焼くのはもったいないのでUSB Flashメモリからインストールできるようにします。</p>
+
+<p>メインで使っているのでmacbook proでGUIで簡単にインストールUSBメモリを作れるソフトウェアを探していたら、ありました。</p>
+
+<p>ubuntuをUSBメモリからインストール： <a href="http://www.artsnet.jp/archives/16">http://www.artsnet.jp/archives/16</a></p>
+
+<p>UNetbootin, Universal Netboot Installer： <a href="http://sourceforge.jp/projects/sfnet_unetbootin/releases/">http://sourceforge.jp/projects/sfnet_unetbootin/releases/</a></p>
+
+<p>mac os x版も用意されています。</p>
+
+<p>unetbootin-mac-549.zip</p>
+
+<h3>日本語環境を導入する</h3>
+
+<p>Ubuntuの日本語環境： <a href="http://www.ubuntulinux.jp/products/JA-localized">http://www.ubuntulinux.jp/products/JA-localized</a></p>
+
+<h3>ibus-mozac (Google日本語入力のオープンソース版) を導入する</h3>
+
+<p>システム→システム管理→日本語環境セットアップ・ヘルパ から
+ibus-mozac にチェックを入れてウィザードを進めます。</p>
+
+<p>ログオフ→ログイン→システム→設定→キーボード・インプット・メソッドを開いてインプットメソッドタブで日本語 &ndash; Mozac を追加します。</p>
+
+<h3>ネットワークプリンタ(Canon PIXUS MX850)を設定する</h3>
+
+<p>UbuntuからMX-850にネットワーク経由で印刷 ： <a href="http://kopo3.blog106.fc2.com/blog-entry-144.html">http://kopo3.blog106.fc2.com/blog-entry-144.html</a></p>
+
+<h3>Google Chrome を導入する</h3>
+
+<p>10.10からSynapticからchromeでインストールできます。</p>
+
+<p>Ubuntu 10.10 64bitのGoogle ChromeにてFlashを有効にする方法： <a href="http://petitec.com/2010/11/google-chrome-enable-flash-ubuntu10-10/">http://petitec.com/2010/11/google-chrome-enable-flash-ubuntu10-10/</a></p>
+
+<h3>LibreOffice を導入する</h3>
+
+<p>Install libreoffice in ubuntu 11.04/10.10/10.04 using PPA： <a href="http://www.ubuntugeek.com/install-libreoffice-in-ubuntu-11-0410-1010-04-using-ppa.html">http://www.ubuntugeek.com/install-libreoffice-in-ubuntu-11-0410-1010-04-using-ppa.html</a></p>
+
+<h3>Skype を導入する</h3>
+
+<p>Ubuntu Tips/アプリケーション/Skypeをインストールするには： <a href="https://wiki.ubuntulinux.jp/UbuntuTips/Application/HowToInstallSkype">https://wiki.ubuntulinux.jp/UbuntuTips/Application/HowToInstallSkype</a></p>
+]]></content>
+    
+  </entry>
+  
+  <entry>
+    
+    <title type="html"><![CDATA[スパムコメントに悩まされて]]></title>
+    <link href="http://mdhy.github.io/blog/2011/01/30/Annoyed-to-spam-comment/"/>
+    
+    <updated>2011-01-30T01:44:51+09:00</updated>
+    <id>http://mdhy.github.io/blog/2011/01/30/Annoyed-to-spam-comment</id>
+    
+    <content type="html"><![CDATA[<p>このブログのサーバを移転するときにDBのバックアップを取ったんですが、なんと１００MBもありおかしいなーと思っていたらコメントが300,000もあるｗｗ</p>
+
+<p>これか！！ですｗ</p>
+
+<p>さっそく削除してスパムアクセスをIPベースで拒否するコードを加えました。</p>
+]]></content>
+    
+  </entry>
+  
+  <entry>
+    
+    <title type="html"><![CDATA[自動よこ幅]]></title>
+    <link href="http://mdhy.github.io/blog/2011/01/24/Auto-width/"/>
+    
+    <updated>2011-01-24T19:59:23+09:00</updated>
+    <id>http://mdhy.github.io/blog/2011/01/24/Auto-width</id>
+    
+    <content type="html"><![CDATA[<p>※JavaScriptが使えるブラウザに限る。</p>
+
+<p>スマホでこのブログを見ると横幅600pxの設定なので、横スクロールしなければいけない。</p>
+
+<p>なのでJavaScriptによこ幅を計算させてよこスクロールを不要にしてみた。</p>
+
+<p>うん、良くなった♪</p>
+]]></content>
+    
+  </entry>
+  
+  <entry>
+    
+    <title type="html"><![CDATA[仮想化ですよ仮想化]]></title>
+    <link href="http://mdhy.github.io/blog/2011/01/21/Virtualization-m-virtualization/"/>
+    
+    <updated>2011-01-21T00:20:19+09:00</updated>
+    <id>http://mdhy.github.io/blog/2011/01/21/Virtualization-m-virtualization</id>
+    
+    <content type="html"><![CDATA[<p>仮想化それはロマン！！</p>
+
+<p>なんて言っても、金なし、場所なし、甲斐性なし、と揃っているとPCサーバ1台で盛りだくさんのOSを動かしたくなるわけです。</p>
+
+<p>XenServerというよりCentOSにXenを入れて動かしていたことは、負荷がかかるとネットワーク周りが不安定になり落ちる現象に悩まされおりました。</p>
+
+<p>でかいファイル（例えばDVDのISOファイルとか数百MBのファイル数十個）をNAS代わりに転送してやるともうだめだったりしてました。</p>
+
+<p>そしてXPが勝手に再起動する。</p>
+
+<hr />
+
+<p>なんかないかなーVMWareのESXiがよさそうだったんですが、ハードウェア要件の敷居が高い；；</p>
+
+<p>当時はアンチMSなんて気取った態度をとっていましたが、今の現場がMS尽くしということもあってMSの仮想化ブランド「Hyper-V」を使ってみました。</p>
+
+<p><a href="http://www.microsoft.com/japan/servers/hyper-v-server/default.mspx">http://www.microsoft.com/japan/servers/hyper-v-server/default.mspx</a></p>
+
+<p>もちろん金はないので、無償のHyper-VServer 2008を使ってます。</p>
+
+<p>そして、これが安定して使える！！XP再起動しない！！！</p>
+
+<p>ハードウェア要件はWindows server 2008が動けばOK、キミに決めた！</p>
+
+<p>そしてそして、Linuxも動いてディスク、NICの専用ドライバが配られていて時計も狂わないYO</p>
+
+<hr />
+
+<p>Linux動くのでこの上でも仮想化したいと思ったら、Hyper-Vがいろいろと使っているのでXenとかKVMとかだめらしい。</p>
+
+<p>あきらめることなかれ、OpenVZというFreeBSDでいうところのJailみたいなのは使えるらしい。</p>
+
+<p>しかもLinuxなら他のディストリビューションも動くらしい。</p>
+
+<p>使ってみる、ちょー使える</p>
+
+<p>なので、WEBサーバもそこに移転したんです</p>
+
+<p>このサイトはHyper-V（仮想化）の上のCentOS5.5の上のOpenVZ（仮想化）の上のCentOS5で提供しています。</p>
+
+<p>メモリ８GBもあるのに512MBで運用しております。</p>
+
+<p>眠いのでお休みなさい。</p>
+]]></content>
+    
+  </entry>
+  
+  <entry>
+    
+    <title type="html"><![CDATA[SCCM集計]]></title>
+    <link href="http://mdhy.github.io/blog/2011/01/20/SCCM-aggregate/"/>
+    
+    <updated>2011-01-20T17:33:22+09:00</updated>
+    <id>http://mdhy.github.io/blog/2011/01/20/SCCM-aggregate</id>
+    
+    <content type="html"><![CDATA[<p>Set oShell = CreateObject(&ldquo;WScript.Shell&rdquo;)</p>
+
+<p>Set oReg = CreateObject(&ldquo;VBScript.RegExp&rdquo;)</p>
+
+<p>Set oExec = oShell.Exec(&ldquo;CMD /C TYPE all.txt&rdquo;)</p>
+
+<p>Do Until oExec.StdOut.AtEndOfStream</p>
+
+<p> ary1=Split(oExec.StdOut.ReadLine, vbTab)</p>
+
+<p> ary2=Split(ary1(2), &ldquo;, &rdquo;)</p>
+
+<p> ary3=Split(ary1(3), &ldquo;, &rdquo;)</p>
+
+<p> oReg.pattern = &ldquo;192.168.160.+&rdquo;</p>
+
+<p> remote=&ldquo;&rdquo;</p>
+
+<p> If oReg.execute(ary1(4)).Count > 0 Then</p>
+
+<p>  remote=&ldquo;A&rdquo;</p>
+
+<p> End If</p>
+
+<p> flg = true</p>
+
+<p> For i = 0 To UBound(ary2)</p>
+
+<p>  j = i</p>
+
+<p>  If StrComp(ary2(i),&ldquo;&rdquo;&ldquo;Heartbeat Discovery&rdquo;&ldquo;&rdquo;) = 0 Then</p>
+
+<p>   If i = 0 then</p>
+
+<p>   j = 2</p>
+
+<p>   End If</p>
+
+<p>   Wscript.Echo ary1(0) &amp; &ldquo;,&rdquo;&ldquo;&rdquo; &amp; ary1(1) &amp; &ldquo;&rdquo;&ldquo;,&rdquo;&ldquo;&rdquo; &amp; ary3(j) &amp; &ldquo;&rdquo;&ldquo;,&rdquo;&ldquo;&rdquo; &amp; remote &amp; &ldquo;&rdquo;&ldquo;&rdquo;</p>
+
+<p>   flg = false</p>
+
+<p>  End If</p>
+
+<p> Next</p>
+
+<p> If flg Then</p>
+
+<p>   Wscript.Echo ary1(0) &amp; &ldquo;,&rdquo;&ldquo;&rdquo;&ldquo;,&rdquo;&ldquo;&rdquo;&ldquo;,&rdquo;&ldquo;&rdquo;&ldquo;&rdquo;</p>
+
+<p> End If</p>
+
+<p>Loop</p>
+]]></content>
+    
+  </entry>
   
 </feed>

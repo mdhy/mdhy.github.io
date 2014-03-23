@@ -1,0 +1,300 @@
+
+<!DOCTYPE html>
+<!--[if IEMobile 7 ]><html class="no-js iem7"><![endif]-->
+<!--[if lt IE 9]><html class="no-js lte-ie8"><![endif]-->
+<!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <title>MySQLに移行完了しました - めだはや</title>
+  <meta name="author" content="はやし">
+
+  
+  <meta name="description" content="日曜日にスゴい風でまったく寝付けずに昨日は１２時間くらい寝てしまった林です。 睡眠は人生を無駄にしていると言われますが、たしかにそのとおりでしょうｗ ＝＝＝＝＝＝ このブログのデータ（PostgreSQLに格納されている）をMySQLに移すことが簡単に実現できたことを以前の記事で紹介しました。 &hellip;">
+  
+
+  <!-- http://t.co/dKP3o1e -->
+  <meta name="HandheldFriendly" content="True">
+  <meta name="MobileOptimized" content="320">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  
+  <link rel="canonical" href="http://mdhy.github.io/blog/2008/12/23/I-have-complete-migration-to-MySQL">
+  <link href="/favicon.png" rel="icon">
+  <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
+  <link href="/atom.xml" rel="alternate" title="めだはや" type="application/atom+xml">
+  <script src="/javascripts/modernizr-2.0.js"></script>
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+  <script>!window.jQuery && document.write(unescape('%3Cscript src="./javascripts/lib/jquery.min.js"%3E%3C/script%3E'))</script>
+  <script src="/javascripts/octopress.js" type="text/javascript"></script>
+  <!--Fonts from Google"s Web font directory at http://google.com/webfonts -->
+<link href="http://fonts.googleapis.com/css?family=PT+Serif:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+<link href="http://fonts.googleapis.com/css?family=PT+Sans:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+<link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+<link href='http://fonts.googleapis.com/css?family=Fjalla+One' rel='stylesheet' type='text/css'>
+  
+
+</head>
+
+<body   class="collapse-sidebar sidebar-footer" >
+  <header role="banner">
+</header>
+  <nav role="navigation"><ul class="subscription" data-subscription="rss">
+  <li><a href="/atom.xml" rel="subscribe-rss" title="subscribe via RSS">RSS</a></li>
+  
+</ul>
+  
+<form action="https://www.google.com/search" method="get">
+  <fieldset role="search">
+    <input type="hidden" name="q" value="site:mdhy.github.io" />
+    <input class="search" type="text" name="q" results="0" placeholder="Search"/>
+  </fieldset>
+</form>
+  
+<ul class="main-navigation">
+  <li><a href="/">Blog</a></li>
+  <li><a href="/blog/archives">Archives</a></li>
+  <li><a href="/about">About</a></li>
+</ul>
+
+</nav>
+  <div id="main">
+    <div id="content">
+      <div>
+<article class="hentry" role="article">
+  
+  <header>
+  
+    
+      <h1 class="entry-title">MySQLに移行完了しました</h1>
+    
+  
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2008-12-23T15:41:45+09:00" pubdate data-updated="true">Dec 23<span>rd</span>, 2008</time>
+        
+      </p>
+    
+  </header>
+
+
+<div class="entry-content"><p>日曜日にスゴい風でまったく寝付けずに昨日は１２時間くらい寝てしまった林です。</p>
+
+<p>睡眠は人生を無駄にしていると言われますが、たしかにそのとおりでしょうｗ</p>
+
+<p>＝＝＝＝＝＝</p>
+
+<p>このブログのデータ（PostgreSQLに格納されている）をMySQLに移すことが簡単に実現できたことを以前の記事で紹介しました。</p>
+
+<p>以前の記事：<a href="http://www.medanohaya.net/?p=384">http://www.medanohaya.net/?p=384</a></p>
+
+<p>次はこのブログのデータベースとの接続部分をMySQLと通信できるように変えないといけません；；</p>
+
+<p>ここが面倒くさいなーーーということなんですが、このブロクを最後に書いたのは今年の３月くらいでした。</p>
+
+<p>たしか、PostgreSQLでもMySQLでもすぐにセットアップできるように設計したこと思い出して、データベース関連のソースを見てみると、それっぽく書いてありました。（書いたのは私自身なんですが；；）</p>
+
+<p>過去の記憶を手探りしながら、一日コースだな＞＜なんて思いながら、手を加えてみると以下のようになりました。</p>
+
+<p>function sql_connect($IN_USER=&lsquo;&rsquo;,$IN_PASS=&lsquo;&rsquo;,$IN_DBNAME=&lsquo;&rsquo;,$IN_HOST=&lsquo;localhost&rsquo;,$IN_PORT=&lsquo;5432&rsquo;){</p>
+
+<p>$db_my = new PDO(&ldquo;mysql:host=$IN_HOST;dbname=$IN_DBNAME&rdquo;,$IN_USER,$IN_PASS);</p>
+
+<p>$db_my->query(&lsquo;SET NAMES utf8&rsquo;);</p>
+
+<p>return $db_my;</p>
+
+<p>//  return pg_connect(&ldquo;user=$IN_USER password=$IN_PASS dbname=$IN_DBNAME
+host=$IN_HOST port=$IN_PORT&rdquo;);</p>
+
+<p>}</p>
+
+<p>function sql_close($IN_CON){</p>
+
+<p>$IN_CON = null;</p>
+
+<p>return true;</p>
+
+<p>//  return pg_close($IN_CON);</p>
+
+<p>}</p>
+
+<p>function sql_query($IN_CON, $IN_STRING){</p>
+
+<p>return $IN_CON->query($IN_STRING);</p>
+
+<p>//    return pg_query($IN_CON, $IN_STRING);</p>
+
+<p>}</p>
+
+<p>function sql_fetch_row($IN_OBJECT){</p>
+
+<p>return $IN_OBJECT->fetch(PDO::FETCH_BOTH);</p>
+
+<p>//    return pg_fetch_row($IN_OBJECT);</p>
+
+<p>}</p>
+
+<p>function sql_fetch_array($IN_OBJECT){</p>
+
+<p>return $IN_OBJECT->fetchall(PDO::FETCH_BOTH);</p>
+
+<p>//    return pg_fetch_all($IN_OBJECT);</p>
+
+<p>}</p>
+
+<p>function sql_num_rows($IN_OBJECT){</p>
+
+<p>return $IN_OBJECT->rowCount();</p>
+
+<p>//    return pg_num_rows($IN_OBJECT);</p>
+
+<p>}</p>
+
+<p>だけ直せば問題ないようでした。</p>
+
+<p>ただし、SELECT文でカラム名を大文字で指定するとPDO::FETCH_BOTHの配列の結果も大文字で返ってくるため、不具合がでるところも数カ所ありました。</p>
+
+<p>が、小文字で指定してやれば小文字で返ってきたので問題ありませんでした。</p>
+
+<p>＝＝＝＝＝＝</p>
+
+<p>これで、無事に移行ができそうです。</p>
+
+<p>来年を予定してましたが、気持ちよく年を越せそうです♪</p>
+</div>
+
+
+  <footer>
+    <p class="meta">
+      
+  
+
+<span class="byline author vcard">Posted by <span class="fn">はやし</span></span>
+
+      
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2008-12-23T15:41:45+09:00" pubdate data-updated="true">Dec 23<span>rd</span>, 2008</time>
+      
+
+<span class="categories">
+  
+    <a class='category' href='/blog/categories/diary/'>diary</a>
+  
+</span>
+
+
+    </p>
+    
+      <div class="sharing">
+  
+  <a href="http://twitter.com/share" class="twitter-share-button" data-url="http://mdhy.github.io/blog/2008/12/23/I-have-complete-migration-to-MySQL/" data-via="" data-counturl="http://mdhy.github.io/blog/2008/12/23/I-have-complete-migration-to-MySQL/" >Tweet</a>
+  
+  
+  
+</div>
+
+    
+    <p class="meta">
+      
+        <a class="basic-alignment left" href="/blog/2008/12/21/What-great-happiness-PDO%3A-PHP/" title="Previous Post: PHP:PDOってすごい幸せ">&laquo; PHP:PDOってすごい幸せ</a>
+      
+      
+        <a class="basic-alignment right" href="/blog/2008/12/23/The-transfer-was-completed-on-the-new-server/" title="Next Post: また新サーバに移転が完了しました">また新サーバに移転が完了しました &raquo;</a>
+      
+    </p>
+  </footer>
+</article>
+
+</div>
+
+<aside class="sidebar">
+  
+    <section>
+  <h1>Recent Posts</h1>
+  <ul id="recent_posts">
+    
+      <li class="post">
+        <a href="/blog/2013/02/02/How-big-reservoir-of-data/">ビックデータの溜め方</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2013/01/28/It-moves-to-the-VPS-Sakura-from-AmazonEC2/">AmazonEC2 から さくらの VPS へお引越し</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2012/08/11/Buy-the-ThinkPad-X61s/">ThinkPad X61s を購入</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2012/03/04/to-start-github/">github をはじめるよ</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2012/03/01/W-that-is-supposed-to-be-amazing-pair-programming-joint-party/">ペアプログラミング合コン...すごいことになってるｗ</a>
+      </li>
+    
+  </ul>
+</section>
+
+
+
+
+
+  
+</aside>
+
+
+    </div>
+  </div>
+  <footer role="contentinfo"><p>
+  Copyright &copy; 2014 - はやし <br/>
+  <span class="credit">Powered by <a href="http://octopress.org">Octopress</a>, customized with <a href="https://github.com/mjhea0/whiterspace">whiterspace</a>.</span>
+</p>
+
+</footer>
+  
+
+
+
+
+
+
+
+  <script type="text/javascript">
+    (function(){
+      var twitterWidgets = document.createElement('script');
+      twitterWidgets.type = 'text/javascript';
+      twitterWidgets.async = true;
+      twitterWidgets.src = 'http://platform.twitter.com/widgets.js';
+      document.getElementsByTagName('head')[0].appendChild(twitterWidgets);
+    })();
+  </script>
+
+
+
+
+
+</body>
+</html>
