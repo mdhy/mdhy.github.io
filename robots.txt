@@ -1,4 +1,4 @@
 User-agent: *
 Disallow: 
 
-Sitemap: http://mdhy.github.io/sitemap.xml 
+Sitemap: http://www.medanohaya.net/sitemap.xml 

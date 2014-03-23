@@ -1,0 +1,275 @@
+
+<!DOCTYPE html>
+<!--[if IEMobile 7 ]><html class="no-js iem7"><![endif]-->
+<!--[if lt IE 9]><html class="no-js lte-ie8"><![endif]-->
+<!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <title>vmware server 2.0 + windows 7 - めだはや</title>
+  <meta name="author" content="はやし">
+
+  
+  <meta name="description" content="久しぶりに洗濯物をおひさまで乾かそうと思って干してみたら急に曇ってきたのでビビッて取り込んだらまた晴れるといった自然の気まぐれに振り回された林です。 ＝＝＝＝＝＝ 土日は家に引き込んでいますが、 &hellip;">
+  
+
+  <!-- http://t.co/dKP3o1e -->
+  <meta name="HandheldFriendly" content="True">
+  <meta name="MobileOptimized" content="320">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  
+  <link rel="canonical" href="http://www.medanohaya.net/2008/11/15/vmware-server-2-0-windows-7">
+  <link href="/favicon.png" rel="icon">
+  <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
+  <link href="/atom.xml" rel="alternate" title="めだはや" type="application/atom+xml">
+  <script src="/javascripts/modernizr-2.0.js"></script>
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+  <script>!window.jQuery && document.write(unescape('%3Cscript src="./javascripts/lib/jquery.min.js"%3E%3C/script%3E'))</script>
+  <script src="/javascripts/octopress.js" type="text/javascript"></script>
+  <!--Fonts from Google"s Web font directory at http://google.com/webfonts -->
+<link href="http://fonts.googleapis.com/css?family=PT+Serif:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+<link href="http://fonts.googleapis.com/css?family=PT+Sans:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+<link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+<link href='http://fonts.googleapis.com/css?family=Fjalla+One' rel='stylesheet' type='text/css'>
+  
+
+</head>
+
+<body   class="collapse-sidebar sidebar-footer" >
+  <header role="banner">
+</header>
+  <nav role="navigation"><ul class="subscription" data-subscription="rss">
+  <li><a href="/atom.xml" rel="subscribe-rss" title="subscribe via RSS">RSS</a></li>
+  
+</ul>
+  
+<form action="https://www.google.com/search" method="get">
+  <fieldset role="search">
+    <input type="hidden" name="q" value="site:www.medanohaya.net" />
+    <input class="search" type="text" name="q" results="0" placeholder="Search"/>
+  </fieldset>
+</form>
+  
+<ul class="main-navigation">
+  <li><a href="/">Blog</a></li>
+  <li><a href="/blog/archives">Archives</a></li>
+  <li><a href="/about">About</a></li>
+</ul>
+
+</nav>
+  <div id="main">
+    <div id="content">
+      <div>
+<article class="hentry" role="article">
+  
+  <header>
+  
+    
+      <h1 class="entry-title">Vmware Server 2.0 + Windows 7</h1>
+    
+  
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2008-11-15T19:31:49+09:00" pubdate data-updated="true">Nov 15<span>th</span>, 2008</time>
+        
+      </p>
+    
+  </header>
+
+
+<div class="entry-content"><p>久しぶりに洗濯物をおひさまで乾かそうと思って干してみたら急に曇ってきたのでビビッて取り込んだらまた晴れるといった自然の気まぐれに振り回された林です。</p>
+
+<p>＝＝＝＝＝＝</p>
+
+<p>土日は家に引き込んでいますが、何をしているかというとボーとしながら現場でマイクソフト社のWINDOWS製品を多く扱っているのでその勉強をしてます。</p>
+
+<p>手元によくできたWindows 7(マイクロソフト社の次期発売のオペレーティングシステム)のPre-BETAがあるので、インストールしてみした。</p>
+
+<p>巷には仮想化という技術が浸透してきていて、今では素晴らしい技術の数々が無料で使えるまでになっています。</p>
+
+<p>今回はノウハウもあってWindows Vistaを動かすことのできるVMware社のVMwarePlayer2.0を使ってみることにしました。</p>
+
+<p>何をやっても一筋縄ではいかない私なのでインストールはできましたが、なぜかネットワークアダプタが認識されてない；；</p>
+
+<p>ググってみるけど、もちろんのことながら参考になる情報は全くないという状況でした＞＜</p>
+
+<p>それでもわかったことはWMwareToolsというものがWMwareServerから手に入れることができて、たぶんネットワークアダプタのドライバも入っているだろうということで、WMwareServer2.0をダウンロードしてインストールしてみることにしました。</p>
+
+<p>WMware Server 2.0 (<a href="http://www.vmware.com/jp/products/server/">http://www.vmware.com/jp/products/server/</a>)</p>
+
+<p>WMware Serverは初期の1.x系から使っていきましたが、2.0系からガラリと仕様が変わって今流行？のWEBアプリケーションでコントロールするみたいです。</p>
+
+<p>ちょっと見た感じでは、Tomcat3で動くJAVAアプリのようのです。</p>
+
+<p>（スクリーンショットを貼りまくって素晴らしさをアピールしたいところですが、このブログは未だに画像が貼れません。）</p>
+
+<p>気になるかたは是非、使ってみてください↑</p>
+
+<p>＝＝＝＝＝＝</p>
+
+<p>そんなこんなでWindows 7をVMware Server上にインストールしていきます。</p>
+
+<p>ある記事（<a href="http://japan.cnet.com/special/story/0,2000056049,20383252,00.htm%EF%BC%89%E3%81%AB%E3%81%AF%E3%82%A4%E3%83%B3%E3%82%B9%E3%83%88%E3%83%BC%E3%83%AB%E3%81%8C%E3%81%8B%E3%81%AA%E3%82%8A%E9%80%9F%E3%81%84%E3%80%81%E8%B5%B7%E5%8B%95%E3%82%84%E7%B5%82%E4%BA%86%E3%81%8C%E9%80%9F%E3%81%84%E3%81%A8%E3%81%84%E3%81%86%E3%81%93%E3%81%A8%E3%81%A7%E3%81%97%E3%81%9F%E3%80%82">http://japan.cnet.com/special/story/0,2000056049,20383252,00.htm%EF%BC%89%E3%81%AB%E3%81%AF%E3%82%A4%E3%83%B3%E3%82%B9%E3%83%88%E3%83%BC%E3%83%AB%E3%81%8C%E3%81%8B%E3%81%AA%E3%82%8A%E9%80%9F%E3%81%84%E3%80%81%E8%B5%B7%E5%8B%95%E3%82%84%E7%B5%82%E4%BA%86%E3%81%8C%E9%80%9F%E3%81%84%E3%81%A8%E3%81%84%E3%81%86%E3%81%93%E3%81%A8%E3%81%A7%E3%81%97%E3%81%9F%E3%80%82</a></p>
+
+<p>そのとおりでした。速いです。</p>
+
+<p>＝＝＝＝＝</p>
+
+<p>もちろんこの記事もWindows 7のIE8で書いています♪(途中からFirefox3.0.0.4で書いていますが、IE8よりFirefoxの方がスクロールからして快適です。)</p>
+
+<p>今はリモートデスクトップで使っていますが、コンソールからも快適です。</p>
+
+<p>それに項目の表示は英語なんですが、標準IMEで日本語入力・表示が可能なんですよ。（まぁ当たり前ですがw）</p>
+
+<p>＝＝＝＝＝＝＝</p>
+
+<p>まだ何も入っていないので軽いのでしょうが、Firexox使って500MB以上メモリを消費しています。</p>
+
+<p>まぁWindows XP Pro上のWMware Server 2.0で十分動くなら文句はない感じですが。</p>
+
+<p>Window7出たら買ってもいいですね♪</p>
+
+<p>ちなみに、Kingsoft Internet Security Uはインストールはできて、リアルタイムウイルスガードは動いているようです。Firefoxも使えています。</p>
+
+<p>なんか３０日間は使えるようなので使っていきます。</p>
+
+<p>ちなみにGUIはWindowsVistaそのものでした。</p>
+
+<p>なにか見つけたらまた書きます。</p>
+</div>
+
+
+  <footer>
+    <p class="meta">
+      
+  
+
+<span class="byline author vcard">Posted by <span class="fn">はやし</span></span>
+
+      
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2008-11-15T19:31:49+09:00" pubdate data-updated="true">Nov 15<span>th</span>, 2008</time>
+      
+
+<span class="categories">
+  
+    <a class='category' href='/categories/diary/'>diary</a>
+  
+</span>
+
+
+    </p>
+    
+      <div class="sharing">
+  
+  <a href="http://twitter.com/share" class="twitter-share-button" data-url="http://www.medanohaya.net/2008/11/15/vmware-server-2-0-windows-7/" data-via="" data-counturl="http://www.medanohaya.net/2008/11/15/vmware-server-2-0-windows-7/" >Tweet</a>
+  
+  
+  
+</div>
+
+    
+    <p class="meta">
+      
+        <a class="basic-alignment left" href="/2008/11/13/It-is-funny-I-Yahoo-Pipes/" title="Previous Post: Yahoo!Pipesっておもしろいよ">&laquo; Yahoo!Pipesっておもしろいよ</a>
+      
+      
+        <a class="basic-alignment right" href="/2008/11/18/The-clean-the-room-then/" title="Next Post: 部屋を掃除して、その後">部屋を掃除して、その後 &raquo;</a>
+      
+    </p>
+  </footer>
+</article>
+
+</div>
+
+<aside class="sidebar">
+  
+    <section>
+  <h1>Recent Posts</h1>
+  <ul id="recent_posts">
+    
+      <li class="post">
+        <a href="/2013/02/02/How-big-reservoir-of-data/">ビックデータの溜め方</a>
+      </li>
+    
+      <li class="post">
+        <a href="/2013/01/28/It-moves-to-the-VPS-Sakura-from-AmazonEC2/">AmazonEC2 から さくらの VPS へお引越し</a>
+      </li>
+    
+      <li class="post">
+        <a href="/2012/08/11/Buy-the-ThinkPad-X61s/">ThinkPad X61s を購入</a>
+      </li>
+    
+      <li class="post">
+        <a href="/2012/03/04/to-start-github/">github をはじめるよ</a>
+      </li>
+    
+      <li class="post">
+        <a href="/2012/03/01/W-that-is-supposed-to-be-amazing-pair-programming-joint-party/">ペアプログラミング合コン...すごいことになってるｗ</a>
+      </li>
+    
+  </ul>
+</section>
+
+
+
+
+
+  
+</aside>
+
+
+    </div>
+  </div>
+  <footer role="contentinfo"><p>
+  Copyright &copy; 2014 - はやし <br/>
+  <span class="credit">Powered by <a href="http://octopress.org">Octopress</a>, customized with <a href="https://github.com/mjhea0/whiterspace">whiterspace</a>.</span>
+</p>
+
+</footer>
+  
+
+
+
+
+
+
+
+  <script type="text/javascript">
+    (function(){
+      var twitterWidgets = document.createElement('script');
+      twitterWidgets.type = 'text/javascript';
+      twitterWidgets.async = true;
+      twitterWidgets.src = 'http://platform.twitter.com/widgets.js';
+      document.getElementsByTagName('head')[0].appendChild(twitterWidgets);
+    })();
+  </script>
+
+
+
+
+
+</body>
+</html>

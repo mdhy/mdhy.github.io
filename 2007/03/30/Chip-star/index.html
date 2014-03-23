@@ -1,0 +1,260 @@
+
+<!DOCTYPE html>
+<!--[if IEMobile 7 ]><html class="no-js iem7"><![endif]-->
+<!--[if lt IE 9]><html class="no-js lte-ie8"><![endif]-->
+<!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <title>チップスター - めだはや</title>
+  <meta name="author" content="はやし">
+
+  
+  <meta name="description" content="これは効くぜぇ 昨日は久しぶりにチップスターのうすしおLを晩に全部食べて、満足して寝ました。 次の朝は同然とても気分が悪い；； 頭も痛いし、胃も痛い、目眩がする・・・ 今日は、次期の研究環境に構築をしようと思っていて、学校に行き、コンパイルが速い事に感動しながらも、気分の悪さに帰って寝ました。 &hellip;">
+  
+
+  <!-- http://t.co/dKP3o1e -->
+  <meta name="HandheldFriendly" content="True">
+  <meta name="MobileOptimized" content="320">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  
+  <link rel="canonical" href="http://www.medanohaya.net/2007/03/30/Chip-star">
+  <link href="/favicon.png" rel="icon">
+  <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
+  <link href="/atom.xml" rel="alternate" title="めだはや" type="application/atom+xml">
+  <script src="/javascripts/modernizr-2.0.js"></script>
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+  <script>!window.jQuery && document.write(unescape('%3Cscript src="./javascripts/lib/jquery.min.js"%3E%3C/script%3E'))</script>
+  <script src="/javascripts/octopress.js" type="text/javascript"></script>
+  <!--Fonts from Google"s Web font directory at http://google.com/webfonts -->
+<link href="http://fonts.googleapis.com/css?family=PT+Serif:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+<link href="http://fonts.googleapis.com/css?family=PT+Sans:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+<link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+<link href='http://fonts.googleapis.com/css?family=Fjalla+One' rel='stylesheet' type='text/css'>
+  
+
+</head>
+
+<body   class="collapse-sidebar sidebar-footer" >
+  <header role="banner">
+</header>
+  <nav role="navigation"><ul class="subscription" data-subscription="rss">
+  <li><a href="/atom.xml" rel="subscribe-rss" title="subscribe via RSS">RSS</a></li>
+  
+</ul>
+  
+<form action="https://www.google.com/search" method="get">
+  <fieldset role="search">
+    <input type="hidden" name="q" value="site:www.medanohaya.net" />
+    <input class="search" type="text" name="q" results="0" placeholder="Search"/>
+  </fieldset>
+</form>
+  
+<ul class="main-navigation">
+  <li><a href="/">Blog</a></li>
+  <li><a href="/blog/archives">Archives</a></li>
+  <li><a href="/about">About</a></li>
+</ul>
+
+</nav>
+  <div id="main">
+    <div id="content">
+      <div>
+<article class="hentry" role="article">
+  
+  <header>
+  
+    
+      <h1 class="entry-title">チップスター</h1>
+    
+  
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2007-03-30T21:01:20+09:00" pubdate data-updated="true">Mar 30<span>th</span>, 2007</time>
+        
+      </p>
+    
+  </header>
+
+
+<div class="entry-content"><p>これは効くぜぇ</p>
+
+<p>昨日は久しぶりに<a href="http://www.yamazaki-nabisco.co.jp/chipstar/">チップスター</a>のうすしおLを晩に全部食べて、満足して寝ました。</p>
+
+<p>次の朝は同然とても気分が悪い；；</p>
+
+<p>頭も痛いし、胃も痛い、目眩がする・・・</p>
+
+<p>今日は、次期の研究環境に構築をしようと思っていて、学校に行き、コンパイルが速い事に感動しながらも、気分の悪さに帰って寝ました。</p>
+
+<p>そして、なんとかチッップスターの毒が抜けたのか、気分も良くなり、現在に至る訳です。</p>
+
+<p>さぁ明日はバイトだけど、今日は研究室にある書籍を管理するデータベースを作ろうかなぁ</p>
+
+<p>先生曰く「必要ないでしょ。これくらいの量なら分かるよ。<big>盗まれてなければｗ</big>」</p>
+
+<p>・・・</p>
+
+<p>書く事も無いので、今回の研究室書籍管理システム（WEB版）の概要を少し紹介しておこうと思います。</p>
+
+<p>まぁ完成してもインターネットには公開しないので、楽しみはありませんが・・・
+まぁこのブログを見ている人も少ないと思うけれどもｗ</p>
+
+<p>簡単な仕様は、前回までに作ったWEB漫画専用ビューワと同じ仕組みを利用します。
+データの管理は、 PostgreSQLによって行います。
+データスキマの詳細は、まだ考えてないので割愛します。</p>
+
+<p>PostgreSQLは追加、修正されたデータの保管に使い、一覧表示や検索などはRSS2.0形式で書き出されたXMLファイルを使います。追加、修正が行われたるごとに、書き出されます。</p>
+
+<p>今回は少し拡張して、AmazonAPIを使って書籍情報を取得し、入力支援を行います。
+APIからのデータはPHPで取得し、必要な情報に加工して返し、それを登録します。</p>
+
+<p>雑誌などは、XHMLを使って、アクティブに出版社->雑誌名->年、月を選択できるように、キーボードを叩くことなく、登録ができるように行います。</p>
+
+<p>まぁこんな感じで作って行けば、できて行くんじゃないでしょうかｗ</p>
+
+<p>今回は、白に黒でもよいんですが、ちょっとデザインを加えてみようと思っています。</p>
+
+<p>イメージ的には<a href="http://odd.to/sample/temp103/index.html">こんな感じ</a>
+です。</p>
+
+<p>おっと、記事を書いていたら、一時間もたってしまった。</p>
+
+<p>風呂に入ってからゆっくり作るかな〜</p>
+</div>
+
+
+  <footer>
+    <p class="meta">
+      
+  
+
+<span class="byline author vcard">Posted by <span class="fn">はやし</span></span>
+
+      
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2007-03-30T21:01:20+09:00" pubdate data-updated="true">Mar 30<span>th</span>, 2007</time>
+      
+
+<span class="categories">
+  
+    <a class='category' href='/categories/diary/'>diary</a>
+  
+</span>
+
+
+    </p>
+    
+      <div class="sharing">
+  
+  <a href="http://twitter.com/share" class="twitter-share-button" data-url="http://www.medanohaya.net/2007/03/30/Chip-star/" data-via="" data-counturl="http://www.medanohaya.net/2007/03/30/Chip-star/" >Tweet</a>
+  
+  
+  
+</div>
+
+    
+    <p class="meta">
+      
+        <a class="basic-alignment left" href="/2007/03/29/Final-form-at-last/" title="Previous Post: やっと完成形">&laquo; やっと完成形</a>
+      
+      
+        <a class="basic-alignment right" href="/2007/04/01/lover-is-coming-to-home/" title="Next Post: 恋人が家にやってくる♪">恋人が家にやってくる♪ &raquo;</a>
+      
+    </p>
+  </footer>
+</article>
+
+</div>
+
+<aside class="sidebar">
+  
+    <section>
+  <h1>Recent Posts</h1>
+  <ul id="recent_posts">
+    
+      <li class="post">
+        <a href="/2013/02/02/How-big-reservoir-of-data/">ビックデータの溜め方</a>
+      </li>
+    
+      <li class="post">
+        <a href="/2013/01/28/It-moves-to-the-VPS-Sakura-from-AmazonEC2/">AmazonEC2 から さくらの VPS へお引越し</a>
+      </li>
+    
+      <li class="post">
+        <a href="/2012/08/11/Buy-the-ThinkPad-X61s/">ThinkPad X61s を購入</a>
+      </li>
+    
+      <li class="post">
+        <a href="/2012/03/04/to-start-github/">github をはじめるよ</a>
+      </li>
+    
+      <li class="post">
+        <a href="/2012/03/01/W-that-is-supposed-to-be-amazing-pair-programming-joint-party/">ペアプログラミング合コン...すごいことになってるｗ</a>
+      </li>
+    
+  </ul>
+</section>
+
+
+
+
+
+  
+</aside>
+
+
+    </div>
+  </div>
+  <footer role="contentinfo"><p>
+  Copyright &copy; 2014 - はやし <br/>
+  <span class="credit">Powered by <a href="http://octopress.org">Octopress</a>, customized with <a href="https://github.com/mjhea0/whiterspace">whiterspace</a>.</span>
+</p>
+
+</footer>
+  
+
+
+
+
+
+
+
+  <script type="text/javascript">
+    (function(){
+      var twitterWidgets = document.createElement('script');
+      twitterWidgets.type = 'text/javascript';
+      twitterWidgets.async = true;
+      twitterWidgets.src = 'http://platform.twitter.com/widgets.js';
+      document.getElementsByTagName('head')[0].appendChild(twitterWidgets);
+    })();
+  </script>
+
+
+
+
+
+</body>
+</html>

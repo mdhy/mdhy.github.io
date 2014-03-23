@@ -2,10 +2,10 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
 
   <title><![CDATA[めだはや]]></title>
-  <link href="http://mdhy.github.io/atom.xml" rel="self"/>
-  <link href="http://mdhy.github.io/"/>
-  <updated>2014-03-23T16:51:13+09:00</updated>
-  <id>http://mdhy.github.io/</id>
+  <link href="http://www.medanohaya.net/atom.xml" rel="self"/>
+  <link href="http://www.medanohaya.net/"/>
+  <updated>2014-03-23T18:22:42+09:00</updated>
+  <id>http://www.medanohaya.net/</id>
   <author>
     <name><![CDATA[はやし]]></name>
     
@@ -16,10 +16,10 @@
   <entry>
     
     <title type="html"><![CDATA[ビックデータの溜め方]]></title>
-    <link href="http://mdhy.github.io/blog/2013/02/02/How-big-reservoir-of-data/"/>
+    <link href="http://www.medanohaya.net/2013/02/02/How-big-reservoir-of-data/"/>
     
     <updated>2013-02-02T17:05:11+09:00</updated>
-    <id>http://mdhy.github.io/blog/2013/02/02/How-big-reservoir-of-data</id>
+    <id>http://www.medanohaya.net/2013/02/02/How-big-reservoir-of-data</id>
     
     <content type="html"><![CDATA[<p>debian の dotdeb とか backports とかで php-pdo を見つけられずにソースからインストールすることになってしまった林です。</p>
 
@@ -35,10 +35,10 @@
   <entry>
     
     <title type="html"><![CDATA[AmazonEC2 から さくらの VPS へお引越し]]></title>
-    <link href="http://mdhy.github.io/blog/2013/01/28/It-moves-to-the-VPS-Sakura-from-AmazonEC2/"/>
+    <link href="http://www.medanohaya.net/2013/01/28/It-moves-to-the-VPS-Sakura-from-AmazonEC2/"/>
     
     <updated>2013-01-28T23:22:02+09:00</updated>
-    <id>http://mdhy.github.io/blog/2013/01/28/It-moves-to-the-VPS-Sakura-from-AmazonEC2</id>
+    <id>http://www.medanohaya.net/2013/01/28/It-moves-to-the-VPS-Sakura-from-AmazonEC2</id>
     
     <content type="html"><![CDATA[<p>おひさしぶりです、林です。</p>
 
@@ -60,10 +60,10 @@
   <entry>
     
     <title type="html"><![CDATA[ThinkPad X61s を購入]]></title>
-    <link href="http://mdhy.github.io/blog/2012/08/11/Buy-the-ThinkPad-X61s/"/>
+    <link href="http://www.medanohaya.net/2012/08/11/Buy-the-ThinkPad-X61s/"/>
     
     <updated>2012-08-11T23:43:39+09:00</updated>
-    <id>http://mdhy.github.io/blog/2012/08/11/Buy-the-ThinkPad-X61s</id>
+    <id>http://www.medanohaya.net/2012/08/11/Buy-the-ThinkPad-X61s</id>
     
     <content type="html"><![CDATA[<p>愛用していた Aspire AS1410 がどうも調子が悪いので Macbook Air の購入を検討していましたが、 80k 円を払って手に入れてもそれほど使わないかもしれないので、どうしようか悩んだりしていましたが、なにか買わないと気が済まない物欲にかられて買いました。</p>
 
@@ -81,10 +81,10 @@
   <entry>
     
     <title type="html"><![CDATA[github をはじめるよ]]></title>
-    <link href="http://mdhy.github.io/blog/2012/03/04/to-start-github/"/>
+    <link href="http://www.medanohaya.net/2012/03/04/to-start-github/"/>
     
     <updated>2012-03-04T10:12:52+09:00</updated>
-    <id>http://mdhy.github.io/blog/2012/03/04/to-start-github</id>
+    <id>http://www.medanohaya.net/2012/03/04/to-start-github</id>
     
     <content type="html"><![CDATA[<p>ペアプログラミング関連で github でRoR と CakePHP が使えることを示せといわれたけど、 github (ギットハブ) を使うためには Git (ギット) を使えないと始まらないなーと思い、ちょっと調べてみた。</p>
 
@@ -104,10 +104,10 @@
   <entry>
     
     <title type="html"><![CDATA[ペアプログラミング合コン...すごいことになってるｗ]]></title>
-    <link href="http://mdhy.github.io/blog/2012/03/01/W-that-is-supposed-to-be-amazing-pair-programming-joint-party/"/>
+    <link href="http://www.medanohaya.net/2012/03/01/W-that-is-supposed-to-be-amazing-pair-programming-joint-party/"/>
     
     <updated>2012-03-01T22:12:21+09:00</updated>
-    <id>http://mdhy.github.io/blog/2012/03/01/W-that-is-supposed-to-be-amazing-pair-programming-joint-party</id>
+    <id>http://www.medanohaya.net/2012/03/01/W-that-is-supposed-to-be-amazing-pair-programming-joint-party</id>
     
     <content type="html"><![CDATA[<p>最近は Amazon EC2 の調子がよく再起動してないようです。</p>
 
@@ -125,10 +125,10 @@
   <entry>
     
     <title type="html"><![CDATA[Aspire 1410 に Linux Mint 12 を入れた]]></title>
-    <link href="http://mdhy.github.io/blog/2012/02/20/I-put-the-Linux-Mint-12-on-Aspire-1410/"/>
+    <link href="http://www.medanohaya.net/2012/02/20/I-put-the-Linux-Mint-12-on-Aspire-1410/"/>
     
     <updated>2012-02-20T00:44:05+09:00</updated>
-    <id>http://mdhy.github.io/blog/2012/02/20/I-put-the-Linux-Mint-12-on-Aspire-1410</id>
+    <id>http://www.medanohaya.net/2012/02/20/I-put-the-Linux-Mint-12-on-Aspire-1410</id>
     
     <content type="html"><![CDATA[<p>メインで使ってる ネットブックを Ubuntu 11.10 から Linux Mint 12 Gnome に入替えました。</p>
 
@@ -213,16 +213,16 @@
   <entry>
     
     <title type="html"><![CDATA[EC2 勝手に再起動している]]></title>
-    <link href="http://mdhy.github.io/blog/2012/02/19/I-have-restarted-EC2-without-permission/"/>
+    <link href="http://www.medanohaya.net/2012/02/19/I-have-restarted-EC2-without-permission/"/>
     
     <updated>2012-02-19T14:25:23+09:00</updated>
-    <id>http://mdhy.github.io/blog/2012/02/19/I-have-restarted-EC2-without-permission</id>
+    <id>http://www.medanohaya.net/2012/02/19/I-have-restarted-EC2-without-permission</id>
     
     <content type="html"><![CDATA[<p>なんかアクセスできないなーと思っていたらEC2 上の w2k8 が再起動していました&hellip;</p>
 
 <p>聞いていたけど、こんなことがあるなんて((；ﾟДﾟ)</p>
 
-<p>ふと不安になって&hellip; : <a href="http://www.medanohaya.net/?p=564">http://www.medanohaya.net/?p=564</a></p>
+<p>ふと不安になって&hellip; :</p>
 
 <p>確認しておいてよかったー</p>
 ]]></content>
@@ -232,10 +232,10 @@
   <entry>
     
     <title type="html"><![CDATA[ふと不安になって...]]></title>
-    <link href="http://mdhy.github.io/blog/2012/02/14/In-some-alarm/"/>
+    <link href="http://www.medanohaya.net/2012/02/14/In-some-alarm/"/>
     
     <updated>2012-02-14T21:53:53+09:00</updated>
-    <id>http://mdhy.github.io/blog/2012/02/14/In-some-alarm</id>
+    <id>http://www.medanohaya.net/2012/02/14/In-some-alarm</id>
     
     <content type="html"><![CDATA[<p>最近は Parallels Desktop やら Virtual Box やら VMware Player やらと戯れる時間が増えるにつれて帰りが遅くなっている林です。</p>
 
@@ -255,10 +255,10 @@
   <entry>
     
     <title type="html"><![CDATA[初代 ipod nano がリボーン]]></title>
-    <link href="http://mdhy.github.io/blog/2012/02/08/First-generation-ipod-nano-is-Reborn/"/>
+    <link href="http://www.medanohaya.net/2012/02/08/First-generation-ipod-nano-is-Reborn/"/>
     
     <updated>2012-02-08T21:56:26+09:00</updated>
-    <id>http://mdhy.github.io/blog/2012/02/08/First-generation-ipod-nano-is-Reborn</id>
+    <id>http://www.medanohaya.net/2012/02/08/First-generation-ipod-nano-is-Reborn</id>
     
     <content type="html"><![CDATA[<p>当時（2006 年）に背面が鏡面加工された ipod nano （初代）の 2GB モデルを 20,000 円くらい出して買ったのを思い出します。</p>
 
@@ -296,10 +296,10 @@
   <entry>
     
     <title type="html"><![CDATA[Xi (クロッシー) トーク 24]]></title>
-    <link href="http://mdhy.github.io/blog/2012/01/22/Xi-Kurosshi-Talk-24/"/>
+    <link href="http://www.medanohaya.net/2012/01/22/Xi-Kurosshi-Talk-24/"/>
     
     <updated>2012-01-22T01:25:32+09:00</updated>
-    <id>http://mdhy.github.io/blog/2012/01/22/Xi-Kurosshi-Talk-24</id>
+    <id>http://www.medanohaya.net/2012/01/22/Xi-Kurosshi-Talk-24</id>
     
     <content type="html"><![CDATA[<p>今日は 1 日中電話をしていた気がする林です。</p>
 
@@ -347,10 +347,10 @@
   <entry>
     
     <title type="html"><![CDATA[AWS で 再開してみる]]></title>
-    <link href="http://mdhy.github.io/blog/2012/01/20/I-try-to-restart-in-AWS/"/>
+    <link href="http://www.medanohaya.net/2012/01/20/I-try-to-restart-in-AWS/"/>
     
     <updated>2012-01-20T00:38:30+09:00</updated>
-    <id>http://mdhy.github.io/blog/2012/01/20/I-try-to-restart-in-AWS</id>
+    <id>http://www.medanohaya.net/2012/01/20/I-try-to-restart-in-AWS</id>
     
     <content type="html"><![CDATA[<p>あけましておめでとうございます。</p>
 
@@ -431,10 +431,10 @@
   <entry>
     
     <title type="html"><![CDATA[第 44 回情報科学若手の会に参加してきた]]></title>
-    <link href="http://mdhy.github.io/blog/2011/09/20/I-ve-been-participating-in-the-meeting-of-the-44th-Information-Science-Young/"/>
+    <link href="http://www.medanohaya.net/2011/09/20/I-ve-been-participating-in-the-meeting-of-the-44th-Information-Science-Young/"/>
     
     <updated>2011-09-20T01:19:46+09:00</updated>
-    <id>http://mdhy.github.io/blog/2011/09/20/I-ve-been-participating-in-the-meeting-of-the-44th-Information-Science-Young</id>
+    <id>http://www.medanohaya.net/2011/09/20/I-ve-been-participating-in-the-meeting-of-the-44th-Information-Science-Young</id>
     
     <content type="html"><![CDATA[<p>もう火曜日です、今日は仕事です。</p>
 
@@ -458,10 +458,10 @@
   <entry>
     
     <title type="html"><![CDATA[Hyper-V + CentOS5 + promiscuous_mode, その後]]></title>
-    <link href="http://mdhy.github.io/blog/2011/09/06/Hyper-V-CentOS5-promiscuous_mode-then/"/>
+    <link href="http://www.medanohaya.net/2011/09/06/Hyper-V-CentOS5-promiscuous_mode-then/"/>
     
     <updated>2011-09-06T22:02:08+09:00</updated>
-    <id>http://mdhy.github.io/blog/2011/09/06/Hyper-V-CentOS5-promiscuous_mode-then</id>
+    <id>http://www.medanohaya.net/2011/09/06/Hyper-V-CentOS5-promiscuous_mode-then</id>
     
     <content type="html"><![CDATA[<h3>Hyper-V って  promiscuous_mode 使えない！？</h3>
 
@@ -519,10 +519,10 @@
   <entry>
     
     <title type="html"><![CDATA[au IS01 をroot化、その後]]></title>
-    <link href="http://mdhy.github.io/blog/2011/04/16/The-root-of-the-au-IS01-then/"/>
+    <link href="http://www.medanohaya.net/2011/04/16/The-root-of-the-au-IS01-then/"/>
     
     <updated>2011-04-16T19:29:31+09:00</updated>
-    <id>http://mdhy.github.io/blog/2011/04/16/The-root-of-the-au-IS01-then</id>
+    <id>http://www.medanohaya.net/2011/04/16/The-root-of-the-au-IS01-then</id>
     
     <content type="html"><![CDATA[<p>最近めっきり元気がなくなって泣きそうになる日々を送っている林です。</p>
 
@@ -554,10 +554,10 @@
   <entry>
     
     <title type="html"><![CDATA[UbuntuでAndroidの開発環境を整える]]></title>
-    <link href="http://mdhy.github.io/blog/2011/04/14/I-fix-the-Android-development-environment-on-Ubuntu/"/>
+    <link href="http://www.medanohaya.net/2011/04/14/I-fix-the-Android-development-environment-on-Ubuntu/"/>
     
     <updated>2011-04-14T22:22:14+09:00</updated>
-    <id>http://mdhy.github.io/blog/2011/04/14/I-fix-the-Android-development-environment-on-Ubuntu</id>
+    <id>http://www.medanohaya.net/2011/04/14/I-fix-the-Android-development-environment-on-Ubuntu</id>
     
     <content type="html"><![CDATA[<p>会社が金をだしてくれるAndroidアプリ開発研修に参加することになったため、予習をしようとしています。</p>
 
@@ -573,10 +573,10 @@
   <entry>
     
     <title type="html"><![CDATA[Ubuntu 10.10 をいれてみる（１）]]></title>
-    <link href="http://mdhy.github.io/blog/2011/04/12/I-try-to-put-Ubuntu-10-10-1/"/>
+    <link href="http://www.medanohaya.net/2011/04/12/I-try-to-put-Ubuntu-10-10-1/"/>
     
     <updated>2011-04-12T21:45:25+09:00</updated>
-    <id>http://mdhy.github.io/blog/2011/04/12/I-try-to-put-Ubuntu-10-10-1</id>
+    <id>http://www.medanohaya.net/2011/04/12/I-try-to-put-Ubuntu-10-10-1</id>
     
     <content type="html"><![CDATA[<p>もうすぐです、４月２８日にUbuntu 11.04がFinal Releaseされます。</p>
 
@@ -586,11 +586,11 @@
 
 <h3>過去の記事</h3>
 
-<p>Xubuntu入れてみる（1）： <a href="http://www.medanohaya.net/?p=510">http://www.medanohaya.net/?p=510</a></p>
+<p>Xubuntu入れてみる（1）：</p>
 
-<p>Xubuntuをいれてみる（2）： <a href="http://www.medanohaya.net/?p=511">http://www.medanohaya.net/?p=511</a></p>
+<p>Xubuntuをいれてみる（2）：</p>
 
-<p>Xubuntuを入れてみる（3）： <a href="http://www.medanohaya.net/?p=516">http://www.medanohaya.net/?p=516</a></p>
+<p>Xubuntuを入れてみる（3）：</p>
 
 <h3>インストールLive CDを手に入れる</h3>
 
@@ -649,10 +649,10 @@ ibus-mozac にチェックを入れてウィザードを進めます。</p>
   <entry>
     
     <title type="html"><![CDATA[スパムコメントに悩まされて]]></title>
-    <link href="http://mdhy.github.io/blog/2011/01/30/Annoyed-to-spam-comment/"/>
+    <link href="http://www.medanohaya.net/2011/01/30/Annoyed-to-spam-comment/"/>
     
     <updated>2011-01-30T01:44:51+09:00</updated>
-    <id>http://mdhy.github.io/blog/2011/01/30/Annoyed-to-spam-comment</id>
+    <id>http://www.medanohaya.net/2011/01/30/Annoyed-to-spam-comment</id>
     
     <content type="html"><![CDATA[<p>このブログのサーバを移転するときにDBのバックアップを取ったんですが、なんと１００MBもありおかしいなーと思っていたらコメントが300,000もあるｗｗ</p>
 
@@ -666,10 +666,10 @@ ibus-mozac にチェックを入れてウィザードを進めます。</p>
   <entry>
     
     <title type="html"><![CDATA[自動よこ幅]]></title>
-    <link href="http://mdhy.github.io/blog/2011/01/24/Auto-width/"/>
+    <link href="http://www.medanohaya.net/2011/01/24/Auto-width/"/>
     
     <updated>2011-01-24T19:59:23+09:00</updated>
-    <id>http://mdhy.github.io/blog/2011/01/24/Auto-width</id>
+    <id>http://www.medanohaya.net/2011/01/24/Auto-width</id>
     
     <content type="html"><![CDATA[<p>※JavaScriptが使えるブラウザに限る。</p>
 
@@ -685,10 +685,10 @@ ibus-mozac にチェックを入れてウィザードを進めます。</p>
   <entry>
     
     <title type="html"><![CDATA[仮想化ですよ仮想化]]></title>
-    <link href="http://mdhy.github.io/blog/2011/01/21/Virtualization-m-virtualization/"/>
+    <link href="http://www.medanohaya.net/2011/01/21/Virtualization-m-virtualization/"/>
     
     <updated>2011-01-21T00:20:19+09:00</updated>
-    <id>http://mdhy.github.io/blog/2011/01/21/Virtualization-m-virtualization</id>
+    <id>http://www.medanohaya.net/2011/01/21/Virtualization-m-virtualization</id>
     
     <content type="html"><![CDATA[<p>仮想化それはロマン！！</p>
 
@@ -740,10 +740,10 @@ ibus-mozac にチェックを入れてウィザードを進めます。</p>
   <entry>
     
     <title type="html"><![CDATA[SCCM集計]]></title>
-    <link href="http://mdhy.github.io/blog/2011/01/20/SCCM-aggregate/"/>
+    <link href="http://www.medanohaya.net/2011/01/20/SCCM-aggregate/"/>
     
     <updated>2011-01-20T17:33:22+09:00</updated>
-    <id>http://mdhy.github.io/blog/2011/01/20/SCCM-aggregate</id>
+    <id>http://www.medanohaya.net/2011/01/20/SCCM-aggregate</id>
     
     <content type="html"><![CDATA[<p>Set oShell = CreateObject(&ldquo;WScript.Shell&rdquo;)</p>
 
